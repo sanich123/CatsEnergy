@@ -1,23 +1,125 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
     <title>Cat\'s energy</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/normalize.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico" />
-    <link rel="icon" href="img/favicon.svg" type="image/svg" />
-    <link rel="apple-touch-icon" href="img/favicon152.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body class="page-body">
-    <header class="main-header">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="./img/logo.svg"  width="33" height="37" alt="Cat\'s energy">
+        </a>
+        <a class="page-header__logo">
+          <img src="./img/logo-words.svg" alt="Cat\'s energy">
+        </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <script src="js/slider.js"></script>
+    <main class="page-main">
+      <h1>Функциональное питание для котов</h1>
+      <section class="promo">
+        <h2 class="visually-hidden">Промо программа</h2>
+        <div class="promo-wrapper"></div>
+        <p class="promo-slogan">Занялся собой? Займись котом!</p>
+        <img src="./img/background-promo.svg" alt="Фотография кота">
+        <img src="./img/promo-food.png" alt="Банка с едой кота">
+        <a href="#">Подобрать программу</a>
+        </div>
+      </section>
+      <section class="programms">
+        <div class="programms-wrapper">
+        <h2 class="visually-hidden">Список программ</h2>
+        <ul class="programms-list">
+          <li class="programms-list__item">
+            <img src="./img/cat-icon.svg" alt="Зеленый круг">
+            <img src="./img/cat-icon-silouette.svg" alt="Силуэт кошки">
+            <h2>Похудение</h2>
+            <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a href="#">Каталог SLIM</a>
+            <img src="./img/arrow.svg">
+          </li>
+          <li class="programms-list__item">
+            <img src="./img/cat-icon.svg" alt="Зеленый круг">
+            <img src="./img/cat-icon-silouette2.svg" alt="Силуэт кошки">
+            <h2>Набор массы</h2>
+            <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a href="#">Каталог PRO</a>
+            <img src="./img/arrow.svg">
+          </li>
+        </ul>
+        </div>
+      </section>
+      <section class="description">
+        <div class="description-wrapper">
+        <h2>Как это работает</h2>
+        <ul class="description-list">
+          <li class="description-list__item">
+            <p>Функциональное питание содержит только полезные питательные вещества.</p>
+          </li>
+          <li class="description-list__item">
+            <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          </li>
+          <li class="description-list__item">
+            <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
+          </li>
+          <li class="description-list__item">
+            <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          </li>
+        </ul>
+        </div>
+      </section>
+      <section class="example">
+        <div class="example-wrapper">
+        <h2>Живой пример</h2>
+        <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+        <div class="example-statistics">
+          <dt><strong>5 КГ</strong></dt>
+          <dd>снижение веса</dd>
+          <dt><strong>60 ДНЕЙ</strong></dt>
+          <dd>затрачено времени</dd>
+        </div>
+        <h3>Затраты на питание: 15 000 РУБ. </h3>
+        <img src="./img/fat-cat.png" alt="Very fat cat">
+        <div class="example-progress">
+          <span>Было</span>
+          <span>Стало</span>
+        </div>
+        </div>
+      </section>
+      <section class="partnership">
+        <h2>приглашаем к сотрудничеству дилеров!</h2>
+        <address>
+          ул. Большая Конюшенная, д. 19/8
+          Санкт-Петербург
+        </address>
+      </section>
+      <section class="map">
+        <img src="./img/map.png">
+      </section>
+    </main>
+    <footer>
+    </footer>
   </body>
 </html>

@@ -1,7 +1,7 @@
 {
-  "name": "c",
+  "name": "catsenergy",
   "private": true,
-  "description": "Личный проект «{{projectTitle}}» от HTML Academy",
+  "description": "Личный проект «CatsEnergy» от HTMLAcademy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",

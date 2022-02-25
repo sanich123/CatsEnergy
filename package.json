@@ -10,14 +10,15 @@
     "gulp-less": "5.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
+    "linthtml-config-htmlacademy": "^1.0.3",
     "postcss": "8.3.11",
     "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.11"
+    "stylelint-config-htmlacademy": "^0.1.11"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "lint": "npm run editorconfig && npm run stylelint",
+    "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
     "start": "gulp"
   },

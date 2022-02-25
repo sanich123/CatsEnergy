@@ -10,7 +10,6 @@
     "gulp-less": "5.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
-    "linthtml-config-htmlacademy": "^1.0.3",
     "postcss": "8.3.11",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "^0.1.11"

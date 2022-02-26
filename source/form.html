@@ -47,42 +47,42 @@
           <fieldset>
             <legend class="visually-hidden">Your cat's data</legend>
               <label for="name">Имя:*</label>
-                <input type="text" name="name" placeholder="БАРСИК" required>
+                <input type="text" name="name" id="name" placeholder="БАРСИК" required>
               <label for="weight">Вес (кг):*</label>
-                <input type="number" name="weight" placeholder="7" required>
+                <input type="number" name="weight" id="weight" placeholder="7" required>
               <label for="age">Возраст (лет):</label>
-                <input type="number" name="age" placeholder="7">
+                <input type="number" name="age" id="age" placeholder="7">
           </fieldset>
           <fieldset>
             <legend class="visually-hidden">Options</legend>
-              <input type="checkbox" name="starving" checked>
+              <input type="checkbox" name="starving" id="starving" checked>
                 <label for="starving">Похудение</label>
-              <input type="checkbox" name="gaining">
+              <input type="checkbox" name="gaining" id="gaining">
                 <label for="gaining">Набор массы</label>
-              <input type="checkbox" name="notKnow">
+              <input type="checkbox" name="notKnow" id="notKnow">
                 <label for="notKnow">Не знаю (Нужен ваш совет)</label>
           </fieldset>
           <fieldset>
             <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
-              <label for="starving">E-mail:*</label>
-                <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <label for="email">E-mail:*</label>
+                <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
               <label for="phone">Телефон:*</label>
-                <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                <input type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
           </fieldset>
           <fieldset>
             <legend>Комментарий</legend>
             <label class="visually-hidden" for="message">Tell us about your cat's habits</label>
-            <textarea name="message" placeholder="Расскажите обо всех повАдках кота"></textarea>
+            <textarea name="message" placeholder="Расскажите обо всех повАдках кота" id="message"></textarea>
           </fieldset>
           <fieldset>
             <legend>Дополнительно</legend>
-            <input type="radio" name="sugarChanger">
+            <input type="radio" name="sugarChanger" id="sugarChanger">
             <label class="visually-hidden" for="sugarChanger">Сахарозаменитель</label>
-            <input type="radio" name="water" >
+            <input type="radio" name="water" id="water">
             <label class="visually-hidden" for="water">Питьевая вода</label>
-            <input type="radio" name="milk" checked>
+            <input type="radio" name="milk" id="milk" checked>
             <label class="visually-hidden" for="milk">Молоко</label>
-            <input type="radio" name="vitamins">
+            <input type="radio" name="vitamins" id="vitamins">
             <label class="visually-hidden" for="vitamins">Витамины</label>
           </fieldset>
           <button type="submit">Отправить заявку</button>
@@ -118,10 +118,10 @@
         </ul>
         <ul class="footer-academy_list">
           <li class="footer-htmlAcademy__item">
-            <a href="https:/htmlacademy.ru">HTML Academy</a>
+            <a href="https://htmlacademy.ru">HTML Academy</a>
           </li>
           <li class="footer-htmlAcademy__item">
-            <a href="https:/htmlacademy.ru">
+            <a href="https://htmlacademy.ru">
               <img src="./img/photos/html-academy.png" alt="Pupil\'s cap">
             </a>
           </li>

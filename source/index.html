@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <link>
+  <head>
     <meta charset="utf-8" />
     <link href="./css/style.css" rel="stylesheet">
     <title>Cat\'s energy</title>
@@ -8,28 +8,28 @@
   <body class="page-body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="./img/logo.svg"  width="33" height="37" alt="Cat\'s energy">
-        </a>
-        <a class="page-header__logo">
-          <img src="./img/logo-words.svg" alt="Cat\'s energy">
-        </a>
+        <img src="./img/svg/logo.svg"  width="33" height="37" alt="Cat\'s energy">
+      </a>
+      <a class="page-header__logo">
+        <img src="./img/svg/logo-words.svg" alt="Cat\'s energy">
+      </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active">
               <a href="#">
                 Главная
               </a>
             </li>
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="#">
                 Каталог продукции
               </a>
             </li>
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="#">
                 Подбор программы
               </a>
@@ -42,10 +42,10 @@
       <h1>Функциональное питание для котов</h1>
       <section class="promo">
         <h2 class="visually-hidden">Промо программа</h2>
-        <div class="promo-wrapper"></div>
+        <div class="promo-wrapper">
         <p class="promo-slogan">Занялся собой? Займись котом!</p>
-        <img src="./img/background-promo.svg" alt="Фотография кота">
-        <img src="./img/promo-food.png" alt="Банка с едой кота">
+        <img src="./img/photos/backgroundCat.png" alt="Фотография кота">
+        <img src="./img/photos/promo-food.png" alt="Банка с едой кота">
         <a href="#">Подобрать программу</a>
         </div>
       </section>
@@ -54,20 +54,20 @@
         <h2 class="visually-hidden">Список программ</h2>
         <ul class="programms-list">
           <li class="programms-list__item">
-            <img src="./img/cat-icon.svg" alt="Зеленый круг">
-            <img src="./img/cat-icon-silouette.svg" alt="Силуэт кошки">
+            <img src="./img/svg/cat-icon.svg" alt="Зеленый круг">
+            <img src="./img/svg/cat-icon-silouette.svg" alt="Силуэт кошки">
             <h2>Похудение</h2>
             <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a href="#">Каталог SLIM</a>
-            <img src="./img/arrow.svg">
+            <img src="./img/svg/arrow.svg">
           </li>
           <li class="programms-list__item">
-            <img src="./img/cat-icon.svg" alt="Зеленый круг">
-            <img src="./img/cat-icon-silouette2.svg" alt="Силуэт кошки">
+            <img src="./img/svg/cat-icon.svg" alt="Зеленый круг">
+            <img src="./img/svg/cat-icon-silouette2.svg" alt="Силуэт кошки">
             <h2>Набор массы</h2>
             <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a href="#">Каталог PRO</a>
-            <img src="./img/arrow.svg">
+            <img src="./img/svg/arrow.svg">
           </li>
         </ul>
         </div>
@@ -102,7 +102,7 @@
           <dd>затрачено времени</dd>
         </div>
         <h3>Затраты на питание: 15 000 РУБ. </h3>
-        <img src="./img/fat-cat.png" alt="Very fat cat">
+        <img src="./img/photos/fat-cat.png" alt="Very fat cat">
         <div class="example-progress">
           <span>Было</span>
           <span>Стало</span>
@@ -117,10 +117,36 @@
         </address>
       </section>
       <section class="map">
-        <img src="./img/map.png">
+        <h2 class="visually-hidden">Карта</h2>
+        <img src="./img/photos/map.png" alt="Карта">
+        <img src="./img/svg/superCat.svg" alt="SuperCat">
       </section>
     </main>
-    <footer>
+    <footer class="footer">
+        <a class="footer-logo">
+          <img src="./img/svg/logo-words.svg" alt="Cat\'s energy">
+        </a>
+        <ul class="footer-social">
+          <li class="main-footer_social-item">
+            <a href="#">Vkontakte</a>
+          </li>
+          <li class="main-footer_social-item">
+            <a href="#">Instagram</a>
+          </li>
+          <li class="main-footer_social-item">
+            <a href="#">Facebook</a>
+          </li>
+        </ul>
+        <ul class="footer-academy_list">
+          <li class="footer-htmlAcademy__item">
+            <a href="https:/htmlacademy.ru">HTML Academy</a>
+          </li>
+          <li class="footer-htmlAcademy__item">
+            <a href="https:/htmlacademy.ru">
+              <img src="./img/photos/html-academy.png" alt="Pupil\'s cap">
+            </a>
+          </li>
+        </ul>
     </footer>
   </body>
 </html>

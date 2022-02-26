@@ -55,11 +55,11 @@
           </fieldset>
           <fieldset>
             <legend class="visually-hidden">Options</legend>
-              <input type="checkbox" name="starving" value="starving" checked>
+              <input type="checkbox" name="starving" checked>
                 <label for="starving">Похудение</label>
-              <input type="checkbox" name="gaining" value="gaining">
+              <input type="checkbox" name="gaining">
                 <label for="gaining">Набор массы</label>
-              <input type="checkbox" name="notKnow" value="notKnowing">
+              <input type="checkbox" name="notKnow">
                 <label for="notKnow">Не знаю (Нужен ваш совет)</label>
           </fieldset>
           <fieldset>
@@ -67,7 +67,7 @@
               <label for="starving">E-mail:*</label>
                 <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
               <label for="phone">Телефон:*</label>
-                <input type="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+                <input type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
           </fieldset>
           <fieldset>
             <legend>Комментарий</legend>
@@ -76,10 +76,19 @@
           </fieldset>
           <fieldset>
             <legend>Дополнительно</legend>
-            <label class="visually-hidden" for="message">Tell us about your cat's habits</label>
-
+            <input type="radio" name="sugarChanger">
+            <label class="visually-hidden" for="sugarChanger">Сахарозаменитель</label>
+            <input type="radio" name="water" >
+            <label class="visually-hidden" for="water">Питьевая вода</label>
+            <input type="radio" name="milk" checked>
+            <label class="visually-hidden" for="milk">Молоко</label>
+            <input type="radio" name="vitamins">
+            <label class="visually-hidden" for="vitamins">Витамины</label>
           </fieldset>
+          <button type="submit">Отправить заявку</button>
         </form>
+        <span>* — Обязательные поля</span>
+
       </section>
       <section class="contacts">
         <h2>приглашаем к сотрудничеству дилеров!</h2>

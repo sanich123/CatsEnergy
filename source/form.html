@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Cat\'s energy</title>
+  </head>
+  <body class="page-body">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="./img/svg/logo.svg"  width="33" height="37" alt="Cat\'s energy">
+      </a>
+      <a class="page-header__logo">
+        <img src="./img/svg/logo-words.svg" alt="Cat\'s energy">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--active">
+              <a href="#">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1>Подбор программы</h1>
+      <section class="cat\'s-info">
+        <h2 class="visually-hidden">Информация о вашем питомце</h2>
+        <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend class="visually-hidden">Your cat's data</legend>
+              <label for="name">Имя:*</label>
+                <input type="text" name="name" placeholder="БАРСИК" required>
+              <label for="weight">Вес (кг):*</label>
+                <input type="number" name="weight" placeholder="7" required>
+              <label for="age">Возраст (лет):</label>
+                <input type="number" name="age" placeholder="7">
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Options</legend>
+              <input type="checkbox" name="starving" value="starving" checked>
+                <label for="starving">Похудение</label>
+              <input type="checkbox" name="gaining" value="gaining">
+                <label for="gaining">Набор массы</label>
+              <input type="checkbox" name="notKnow" value="notKnowing">
+                <label for="notKnow">Не знаю (Нужен ваш совет)</label>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+              <label for="starving">E-mail:*</label>
+                <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <label for="phone">Телефон:*</label>
+                <input type="phone" name="phone" placeholder="8 (960) 900-60-90" required>
+          </fieldset>
+          <fieldset>
+            <legend>Комментарий</legend>
+            <label class="visually-hidden" for="message">Tell us about your cat's habits</label>
+            <textarea name="message" placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Дополнительно</legend>
+            <label class="visually-hidden" for="message">Tell us about your cat's habits</label>
+
+          </fieldset>
+        </form>
+      </section>
+      <section class="contacts">
+        <h2>приглашаем к сотрудничеству дилеров!</h2>
+        <address>
+          ул. Большая Конюшенная, д. 19/8
+          Санкт-Петербург
+        </address>
+        <h2 class="visually-hidden">Карта</h2>
+        <img src="./img/photos/map.png" alt="Карта">
+        <img src="./img/photos/superCat.png" alt="SuperCat">
+      </section>
+    </main>
+    <footer class="footer">
+        <a class="footer-logo">
+          <img src="./img/svg/logo-words.svg" alt="Cat\'s energy">
+        </a>
+        <ul class="footer-social">
+          <li class="main-footer_social-item">
+            <a href="#">Vkontakte</a>
+          </li>
+          <li class="main-footer_social-item">
+            <a href="#">Instagram</a>
+          </li>
+          <li class="main-footer_social-item">
+            <a href="#">Facebook</a>
+          </li>
+        </ul>
+        <ul class="footer-academy_list">
+          <li class="footer-htmlAcademy__item">
+            <a href="https:/htmlacademy.ru">HTML Academy</a>
+          </li>
+          <li class="footer-htmlAcademy__item">
+            <a href="https:/htmlacademy.ru">
+              <img src="./img/photos/html-academy.png" alt="Pupil\'s cap">
+            </a>
+          </li>
+        </ul>
+    </footer>
+  </body>
+</html>

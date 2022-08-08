@@ -5,10 +5,10 @@
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "browser-sync": "^2.27.10",
-    "gulp": "4.0.2",
+    "gulp": "^4.0.2",
     "gulp-less": "^5.0.0",
-    "gulp-plumber": "1.2.1",
-    "gulp-postcss": "9.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
     "postcss": "^8.4.16",
     "postcss-less": "^6.0.0",
     "stylelint": "^14.9.1",

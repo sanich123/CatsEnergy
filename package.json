@@ -3,7 +3,6 @@
   "private": true,
   "description": "My work in adaptive coding",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "^10.4.8",
     "browser-sync": "^2.27.10",
     "gulp": "4.0.2",
@@ -11,12 +10,13 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "postcss": "^8.4.16",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "^0.1.12"
+    "postcss-less": "^6.0.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-recommended": "^8.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "stylelint": "stylelint \"source/less/**/*.less\" --custom-syntax postcss-less",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
     "start": "gulp"

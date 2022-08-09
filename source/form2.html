@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" lang="ru" />
+    <link href="./css/styles.css" rel="stylesheet">
+    <title>Cat\'s energy</title>
+  </head>
+  <body class="page__body">
+    <header class="main-header">
+      <div class="main-header__wrapper">
+      <a class="main-header__logo" href="./index.html" aria-label="Логотип магазина">
+        <svg width="34" height="38" ><use xlink:href="./img/svg/icons.svg#logo"></use></svg>
+      </a>
+      <a class="page-header__logo" href="./index.html" aria-label="Логотип магазина">
+        <svg width="128" height="24" ><use xlink:href="./img/svg/icons.svg#logo-words"></use></svg>
+      </a>
+      <button class="page-header__toggler" type="button" aria-label="Кнопка открытия меню">
+        <svg width="24" height="18"><use xlink:href="./img/svg/icons.svg#hamburger"></use></svg>
+      </button>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item nav-list__item--active">
+              <a href="./index.html">
+                Главная
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="./catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="./form.html">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1>Подбор программы</h1>
+      <section class="cat\'s-info">
+        <h2 class="visually-hidden">Информация о вашем питомце</h2>
+        <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset>
+            <legend class="visually-hidden">Your cat's data</legend>
+              <label>Имя:*
+                <input type="text" name="name" id="name" placeholder="БАРСИК" required>
+              </label>
+              <label>Вес (кг):*
+                <input type="number" name="weight" id="weight" placeholder="7" required>
+              </label>
+              <label>Возраст (лет):
+                <input type="number" name="age" id="age" placeholder="7">
+              </label>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Options</legend>
+            <label>
+              <input type="checkbox" name="starving" id="starving" checked>
+                Похудение
+            </label>
+            <label>
+              <input type="checkbox" name="gaining" id="gaining">
+                Набор массы
+            </label>
+            <label>
+              <input type="checkbox" name="notKnow" id="notKnow">
+                Не знаю (Нужен ваш совет)
+              </label>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Контактные данные (владельца кота)</legend>
+              <label>E-mail:*
+                <input type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
+                <svg width="20" height="15"><use xlink:href="./img/svg/icons.svg#icon-mail"></use></svg>
+              </label>
+              <label>Телефон:*
+                <input type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+                <svg width="20" height="21"><use xlink:href="./img/svg/icons.svg#icon-phone"></use></svg>
+              </label>
+          </fieldset>
+          <fieldset>
+            <legend>Комментарий</legend>
+            <label class="visually-hidden" for="message">Tell us about your cat's habits</label>
+            <textarea name="message" placeholder="Расскажите обо всех повАдках кота" id="message"></textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Дополнительно</legend>
+            <input type="radio" name="sugarChanger" id="sugarChanger">
+            <label class="visually-hidden" for="sugarChanger">Сахарозаменитель</label>
+            <input type="radio" name="water" id="water">
+            <label class="visually-hidden" for="water">Питьевая вода</label>
+            <input type="radio" name="milk" id="milk" checked>
+            <label class="visually-hidden" for="milk">Молоко</label>
+            <input type="radio" name="vitamins" id="vitamins">
+            <label class="visually-hidden" for="vitamins">Витамины</label>
+          </fieldset>
+          <button type="submit">Отправить заявку</button>
+        </form>
+        <span>* — Обязательные поля</span>
+
+      </section>
+      <section class="contacts">
+        <h2>приглашаем к сотрудничеству дилеров!</h2>
+        <address>
+          ул. Большая Конюшенная, д. 19/8
+          Санкт-Петербург
+        </address>
+        <h2 class="visually-hidden">Карта</h2>
+        <img src="./img/photos/map.png" alt="Карта">
+        <img src="./img/photos/superCat.png" alt="SuperCat">
+      </section>
+    </main>
+    <footer class="footer">
+        <a class="footer__logo">
+          <svg width="128" height="24" aria-label="Логотип магазина"><use xlink:href="./img/svg/icons.svg#logo-words"></use></svg>
+        </a>
+        <ul class="footer__social-list social-list">
+          <li class="social-list__item">
+            <a href="#" aria-label="Иконка ВКонтакте"><svg width="27" height="17"><use xlink:href="./img/svg/icons.svg#icon-vk"></use></svg></a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" aria-label="Иконка Youtube"><svg width="24" height="19"><use xlink:href="./img/svg/icons.svg#icon-youtube"></use></svg></a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" aria-label="Иконка Telegram"><svg width="20" height="18"><use xlink:href="./img/svg/icons.svg#icon-telegram"></use></svg></a>
+          </li>
+        </ul>
+        <ul class="footer__academy-links academy-links">
+          <li class="academy-links__item">
+            <a href="https://htmlacademy.ru">HTML Academy</a>
+          </li>
+          <li class="academy-links__item">
+            <a href="https://htmlacademy.ru">
+              <svg width="27" height="34"><use xlink:href="./img/svg/icons.svg#html-academy"></use></svg>
+            </a>
+          </li>
+        </ul>
+    </footer>
+  </body>
+</html>

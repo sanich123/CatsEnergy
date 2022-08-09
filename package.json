@@ -9,8 +9,11 @@
     "gulp-less": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-pug-linter": "^1.5.0",
     "postcss": "^8.4.16",
     "postcss-less": "^6.0.0",
+    "pug": "^3.0.2",
     "stylelint": "^14.9.1",
     "stylelint-config-recommended": "^8.0.0"
   },

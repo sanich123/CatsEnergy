@@ -5,6 +5,7 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import pug from 'gulp-pug';
+import pugLinter from 'gulp-pug-linter';
 
 // Styles
 

@@ -1,0 +1,70 @@
+-
+  const catalogItems = [{
+    h3: 'Cat Energy PRO 500 г',
+    imgSrc: "./img/photos/catalog/catEnergy500.png",
+    imgAlt: "Cat Energy 500",
+    dd1: '500 г',
+    dd2: 'Курица',
+    dd3: '700 Р.'
+  }, {
+    h3: 'Cat Energy PRO 1000 г',
+    imgSrc: "./img/photos/catalog/catEnergy1000.png",
+    imgAlt: "Cat Energy 1000",
+    dd1: '1000 г',
+    dd2: 'Курица',
+    dd3: '1000 Р.'
+  }, {
+    h3: 'Cat Energy PRO 500 г',
+    imgSrc: "./img/photos/catalog/catEnergy500fish.png",
+    imgAlt: "Cat Energy 500 with fish",
+    dd1: '500 г',
+    dd2: 'Рыба',
+    dd3: '700 Р.'
+  }, {
+    h3: 'Cat Energy PRO 1000 г',
+    imgSrc: "./img/photos/catalog/catEnergy1000fish.png",
+    imgAlt: "Cat Energy 1000 with fish",
+    dd1: '1000 г',
+    dd2: 'Рыба',
+    dd3: '1000 Р.'
+  }, {
+    h3: 'Cat Energy SLIM 500 г',
+    imgSrc: "./img/photos/catalog/catEnergy500buckwheat.png",
+    imgAlt: "Cat Slim buckwheat 500",
+    dd1: '500 г',
+    dd2: 'Гречка',
+    dd3: '400 Р.'
+  }, {
+    h3: 'Cat Energy SLIM 1000 г',
+    imgSrc: "./img/photos/catalog/catSlim1000backwheat.png",
+    imgAlt: "Cat Slim buckwheat 1000",
+    dd1: '1000 г',
+    dd2: 'Гречка',
+    dd3: '700 Р.'
+  }, {
+    h3: 'Cat Energy SLIM 500 г',
+    imgSrc: "./img/photos/catalog/catSlim500rice.png",
+    imgAlt: "Cat Slim rice 500",
+    dd1: '500 г',
+    dd2: 'Рис',
+    dd3: '500 Р.'
+  }];
+
+section.catalog
+    ul.catalog-list
+    each item in catalogItems
+        li.catalog-list__item
+            h3=item.h3
+            img(src=item.imgSrc, alt=item.imgAlt)
+            dl
+                dt Масса
+                dd=item.dd1
+                dt Вкус
+                dd=item.dd2
+                dt Цена
+                dd=item.dd3
+            button(type="button") Заказать
+        li(class="catalog-list_item show-more")
+            h3 Показать еще 100500 товаров
+            p На самом деле вкусов гораздо больше!
+            button(type="button") Показать все

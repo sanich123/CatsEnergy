@@ -1,0 +1,32 @@
+-
+  const goods = [{
+    name: 'Сахарозаменитель',
+    dt: '1 упаковка (100 г)',
+    dd: '200 Р.',
+  }, {
+    name: 'Питьевая вода',
+    dt: '5 литров',
+    dd: '50 Р.',
+  }, {
+    name: 'Молоко',
+    dt: '1 литр',
+    dd: '100 Р.',
+  }, {
+    name: 'Витамины',
+    dt: '1 упаковка (30 г)',
+    dd: '300 Р.',
+  }];
+
+section additional
+    h2 Дополнительные товары
+    ul(class="additional__list goods-list")
+    each good in goods
+        li.goods-list__item
+            h3=good.name
+            dl
+                dt=good.dt
+                dd=good.dd
+            button(type="button") Заказать
+    .additional__offer
+        h2 Закажите все и получите чехол для кота в подарок!
+        img(src="./img/photos/catalog/background-img.png" alt="Some grumpy cat in the backpack")

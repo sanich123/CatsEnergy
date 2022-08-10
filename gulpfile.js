@@ -20,19 +20,13 @@ export const styles = () => {
 
 // Html
 
-export const html = () => {
-  return gulp.src('source/pug/pages/index.pug')
+export const pugToHtml = () => {
+  return gulp.src('source/pug/pages/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('source'))
   .pipe(browser.stream());
 }
 
-export const form = () => {
-  return gulp.src('source/pug/pages/form.pug')
-  .pipe(pug())
-  .pipe(gulp.dest('source'))
-  .pipe(browser.stream())
-}
 
 // Server
 
@@ -51,13 +45,12 @@ const server = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/pug/pages/index.pug', gulp.series(html))
-  gulp.watch('source/pug/pages/form.pug', gulp.series(form))
+  gulp.watch('source/pug/pages/*.pug', gulp.series(pugToHtml));
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 
 export default gulp.series(
-  html, form, styles, server, watcher
+  pugToHtml, styles, server, watcher
 );

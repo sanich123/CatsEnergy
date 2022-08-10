@@ -1,5 +1,5 @@
 -
-  var programms = [{
+  const programms = [{
     width: '36',
     height: '50',
     path: './img/svg/icons.svg#cat\'s-silouette-1',
@@ -21,8 +21,8 @@ section(class="programms" aria-label="Список программ")
         li.programms-list__item
             svg(width=program.width, height=program.height)
                 use(xlink:href=program.path)
-            h2 program.h2
-            p program.p
-            a(href="#") `Каталог ${program.a}`
+            h2=program.h2
+            p=program.p
+            a(href="#")=`Каталог ${program.a}`
                 svg(width="24" height="12"): use(xlink:href="./img/svg/icons.svg#arrow")
 

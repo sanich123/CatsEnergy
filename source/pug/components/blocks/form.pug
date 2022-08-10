@@ -1,0 +1,48 @@
+section.form
+    h2.visually-hidden Информация о вашем питомце
+    p Заполните анкету, и мы подберем программу питания для вашего кота
+    form(action="https://echo.htmlacademy.ru",method="post")
+        fieldset
+            legend.visually-hidden Your cat's data
+            label Имя:*
+                input#name(type="text" name="name" placeholder="БАРСИК" required)
+            label Вес (кг):*
+                input#weight(type="number" name="weight" placeholder="7" required)
+            label Возраст (лет)
+                input#age(type="number" name="age" placeholder="7")
+        fieldset
+            legend.visually-hidden Options
+            label Похудение
+                input#starving(type="checkbox" name="starving" checked)
+            label  Набор массы
+                input#gaining(type="checkbox" name="gaining")
+            label Не знаю (Нужен ваш совет)
+                input#notKnow(type="checkbox" name="notKnow")
+        fieldset
+            legend.visually-hidden Контактные данные (владельца кота)
+            label E-mail:*
+                input#email(type="email" name="email" placeholder="kuklachev@gmail.com" required)
+                svg(width="20" height="15")
+                    use(xlink:href="./img/svg/icons.svg#icon-mail")
+            label Телефон:*
+                input#phone(type="tel" name="phone" placeholder="8 (960) 900-60-90" required)
+                svg(width="20" height="21")
+                    use(xlink:href="./img/svg/icons.svg#icon-phone")
+        fieldset
+            legend Комментарий
+            label(aria-label="Tell us about your cat's habits")
+                textarea#message(name="message" placeholder="Расскажите обо всех повАдках кота")
+        fieldset
+            legend Дополнительно
+            label Сахарозаменитель
+                input#sugarChanger(type="radio" name="sugarChanger")
+            label Питьевая вода
+                input#water(type="radio" name="water")
+            label Молоко
+                input#mil(type="radio" name="milk" checked)
+            label Витамины
+                input#vitamins(type="radio" name="vitamins")
+        button(type="submit") Отправить заявку
+    span * — Обязательные поля
+
+

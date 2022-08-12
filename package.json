@@ -14,7 +14,7 @@
     "postcss": "^8.4.16",
     "postcss-less": "^6.0.0",
     "pug": "^3.0.2",
-    "stylelint": "^14.9.1",
+    "stylelint": "^14.10.0",
     "stylelint-config-recommended": "^8.0.0"
   },
   "scripts": {

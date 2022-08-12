@@ -1,0 +1,45 @@
+@import '../global/variables.less';
+@import '../mixins/mixins.less';
+
+.promo {
+    min-height: 480px;
+    .container(@mobile-width);
+    position: relative;
+
+    &__background-wrapper {
+      min-height: 302px;
+      background-color: rgba(104, 183, 56, 0.85);
+      background-image: url('../../img/photos/backgroundCat.png');
+    }
+  h2 {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 36px;
+    color: @white;
+  }
+  a {
+    .to-center();
+    padding: 7px 44px;
+    margin: 138px 20px;
+    font-size: 14px;
+    line-height: 18px;
+    background: @base-green;
+    text-transform: uppercase;
+    color: @white;
+  }
+  p {
+    .to-center();
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: @white;
+  }
+  img {
+    position: absolute;
+    top: 33%;
+  }
+}
+
+
+

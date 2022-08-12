@@ -2,21 +2,33 @@
 @import '../mixins/mixins.less';
 
 .promo {
-    min-height: 480px;
-    .container(@mobile-width);
-    position: relative;
+  min-height: 480px;
+  .container(@mobile-width);
+  position: relative;
 
-    &__background-wrapper {
-      min-height: 302px;
-      background-color: rgba(104, 183, 56, 0.85);
-      background-image: url('../../img/photos/backgroundCat.png');
+  &__background-wrapper {
+    padding-top: 15px;//не получается выровнять нормально
+    min-height: 302px;
+    background-color: rgba(104, 183, 56, 0.85);
+    background-image: url('../../img/photos/backgroundCat.png');
+      p {
+        .to-center();
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: @white;
+      }
+      h2 {
+        margin-top: 5px;//это тоже пока не получается
+        text-align: center;
+        font-size: 36px;
+        line-height: 36px;
+        color: @white;
+      }
     }
-  h2 {
-    margin-top: 25px;
-    text-align: center;
-    font-size: 36px;
-    line-height: 36px;
-    color: @white;
+  img {
+    position: absolute;
+    top: 33%;
   }
   a {
     .to-center();
@@ -27,17 +39,6 @@
     background: @base-green;
     text-transform: uppercase;
     color: @white;
-  }
-  p {
-    .to-center();
-    font-size: 14px;
-    line-height: 14px;
-    text-transform: uppercase;
-    color: @white;
-  }
-  img {
-    position: absolute;
-    top: 33%;
   }
 }
 

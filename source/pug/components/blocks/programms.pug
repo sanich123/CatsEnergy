@@ -17,13 +17,13 @@
 
 section(class="programms" aria-label="Список программ")
     ul(class="programms-list")
-    each program in programms
-        li.programms-list__item
-            .heading-wrapper
-                svg(width=program.width, height=program.height)
-                    use(xlink:href=program.path)
-                h2=program.h2
-            p=program.p
-            a(href="#")=`Каталог ${program.a}`
-                svg(width="24" height="12"): use(xlink:href="./img/svg/icons.svg#arrow")
+        each program in programms
+            li.programms-list__item
+                .heading-wrapper
+                    svg(width=program.width, height=program.height)
+                        use(xlink:href=program.path)
+                    h2=program.h2
+                p=program.p
+                a(href="#")=`Каталог ${program.a}`
+                    svg(width="24" height="12"): use(xlink:href="./img/svg/icons.svg#arrow")
 

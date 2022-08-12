@@ -400,9 +400,14 @@ a {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+/* stylelint-disable CssSyntaxError */
 .programms {
   width: 320px;
   margin: 0 auto;
+}
+.programms-list {
+  list-style: none;
+  padding: 0;
 }
 .programms-list__item {
   margin-top: 10px;
@@ -423,12 +428,12 @@ a {
   text-transform: uppercase;
 }
 .programms-list__item .heading-wrapper::before {
-  content: '.';
+  position: absolute;
+  content: '';
   width: 50px;
   height: 50px;
   background-color: #68B738;
   border-radius: 50%;
-  position: absolute;
   z-index: 2;
 }
 .programms-list__item .heading-wrapper svg {
@@ -451,6 +456,94 @@ a {
 }
 .programms-list__item a svg {
   margin-left: 17px;
+}
+.description__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+.description__wrapper h2 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+.description__wrapper .description-list {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+}
+.description__wrapper .description-list__item {
+  display: grid;
+  grid-template-columns: 60px auto;
+  gap: 20px;
+}
+.description__wrapper .description-list__item p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+.example__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #EAEAEA;
+  padding: 20px;
+  min-height: 700px;
+}
+.example__wrapper h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  line-height: 40px;
+}
+.example__wrapper p {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+.example__wrapper .example__statistics dt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+.example__wrapper .example__statistics dt dd {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #444444;
+}
+.example__wrapper h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.example__wrapper .example__progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.contacts {
+  width: 320px;
+  margin: 0 auto;
+}
+.footer {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #F2F2F2;
 }
 :root {
   --base-green: #68B738;

@@ -1,0 +1,36 @@
+@import "../global/variables.less";
+@import "../mixins/mixins.less";
+
+.description {
+  &__wrapper {
+    .container(@mobile-width);
+    h2 {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: center;
+    }
+    .description-list {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      gap: 20px;
+    }
+
+    .description-list__item {
+      display: grid;
+      grid-template-columns: 60px auto;
+      gap: 20px;
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: @special-dark-grey;
+      }
+    }
+  }
+}

@@ -4,4 +4,34 @@
 .footer {
   .container(@mobile-width);
   background-color: @base-grey;
+  display: grid;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+
+  .social-list {
+    .reset-ul();
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .academy-links {
+    width: 100%;
+    .reset-ul();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      color: @special-dark-grey;
+    }
+  }
 }

@@ -1,7 +1,38 @@
 @import '../global/variables.less';
 @import '../mixins/mixins.less';
 
-
 .contacts {
   .container(@mobile-width);
+  &__address-wrapper {
+    width: 100%;
+    padding: 26px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    h2 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: @special-black;
+    }
+    address {
+      font-family: 'Arial';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: @special-dark-grey;
+    }
+  }
+  &__map-wrapper {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
 }

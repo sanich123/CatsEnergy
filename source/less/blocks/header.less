@@ -4,12 +4,37 @@
 .header {
   &__wrapper {
     .container(@mobile-width);
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    align-items: center;
+  }
+
+  .header__toggler {
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
 }
 
 .nav {
   &__wrapper {
     .container(@mobile-width);
+  }
+  &-list {
+    .reset-ul();
+    &__item {
+      .to-center();
+      min-height: 66px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      border-top: 1px solid #E6E6E6;
+      a {
+        color: @black;
+      }
+    }
   }
 }
 

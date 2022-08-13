@@ -311,6 +311,13 @@ template {
   src: url("../../fonts/Oswald-Regular.woff2") format("woff2"), url("../../fonts/Oswald-Regular.woff") format("woff");
   font-display: swap;
 }
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/Oswald-Medium.woff2") format("woff2"), url("../../fonts/Oswald-Medium.woff") format("woff");
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -348,13 +355,46 @@ a {
   align-items: center;
   justify-content: center;
 }
+.reset-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .header__wrapper {
   width: 320px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  align-items: center;
+}
+.header .header__toggler {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 .nav__wrapper {
   width: 320px;
   margin: 0 auto;
+}
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 66px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-top: 1px solid #E6E6E6;
+}
+.nav-list__item a {
+  color: #000000;
 }
 .promo {
   min-height: 480px;
@@ -540,10 +580,71 @@ a {
   width: 320px;
   margin: 0 auto;
 }
+.contacts__address-wrapper {
+  width: 100%;
+  padding: 26px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.contacts__address-wrapper h2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+}
+.contacts__address-wrapper address {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+.contacts__map-wrapper {
+  position: relative;
+}
+.contacts__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
 .footer {
   width: 320px;
   margin: 0 auto;
   background-color: #F2F2F2;
+  display: grid;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+.footer .social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .academy-links {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .academy-links a {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
 }
 :root {
   --base-green: #68B738;

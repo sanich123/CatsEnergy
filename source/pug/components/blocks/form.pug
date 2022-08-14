@@ -1,7 +1,8 @@
-section.form
-    h2.visually-hidden Информация о вашем питомце
+- var d = 200;
+section(class="form" aria-label="Информация о вашем питомце")
+    h2 Подбор программы
     p Заполните анкету, и мы подберем программу питания для вашего кота
-    form(action="https://echo.htmlacademy.ru",method="post")
+    form(action="https://echo.htmlacademy.ru" method="post")
         fieldset
             legend.visually-hidden Your cat's data
             label Имя:*
@@ -12,12 +13,12 @@ section.form
                 input#age(type="number" name="age" placeholder="7")
         fieldset
             legend.visually-hidden Options
-            label Похудение
-                input#starving(type="checkbox" name="starving" checked)
-            label  Набор массы
-                input#gaining(type="checkbox" name="gaining")
-            label Не знаю (Нужен ваш совет)
-                input#notKnow(type="checkbox" name="notKnow")
+            label.checkbox-label Похудение
+                input#starving(class="visually-hidden" type="checkbox" name="starving" checked)
+            label.checkbox-label  Набор массы
+                input#gaining(class="visually-hidden" type="checkbox" name="gaining")
+            label.checkbox-label Не знаю (Нужен ваш совет)
+                input#notKnow(class="visually-hidden" type="checkbox" name="notKnow")
         fieldset
             legend.visually-hidden Контактные данные (владельца кота)
             label E-mail:*
@@ -34,14 +35,19 @@ section.form
                 textarea#message(name="message" placeholder="Расскажите обо всех повАдках кота")
         fieldset
             legend Дополнительно
-            label Сахарозаменитель
-                input#sugarChanger(type="radio" name="sugarChanger")
-            label Питьевая вода
-                input#water(type="radio" name="water")
-            label Молоко
-                input#mil(type="radio" name="milk" checked)
-            label Витамины
-                input#vitamins(type="radio" name="vitamins")
+            input#sugarChanger(class="visually-hidden" type="radio" name="sugarChanger")
+            label(for="sugarChanger" class="radio-label") Cахарозаменитель
+            input(type="checkbox", id="check")
+            label(for="check", style='--d: '+d+'px')
+                svg(viewBox=[0, 0, 50, 50].join( ))
+                    path(d="M6 26 L 20 40 L 45 10")
+
+            //- label.radio-label Питьевая вода
+            //-     input#water(class="visually-hidden" type="radio" name="water")
+            //- label.radio-label Молоко
+            //-     input#mil(class="visually-hidden" type="radio" name="milk" checked)
+            //- label.radio-label Витамины
+            //-     input#vitamins(class="visually-hidden" type="radio" name="vitamins")
         button(type="submit") Отправить заявку
     span * — Обязательные поля
 

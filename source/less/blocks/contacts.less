@@ -3,6 +3,7 @@
 
 .contacts {
   .container(@mobile-width);
+  background-color: @base-grey;
   &__address-wrapper {
     width: 100%;
     padding: 26px 20px;
@@ -18,12 +19,9 @@
       color: @special-black;
     }
     address {
-      font-family: 'Arial';
-      font-style: normal;
-      font-weight: 400;
+      .arial-font();
       font-size: 14px;
       line-height: 20px;
-      color: @special-dark-grey;
     }
   }
   &__map-wrapper {

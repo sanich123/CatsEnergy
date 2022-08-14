@@ -1,0 +1,118 @@
+@import '../global/variables.less';
+@import '../mixins/mixins.less';
+
+.form {
+  .container(@mobile-width);
+  padding: 0 20px;
+
+  h2 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    color: @black;
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @black;
+  }
+
+  fieldset {
+    border: none;
+    border-bottom: 1px solid @light-grey;
+    display: grid;
+    padding: 0;
+    gap: 13px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+
+    label {
+      font-size: 16px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: @special-dark-grey;
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+
+      input {
+        border: 1px solid @light-grey2;
+        height: 45px;
+        padding-left: 14px;
+
+        &::placeholder {
+          font-size: 16px;
+          line-height: 18px;
+          color: @special-dark-grey;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+  .radio-label {
+    position: relative;
+  }
+  .radio-label::before {
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 26px;
+    border: 1px solid @special-grey;
+}
+  .radio-label::after {
+    display: none;
+    position: absolute;
+    content:'';
+    width: 18px;
+    height: 14px;
+    background-image: url('../../img/svg/checked.svg');
+    background-size: 18px 14px;
+    background-repeat: no-repeat;
+  }
+
+  #sugarChanger:checked + .radio-label::after {
+    display: block;
+  }
+
+  input#check {
+	position: absolute;
+	opacity: 0;
+
+	&:checked + label svg path {
+		stroke-dashoffset: 0;
+	}
+
+	&:focus + label {
+		transform: scale(1.03);
+	}
+}
+
+#check + label {
+	display: block;
+	border: 1px solid @special-grey;
+	width: 26px;
+  height: 26px;
+	cursor: pointer;
+
+	&:active {
+		transform: scale(1.3);
+	}
+
+	svg {
+		pointer-events: none;
+		path {
+			fill: none;
+			stroke: @base-green;
+			stroke-width: 4px;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-dasharray: 100;
+			stroke-dashoffset: 101;
+		}
+	}
+}
+

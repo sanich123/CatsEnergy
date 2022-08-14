@@ -1,0 +1,77 @@
+@import '../global/variables.less';
+@import '../mixins/mixins.less';
+
+.additional {
+  .container(@mobile-width);
+  padding: 30px 20px;
+  h2 {
+    position: relative;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: @black;
+
+    &::after {
+      position: absolute;
+      content: '';
+      transform: translate(23px, 15px) rotate(180deg);
+      width: 53px;
+      border: 2px solid @base-green;
+    }
+  }
+
+  &__list {
+    .reset-ul();
+  }
+
+  .goods-list__item {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid @special-grey;
+    min-height: 130px;
+    padding-bottom: 20px;
+
+    h3 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: @special-dark-grey2;
+    }
+
+    dl {
+      display: flex;
+      justify-content: space-between;
+
+      dt, dd {
+        .arial-font();
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+  }
+  &__offer {
+    display: flex;
+    width: 279px;
+    height: 289px;
+    background-image: url("../../img/photos/catalog/grumpy-cat-in-backpack.png");
+    background-repeat: no-repeat;
+    position: relative;
+    flex-direction: column-reverse;
+    padding-bottom: 45px;
+
+    svg {
+      position: absolute;
+      top: 40px;
+      left: 100px;
+    }
+
+    h3 {
+      .arial-font();
+      font-size: 16px;
+      line-height: 20px;
+      color: @white;
+      text-align: center;
+    }
+  }
+}

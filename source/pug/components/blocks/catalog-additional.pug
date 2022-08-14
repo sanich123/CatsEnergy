@@ -17,16 +17,17 @@
     dd: '300 Р.',
   }];
 
-section additional
+section.additional
     h2 Дополнительные товары
     ul(class="additional__list goods-list")
-    each good in goods
-        li.goods-list__item
-            h3=good.name
-            dl
-                dt=good.dt
-                dd=good.dd
-            button(type="button") Заказать
+        each good in goods
+            li.goods-list__item
+                h3=good.name
+                dl
+                    dt=good.dt
+                    dd=good.dd
+                button(class="accept-btn" type="button") Заказать
     .additional__offer
-        h2 Закажите все и получите чехол для кота в подарок!
-        img(src="./img/photos/catalog/background-img.png" alt="Some grumpy cat in the backpack")
+        svg(width="78" height="80")
+            use(xlink:href="./img/svg/icons.svg#gift-icon")
+        h3 Закажите все <br>и получите чехол для <br>кота в подарок!

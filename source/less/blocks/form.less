@@ -53,17 +53,18 @@
     }
   }
 }
-  .radio-label {
+  .checkbox-label {
     position: relative;
+    display: flex;
   }
-  .radio-label::before {
+  .checkbox-label::before {
     position: absolute;
     content: '';
     width: 26px;
     height: 26px;
     border: 1px solid @special-grey;
 }
-  .radio-label::after {
+  .checkbox-label::after {
     display: none;
     position: absolute;
     content:'';
@@ -74,45 +75,9 @@
     background-repeat: no-repeat;
   }
 
-  input#sugarChanger:checked + .radio-label::after {
+  #sugarChanger:checked + .checkbox-label::after,
+  #water:checked + .checkbox-label::after,
+  #milk:checked + .checkbox-label::after,
+  #vitamins:checked + .checkbox-label::after {
     display: block;
   }
-
-  input#check {
-	position: absolute;
-	opacity: 0;
-
-	&:checked + label svg path {
-		stroke-dashoffset: 0;
-	}
-
-	&:focus + label {
-		transform: scale(1.03);
-	}
-}
-
-#check + label {
-	display: block;
-	border: 1px solid @special-grey;
-	width: 26px;
-  height: 26px;
-	cursor: pointer;
-
-	&:active {
-		transform: scale(1.3);
-	}
-
-	svg {
-		pointer-events: none;
-		path {
-			fill: none;
-			stroke: @base-green;
-			stroke-width: 4px;
-			stroke-linecap: round;
-			stroke-linejoin: round;
-			stroke-dasharray: 100;
-			stroke-dashoffset: 101;
-		}
-	}
-}
-

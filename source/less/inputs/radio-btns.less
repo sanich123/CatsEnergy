@@ -1,0 +1,35 @@
+@import '../global/variables.less';
+
+.radio-label {
+  position: relative;
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 1px solid @special-grey;
+    border-radius: 50%;
+    left: -40px;
+  }
+
+  &::after {
+    display: none;
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: @base-green;
+    left: -32px;
+  }
+}
+
+#starving:checked + .radio-label::after,
+#gaining:checked + .radio-label::after,
+#notKnow:checked + .radio-label::after {
+  display: block;
+}

@@ -1,5 +1,8 @@
 @import '../global/variables.less';
 @import '../mixins/mixins.less';
+@import '../inputs/checkboxes.less';
+@import '../inputs/radio-btns.less';
+@import '../inputs/email-phone.less';
 
 .form {
   .container(@mobile-width);
@@ -19,6 +22,10 @@
     color: @black;
   }
 
+  button {
+    width: 100%;
+  }
+
   fieldset {
     border: none;
     border-bottom: 1px solid @light-grey;
@@ -27,6 +34,12 @@
     gap: 13px;
     margin-bottom: 10px;
     padding-bottom: 10px;
+
+    legend {
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
 
 
     label {
@@ -53,31 +66,4 @@
     }
   }
 }
-  .checkbox-label {
-    position: relative;
-    display: flex;
-  }
-  .checkbox-label::before {
-    position: absolute;
-    content: '';
-    width: 26px;
-    height: 26px;
-    border: 1px solid @special-grey;
-}
-  .checkbox-label::after {
-    display: none;
-    position: absolute;
-    content:'';
-    width: 18px;
-    height: 14px;
-    background-image: url('../../img/svg/checked.svg');
-    background-size: 18px 14px;
-    background-repeat: no-repeat;
-  }
 
-  #sugarChanger:checked + .checkbox-label::after,
-  #water:checked + .checkbox-label::after,
-  #milk:checked + .checkbox-label::after,
-  #vitamins:checked + .checkbox-label::after {
-    display: block;
-  }

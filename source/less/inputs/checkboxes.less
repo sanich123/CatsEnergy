@@ -1,0 +1,34 @@
+.checkbox-label {
+  position: relative;
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+.checkbox-label::before {
+  position: absolute;
+  content: '';
+  width: 26px;
+  height: 26px;
+  border: 1px solid @special-grey;
+  left: -40px
+}
+
+.checkbox-label::after {
+  position: absolute;
+  display: none;
+  content:'';
+  width: 18px;
+  height: 14px;
+  background-image: url('../../img/svg/checked.svg');
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+  left: -35px;
+}
+
+#sugarChanger:checked + .checkbox-label::after,
+#water:checked + .checkbox-label::after,
+#milk:checked + .checkbox-label::after,
+#vitamins:checked + .checkbox-label::after {
+  display: block;
+}

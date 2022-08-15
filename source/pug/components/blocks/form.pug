@@ -1,4 +1,3 @@
-- var d = 200;
 section(class="form" aria-label="Информация о вашем питомце")
     h2 Подбор программы
     p Заполните анкету, и мы подберем программу питания для вашего кота
@@ -13,19 +12,19 @@ section(class="form" aria-label="Информация о вашем питомц
                 input#age(type="number" name="age" placeholder="7")
         fieldset
             legend.visually-hidden Options
-            label.checkbox-label Похудение
-                input#starving(class="visually-hidden" type="checkbox" name="starving" checked)
-            label.checkbox-label  Набор массы
-                input#gaining(class="visually-hidden" type="checkbox" name="gaining")
-            label.checkbox-label Не знаю (Нужен ваш совет)
-                input#notKnow(class="visually-hidden" type="checkbox" name="notKnow")
+            input#starving(class="visually-hidden" type="radio" name="program" checked)
+            label(for="starving" class="radio-label") Похудение
+            input#gaining(class="visually-hidden" type="radio" name="program")
+            label(for="gaining" class="radio-label") Набор массы
+            input#notKnow(class="visually-hidden" type="radio" name="program")
+            label(for="notKnow" class="radio-label") Не знаю (Нужен ваш совет)
         fieldset
-            legend.visually-hidden Контактные данные (владельца кота)
-            label E-mail:*
+            legend Контактные данные (владельца кота)
+            label(for="email" class="email-label") E-mail:*
                 input#email(type="email" name="email" placeholder="kuklachev@gmail.com" required)
                 svg(width="20" height="15")
                     use(xlink:href="./img/svg/icons.svg#icon-mail")
-            label Телефон:*
+            label(for="phone" class="phone-label") Телефон:*
                 input#phone(type="tel" name="phone" placeholder="8 (960) 900-60-90" required)
                 svg(width="20" height="21")
                     use(xlink:href="./img/svg/icons.svg#icon-phone")
@@ -43,7 +42,7 @@ section(class="form" aria-label="Информация о вашем питомц
             label(for="milk" class="checkbox-label") Молоко
             input#vitamins(class="visually-hidden" type="checkbox" name="vitamins")
             label(for="vitamins" class="checkbox-label") Витамины
-        button(type="submit") Отправить заявку
+        button(type="submit" class="accept-btn") Отправить заявку
     span * — Обязательные поля
 
 

@@ -863,6 +863,87 @@ a {
   color: #FFFFFF;
   text-align: center;
 }
+.checkbox-label {
+  position: relative;
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.checkbox-label::before {
+  position: absolute;
+  content: '';
+  width: 26px;
+  height: 26px;
+  border: 1px solid #CDCDCD;
+  left: -40px;
+}
+.checkbox-label::after {
+  position: absolute;
+  display: none;
+  content: '';
+  width: 18px;
+  height: 14px;
+  background-image: url('../../img/svg/checked.svg');
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+  left: -35px;
+}
+#sugarChanger:checked + .checkbox-label::after,
+#water:checked + .checkbox-label::after,
+#milk:checked + .checkbox-label::after,
+#vitamins:checked + .checkbox-label::after {
+  display: block;
+}
+.radio-label {
+  position: relative;
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.radio-label::before {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 1px solid #CDCDCD;
+  border-radius: 50%;
+  left: -40px;
+}
+.radio-label::after {
+  display: none;
+  position: absolute;
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #68B738;
+  left: -32px;
+}
+#starving:checked + .radio-label::after,
+#gaining:checked + .radio-label::after,
+#notKnow:checked + .radio-label::after {
+  display: block;
+}
+.email-label,
+.phone-label {
+  position: relative;
+}
+.email-label svg {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+.phone-label svg {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+#email {
+  margin-left: -45px;
+}
+#phone {
+  margin-left: -25px;
+}
 .form {
   width: 320px;
   margin: 0 auto;
@@ -881,6 +962,9 @@ a {
   text-transform: uppercase;
   color: #000000;
 }
+.form button {
+  width: 100%;
+}
 .form fieldset {
   border: none;
   border-bottom: 1px solid #D9D9D9;
@@ -889,6 +973,11 @@ a {
   gap: 13px;
   margin-bottom: 10px;
   padding-bottom: 10px;
+}
+.form fieldset legend {
+  font-size: 24px;
+  line-height: 26px;
+  margin-bottom: 15px;
 }
 .form fieldset label {
   font-size: 16px;
@@ -909,33 +998,6 @@ a {
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
-}
-.checkbox-label {
-  position: relative;
-  display: flex;
-}
-.checkbox-label::before {
-  position: absolute;
-  content: '';
-  width: 26px;
-  height: 26px;
-  border: 1px solid #CDCDCD;
-}
-.checkbox-label::after {
-  display: none;
-  position: absolute;
-  content: '';
-  width: 18px;
-  height: 14px;
-  background-image: url('../../img/svg/checked.svg');
-  background-size: 18px 14px;
-  background-repeat: no-repeat;
-}
-#sugarChanger:checked + .checkbox-label::after,
-#water:checked + .checkbox-label::after,
-#milk:checked + .checkbox-label::after,
-#vitamins:checked + .checkbox-label::after {
-  display: block;
 }
 :root {
   --base-green: #68B738;

@@ -2,6 +2,9 @@
 @import '../mixins/mixins.less';
 
 .header {
+  &__logo--tablet {
+    display: none;
+  }
 
   &__wrapper {
     .container(@mobile-width);
@@ -41,4 +44,58 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .header {
+    padding: 24px 30px;
+    .container(@tablet-width);
+    display: grid;
+    grid-template-columns: 33% 66%;
+
+    &__logo--tablet {
+      display: block;
+    }
+
+    &__logo,
+    &__toggler {
+      display: none;
+    }
+
+    .nav {
+      width: auto;
+      margin: 0;
+        &-list {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          column-gap: 10px;
+        &__item {
+          font-size: 18px;
+          line-height: 24px;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    padding: 55px 110px;
+    .container(@desktop-width);
+    grid-template-columns: 50% 50%;
+    .nav {
+    background-color: @base-green;
+      &-list {
+
+        justify-content: center;
+
+        &__item {
+          a {
+          color: @white;
+          }
+        }
+      }
+    }
+  }
+}
 

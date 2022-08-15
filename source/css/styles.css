@@ -332,11 +332,13 @@ img {
   height: auto;
 }
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   list-style: none;
-  height: 100vh;
+  min-height: 100vh;
 }
 a {
   text-decoration: none;
@@ -385,6 +387,9 @@ a {
   font-weight: 400;
   color: #444444;
 }
+.header__logo--tablet {
+  display: none;
+}
 .header__wrapper {
   width: 320px;
   margin: 0 auto;
@@ -425,6 +430,54 @@ a {
 }
 .nav-list__item a {
   color: #000000;
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 24px 30px;
+    width: 768px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 66%;
+  }
+  .header__logo--tablet {
+    display: block;
+  }
+  .header__logo,
+  .header__toggler {
+    display: none;
+  }
+  .header .nav {
+    width: auto;
+    margin: 0;
+  }
+  .header .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 10px;
+  }
+  .header .nav-list__item {
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    padding: 55px 110px;
+    width: 1440px;
+    margin: 0 auto;
+    grid-template-columns: 50% 50%;
+  }
+  .header .nav {
+    background-color: #68B738;
+  }
+  .header .nav-list {
+    justify-content: center;
+  }
+  .header .nav-list__item a {
+    color: #FFFFFF;
+  }
 }
 .promo {
   min-height: 480px;
@@ -610,6 +663,7 @@ a {
   width: 320px;
   margin: 0 auto;
   background-color: #F2F2F2;
+  margin-top: 20px;
 }
 .contacts__address-wrapper {
   width: 100%;
@@ -998,6 +1052,34 @@ a {
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+}
+.form__require-fields {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 21px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+#message {
+  width: 280px;
+  min-height: 150px;
+  border: 1px solid #E7E7E7;
+  padding-top: 9px;
+  padding-left: 15px;
+  resize: none;
+}
+#message::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
 }
 :root {
   --base-green: #68B738;

@@ -488,8 +488,12 @@ a {
 .promo__background-wrapper {
   padding-top: 15px;
   min-height: 302px;
-  background-color: rgba(104, 183, 56, 0.85);
   background-image: url('../../img/photos/backgroundCat.png');
+}
+.promo__background-wrapper .some-wrapper {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(104, 183, 56, 0.85);
 }
 .promo__background-wrapper p {
   display: flex;

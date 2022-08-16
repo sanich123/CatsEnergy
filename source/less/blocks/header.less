@@ -2,11 +2,12 @@
 @import '../mixins/mixins.less';
 
 .header {
+  position: relative;
+
   &__logo--tablet {
     display: none;
   }
-
-  &__wrapper {
+   &__wrapper {
     .container(@mobile-width);
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
@@ -86,10 +87,13 @@
     .nav {
     background-color: @base-green;
       &-list {
-
         justify-content: center;
-
         &__item {
+          &--active {
+            a {
+              border-bottom: 2px solid @white;
+            }
+          }
           a {
           color: @white;
           }

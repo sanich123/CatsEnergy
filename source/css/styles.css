@@ -387,6 +387,9 @@ a {
   font-weight: 400;
   color: #444444;
 }
+.header {
+  position: relative;
+}
 .header__logo--tablet {
   display: none;
 }
@@ -475,37 +478,41 @@ a {
   .header .nav-list {
     justify-content: center;
   }
+  .header .nav-list__item--active a {
+    border-bottom: 2px solid #FFFFFF;
+  }
   .header .nav-list__item a {
     color: #FFFFFF;
   }
 }
 .promo {
-  min-height: 480px;
   width: 320px;
   margin: 0 auto;
+  min-height: 480px;
   position: relative;
 }
-.promo__background-wrapper {
-  padding-top: 15px;
+.promo__background-image {
+  position: relative;
   min-height: 302px;
   background-image: url('../../img/photos/backgroundCat.png');
 }
-.promo__background-wrapper .some-wrapper {
-  width: 100px;
-  height: 100px;
+.promo__background-image--color {
+  min-height: inherit;
   background-color: rgba(104, 183, 56, 0.85);
 }
-.promo__background-wrapper p {
+.promo__background-image p {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   color: #FFFFFF;
+  z-index: 999;
 }
-.promo__background-wrapper h2 {
-  margin-top: 5px;
+.promo__background-image h2 {
+  font-weight: 400;
   text-align: center;
   font-size: 36px;
   line-height: 36px;

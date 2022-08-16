@@ -2,29 +2,31 @@
 @import '../mixins/mixins.less';
 
 .promo {
-  min-height: 480px;
   .container(@mobile-width);
+  min-height: 480px;
   position: relative;
 
-  &__background-wrapper {
-    .some-wrapper {
-      width: 100px;
-      height: 100px;
+  &__background-image {
+    position: relative;
+    min-height: 302px;
+    background-image: url('../../img/photos/backgroundCat.png');
+
+    &--color {
+      min-height: inherit;
       background-color: rgba(104, 183, 56, 0.85);
     }
-    padding-top: 15px;//не получается выровнять нормально
-    min-height: 302px;
 
-    background-image: url('../../img/photos/backgroundCat.png');
       p {
         .to-center();
+        font-weight: 400;
         font-size: 14px;
         line-height: 14px;
         text-transform: uppercase;
         color: @white;
+        z-index: 999;
       }
       h2 {
-        margin-top: 5px;//это тоже пока не получается
+        font-weight: 400;
         text-align: center;
         font-size: 36px;
         line-height: 36px;

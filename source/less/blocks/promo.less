@@ -33,10 +33,11 @@
         color: @white;
       }
     }
-  img {
+  &__can-img {
     position: absolute;
     top: 33%;
   }
+
   a {
     .to-center();
     padding: 7px 44px;
@@ -46,6 +47,65 @@
     background: @base-green;
     text-transform: uppercase;
     color: @white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    background-image: url('../../img/photos/promo-food-tablet.png');
+    background-position: 30px 270px;
+    background-repeat: no-repeat;
+    .container(@tablet-width);
+    padding: 0 117px;
+    min-height: 900px;
+
+    &__background-image {
+      background-image: none;
+
+      &--color {
+        background-color: transparent;
+      }
+    }
+
+    p, h2 {
+      display: block;
+      text-align: start;
+      color: @black;
+    }
+
+    h2 {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    a {
+      display: inline-flex;
+      font-size: 20px;
+      line-height: 20px;
+      padding: 14px 26px;
+      margin: 0;
+      width: auto;
+      z-index: 999;
+    }
+    &__can-img {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    .container(@desktop-width);
+    background-image: none;
+    padding: 0 190px;
+    h2 {
+      width: 436px;
+    }
   }
 }
 

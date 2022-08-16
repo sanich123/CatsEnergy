@@ -340,6 +340,30 @@ body {
   list-style: none;
   min-height: 100vh;
 }
+@media (min-width: 1440px) {
+  body {
+    background: url('../../img/photos/bg-desktop.png') no-repeat top right;
+  }
+  body::before {
+    content: '';
+    width: 720px;
+    height: 694px;
+    background-color: rgba(104, 183, 56, 0.85);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  body::after {
+    content: '';
+    position: absolute;
+    width: 552px;
+    height: 499px;
+    background-image: url('../../img/photos/promo-food-desktop.png');
+    background-size: 552px 499px;
+    left: 700px;
+    top: 150px;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -472,9 +496,6 @@ a {
     margin: 0 auto;
     grid-template-columns: 50% 50%;
   }
-  .header .nav {
-    background-color: #68B738;
-  }
   .header .nav-list {
     justify-content: center;
   }
@@ -518,7 +539,7 @@ a {
   line-height: 36px;
   color: #FFFFFF;
 }
-.promo img {
+.promo__can-img {
   position: absolute;
   top: 33%;
 }
@@ -533,6 +554,60 @@ a {
   background: #68B738;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .promo {
+    background-image: url('../../img/photos/promo-food-tablet.png');
+    background-position: 30px 270px;
+    background-repeat: no-repeat;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 117px;
+    min-height: 900px;
+  }
+  .promo__background-image {
+    background-image: none;
+  }
+  .promo__background-image--color {
+    background-color: transparent;
+  }
+  .promo p,
+  .promo h2 {
+    display: block;
+    text-align: start;
+    color: #000000;
+  }
+  .promo h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .promo p {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .promo a {
+    display: inline-flex;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px;
+    margin: 0;
+    width: auto;
+    z-index: 999;
+  }
+  .promo__can-img {
+    display: none;
+  }
+}
+@media (min-width: 1440px) {
+  .promo {
+    width: 1440px;
+    margin: 0 auto;
+    background-image: none;
+    padding: 0 190px;
+  }
+  .promo h2 {
+    width: 436px;
+  }
 }
 /* stylelint-disable CssSyntaxError */
 .programms {

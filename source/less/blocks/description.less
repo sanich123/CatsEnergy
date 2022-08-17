@@ -40,38 +40,20 @@
       grid-template-rows: 230px 230px;
       column-gap: 153px;
       row-gap: 37px;
+      padding-bottom: 50px;
       &__item {
         display: grid;
         grid-template-columns: auto;
         align-content: space-around;
+        min-height: 280px;
+
         p {
           position: relative;
           font-size: 16px;
           line-height: 24px;
           width: 220px;
-          &::after {
-            position: absolute;
-            font-weight: 400;
-            font-size: 280px;
-            line-height: 280px;
-            color: #F2F2F2;
-          }
-        }
-        .first::after {
-          content: '1';
         }
 
-        .second::after {
-          content: '2';
-        }
-
-        .third::after {
-          content: '3';
-        }
-
-        .forth::after {
-          content: '4';
-        }
         #icon-clock,
         #icon-water,
         #icon-leaf,
@@ -79,8 +61,30 @@
           width: 80px;
           height: 80px;
         }
+      }
+      .first, .second, .third, .fourth {
+          background-repeat: no-repeat;
+          background-position: top right;
+      }
 
+      .first {
+          background-image: url('../../img/svg/icon-one.svg');
+          background-size: 112px 280px;
+      }
 
+      .second {
+          background-image: url('../../img/svg/icon-two.svg');
+          background-size: 134px 280px;
+      }
+
+      .third {
+          background-image: url('../../img/svg/icon-three.svg');
+          background-size: 134px 280px;
+      }
+
+      .fourth {
+          background-image: url('../../img/svg/icon-four.svg');
+          background-size: 136px 280px;
       }
     }
   }

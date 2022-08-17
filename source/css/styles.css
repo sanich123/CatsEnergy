@@ -791,11 +791,13 @@ a {
     grid-template-rows: 230px 230px;
     column-gap: 153px;
     row-gap: 37px;
+    padding-bottom: 50px;
   }
   .description-list__item {
     display: grid;
     grid-template-columns: auto;
     align-content: space-around;
+    min-height: 280px;
   }
   .description-list__item p {
     position: relative;
@@ -803,31 +805,35 @@ a {
     line-height: 24px;
     width: 220px;
   }
-  .description-list__item p::after {
-    position: absolute;
-    font-weight: 400;
-    font-size: 280px;
-    line-height: 280px;
-    color: #F2F2F2;
-  }
-  .description-list__item .first::after {
-    content: '1';
-  }
-  .description-list__item .second::after {
-    content: '2';
-  }
-  .description-list__item .third::after {
-    content: '3';
-  }
-  .description-list__item .forth::after {
-    content: '4';
-  }
   .description-list__item #icon-clock,
   .description-list__item #icon-water,
   .description-list__item #icon-leaf,
   .description-list__item #icon-fork {
     width: 80px;
     height: 80px;
+  }
+  .description-list .first,
+  .description-list .second,
+  .description-list .third,
+  .description-list .fourth {
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  .description-list .first {
+    background-image: url('../../img/svg/icon-one.svg');
+    background-size: 112px 280px;
+  }
+  .description-list .second {
+    background-image: url('../../img/svg/icon-two.svg');
+    background-size: 134px 280px;
+  }
+  .description-list .third {
+    background-image: url('../../img/svg/icon-three.svg');
+    background-size: 134px 280px;
+  }
+  .description-list .fourth {
+    background-image: url('../../img/svg/icon-four.svg');
+    background-size: 136px 280px;
   }
 }
 .example__wrapper {

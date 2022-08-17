@@ -609,46 +609,38 @@ a {
     width: 436px;
   }
 }
-/* stylelint-disable CssSyntaxError */
 .programms {
   width: 320px;
   margin: 0 auto;
-}
-.programms-list {
-  list-style: none;
-  padding: 0;
-}
-.programms-list__item {
-  margin-top: 10px;
-  min-height: 266px;
-  background-color: #d9d9d9;
   padding: 20px;
 }
-.programms-list__item .heading-wrapper {
-  padding: 20px 20px;
-  position: relative;
-  display: flex;
-  align-items: center;
+.programms-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 20px;
 }
-.programms-list__item .heading-wrapper h2 {
-  margin-left: 20px;
+.programms-list__item {
+  min-height: 266px;
+  background-color: #d9d9d9;
+  padding: 0 20px;
+  display: grid;
+  grid-template-areas: 'svg h2' 'p p' 'a a';
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+}
+.programms-list__item h2 {
+  grid-area: h2;
+  display: grid;
+  align-items: center;
+  font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 }
-.programms-list__item .heading-wrapper::before {
-  position: absolute;
-  content: '';
-  width: 50px;
-  height: 50px;
-  background-color: #68B738;
-  border-radius: 50%;
-  z-index: 2;
-}
-.programms-list__item .heading-wrapper svg {
-  z-index: 2;
-}
 .programms-list__item p {
+  grid-area: p;
   font-family: 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -657,6 +649,12 @@ a {
   line-height: 18px;
 }
 .programms-list__item a {
+  grid-area: a;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-self: center;
+  gap: 17px;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
@@ -664,7 +662,39 @@ a {
   color: #000000;
 }
 .programms-list__item a svg {
-  margin-left: 17px;
+  align-self: center;
+}
+.programms-list__item .icon-cat {
+  grid-area: svg;
+  display: grid;
+  justify-self: start;
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .programms {
+    width: 768px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .programms-list {
+    gap: 30px;
+  }
+  .programms-list__item {
+    padding-left: 52px;
+    padding-bottom: 57px;
+    padding-top: 40px;
+    grid-template-areas: 'h2 svg' 'p svg' 'a svg';
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto;
+  }
+  .programms-list__item .icon-cat {
+    justify-self: center;
+    align-self: center;
+  }
+  .programms-list__item #black-cat {
+    width: 200px;
+    height: 211px;
+  }
 }
 .description__wrapper {
   width: 320px;

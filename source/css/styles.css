@@ -747,35 +747,88 @@ a {
     justify-self: start;
   }
 }
-.description__wrapper {
+.description {
   width: 320px;
   margin: 0 auto;
 }
-.description__wrapper h2 {
+.description h2 {
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   text-align: center;
 }
-.description__wrapper .description-list {
+.description-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   grid-template-rows: auto auto auto auto;
   gap: 20px;
 }
-.description__wrapper .description-list__item {
+.description-list__item {
   display: grid;
   grid-template-columns: 60px auto;
   gap: 20px;
 }
-.description__wrapper .description-list__item p {
-  margin: 0;
-  padding: 0;
+.description-list__item p {
   font-family: 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #444444;
+  margin: 0;
+  padding: 0;
   font-size: 14px;
   line-height: 18px;
+}
+@media (min-width: 768px) {
+  .description {
+    width: 768px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .description-list {
+    grid-template-columns: auto auto;
+    grid-template-rows: 230px 230px;
+    column-gap: 153px;
+    row-gap: 37px;
+  }
+  .description-list__item {
+    display: grid;
+    grid-template-columns: auto;
+    align-content: space-around;
+  }
+  .description-list__item p {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    width: 220px;
+  }
+  .description-list__item p::after {
+    position: absolute;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: #F2F2F2;
+  }
+  .description-list__item .first::after {
+    content: '1';
+  }
+  .description-list__item .second::after {
+    content: '2';
+  }
+  .description-list__item .third::after {
+    content: '3';
+  }
+  .description-list__item .forth::after {
+    content: '4';
+  }
+  .description-list__item #icon-clock,
+  .description-list__item #icon-water,
+  .description-list__item #icon-leaf,
+  .description-list__item #icon-fork {
+    width: 80px;
+    height: 80px;
+  }
 }
 .example__wrapper {
   width: 320px;

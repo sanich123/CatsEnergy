@@ -788,7 +788,7 @@ a {
   }
   .description-list {
     grid-template-columns: auto auto;
-    grid-template-rows: 230px 230px;
+    grid-template-rows: auto auto;
     column-gap: 153px;
     row-gap: 37px;
     padding-bottom: 50px;
@@ -834,6 +834,24 @@ a {
   .description-list .fourth {
     background-image: url('../../img/svg/icon-four.svg');
     background-size: 136px 280px;
+  }
+}
+@media (min-width: 1440px) {
+  .description {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+  .description h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .description-list {
+    grid-template-columns: auto auto auto auto;
+    gap: 100px;
+  }
+  .description-list__item {
+    width: 220px;
   }
 }
 .example__wrapper {

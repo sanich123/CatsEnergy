@@ -37,7 +37,7 @@
     padding: 30px;
     &-list {
       grid-template-columns: auto auto;
-      grid-template-rows: 230px 230px;
+      grid-template-rows: auto auto;
       column-gap: 153px;
       row-gap: 37px;
       padding-bottom: 50px;
@@ -85,6 +85,24 @@
       .fourth {
           background-image: url('../../img/svg/icon-four.svg');
           background-size: 136px 280px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description {
+    h2 {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    .container(@desktop-width);
+    padding: 0 110px;
+    &-list {
+      grid-template-columns: auto auto auto auto;
+      gap: 100px;
+      &__item {
+        width: 220px;
       }
     }
   }

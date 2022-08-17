@@ -18,16 +18,16 @@
   }];
 
 section.additional
-    h2 Дополнительные товары
-    ul(class="additional__list goods-list")
-        each good in goods
-            li.goods-list__item
-                h3=good.name
-                dl
-                    dt=good.dt
-                    dd=good.dd
-                button(class="accept-btn" type="button") Заказать
-    .additional__offer
-        svg(width="78" height="80")
-            use(xlink:href="./img/svg/icons.svg#gift-icon")
-        h3 Закажите все <br>и получите чехол для <br>кота в подарок!
+  h2 Дополнительные товары
+  ul(class="additional__list goods-list")
+    each good in goods
+      li.goods-list__item
+        h3=good.name
+        dl
+          dt=good.dt
+          dd=good.dd
+        button(class="accept-btn" type="button") Заказать
+  .additional__offer
+    svg(width="78" height="80")
+      use(xlink:href="./img/svg/icons.svg#gift-icon")
+    h3 Закажите все <br>и получите чехол для <br>кота в подарок!

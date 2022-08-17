@@ -20,19 +20,19 @@
   }];
 
 footer.footer
-    a.footer__logo
-        svg(width="128", height="24",aria-label="Логотип магазина")
-            use(xlink:href="./img/svg/icons.svg#logo-words")
-    ul(class="footer__social-list social-list")
-        each social in socials
-            li.social-list__item
-                a(href=social.url, aria-label=social.label)
-                    svg(width=social.width, height=social.height)
-                        use(xlink:href=social.path)
-    ul(class="footer__academy-links academy-links")
-        li.academy-links__item
-            a(href="https://htmlacademy.ru") HTML Academy
-        li.academy-links__item
-            a(href="https://htmlacademy.ru")
-                svg(width="27", height="34")
-                    use(xlink:href="./img/svg/icons.svg#html-academy")
+  a.footer__logo
+    svg(width="128", height="24",aria-label="Логотип магазина")
+      use(xlink:href="./img/svg/icons.svg#logo-words")
+  ul(class="footer__social-list social-list")
+    each social in socials
+      li.social-list__item
+        a(href=social.url, aria-label=social.label)
+          svg(width=social.width, height=social.height)
+            use(xlink:href=social.path)
+  ul(class="footer__academy-links academy-links")
+    li.academy-links__item
+      a(href="https://htmlacademy.ru") HTML Academy
+    li.academy-links__item
+      a(href="https://htmlacademy.ru")
+        svg(width="27", height="34")
+          use(xlink:href="./img/svg/icons.svg#html-academy")

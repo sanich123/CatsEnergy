@@ -563,7 +563,7 @@ a {
     width: 768px;
     margin: 0 auto;
     padding: 0 117px;
-    min-height: 900px;
+    min-height: 800px;
   }
   .promo__background-image {
     background-image: none;
@@ -603,7 +603,7 @@ a {
     width: 1440px;
     margin: 0 auto;
     background-image: none;
-    padding: 0 190px;
+    min-height: 600px;
   }
   .promo h2 {
     width: 436px;
@@ -664,7 +664,8 @@ a {
 .programms-list__item a svg {
   align-self: center;
 }
-.programms-list__item .icon-cat {
+.programms-list__item #green-cat-1,
+.programms-list__item #green-cat-2 {
   grid-area: svg;
   display: grid;
   justify-self: start;
@@ -683,17 +684,67 @@ a {
     padding-left: 52px;
     padding-bottom: 57px;
     padding-top: 40px;
+    padding-right: 40px;
     grid-template-areas: 'h2 svg' 'p svg' 'a svg';
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
     grid-template-rows: auto auto auto;
+    min-height: 372px;
   }
-  .programms-list__item .icon-cat {
+  .programms-list__item #green-cat-1 {
+    grid-area: svg;
+    width: 200px;
+    height: 211px;
     justify-self: center;
     align-self: center;
   }
-  .programms-list__item #black-cat {
-    width: 200px;
-    height: 211px;
+  .programms-list__item #green-cat-2 {
+    grid-area: svg;
+    width: 268px;
+    height: 200px;
+    justify-self: center;
+    align-self: center;
+  }
+  .programms-list__item h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .programms-list__item p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .programms-list__item a {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .programms {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+  .programms-list {
+    grid-template-columns: auto auto;
+    gap: 110px;
+  }
+  .programms-list__item {
+    grid-template-areas: 'svg h2' 'p p' 'a a';
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto;
+  }
+  .programms-list__item #green-cat-1 {
+    grid-area: svg;
+    width: 100px;
+    height: 106px;
+    align-self: center;
+    justify-self: start;
+  }
+  .programms-list__item #green-cat-2 {
+    grid-area: svg;
+    width: 134px;
+    height: 100px;
+    align-self: center;
+    justify-self: start;
   }
 }
 .description__wrapper {

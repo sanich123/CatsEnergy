@@ -65,29 +65,29 @@
   }];
 
 section.catalog
-    h2 Каталог продукции
-    ul.catalog-list
-        each item in catalogItems
-            li.catalog-list__item
-                img(src=item.imgSrc alt=item.imgAlt width=item.width height=item.height)
-                .description__wrapper
-                    h3=item.h3
-                    dl
-                        .dt__wrapper
-                            dt Масса
-                            dd=item.dd1
-                        .dt__wrapper
-                            dt Вкус
-                            dd=item.dd2
-                        .dt__wrapper
-                            dt Цена
-                            dd=item.dd3
-                button(class="accept-btn" type="button") Заказать
-    .catalog__more
-        .svg__wrapper
-            button(type="button")
-                svg(width="30" height="30")
-                    use(xlink:href="./img/svg/icons.svg#plus-icon")
-        h3 Показать еще 100500 товаров
-        p На самом деле вкусов гораздо больше!
-        button(type="button") Показать все
+  h2 Каталог продукции
+  ul.catalog-list
+    each item in catalogItems
+      li.catalog-list__item
+        img(src=item.imgSrc alt=item.imgAlt width=item.width height=item.height)
+        .description__wrapper
+          h3=item.h3
+          dl
+            .dt__wrapper
+              dt Масса
+              dd=item.dd1
+            .dt__wrapper
+              dt Вкус
+              dd=item.dd2
+            .dt__wrapper
+              dt Цена
+              dd=item.dd3
+        button(class="accept-btn" type="button") Заказать
+  .catalog__more
+    .svg__wrapper
+      button(type="button")
+        svg(width="30" height="30")
+          use(xlink:href="./img/svg/icons.svg#plus-icon")
+    h3 Показать еще 100500 товаров
+    p На самом деле вкусов гораздо больше!
+    button(type="button") Показать все

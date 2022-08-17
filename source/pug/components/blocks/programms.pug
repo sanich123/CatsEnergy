@@ -1,28 +1,15 @@
--
-  const programms = [{
-    width: '50',
-    height: '53',
-    path: './img/svg/icons.svg#icon-black-cat',
-    h2: 'Похудение',
-    p: 'Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.',
-    a: 'SLIM'
-  }, {
-    width: '67',
-    height: '50',
-    path: './img/svg/icons.svg#icon-black-cat2',
-    h2: 'Набор массы',
-    p: 'Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!',
-    a: 'Pro',
-  }];
-
 section(class="programms" aria-label="Список программ")
-    ul(class="programms-list")
-        each program in programms
-            li.programms-list__item
-                svg#black-cat(class="icon-cat")
-                    use(xlink:href=program.path)
-                h2=program.h2
-                p=program.p
-                a(href="#")=`Каталог ${program.a}`
-                    svg(width="24" height="12"): use(xlink:href="./img/svg/icons.svg#arrow")
+  ul(class="programms-list")
+    li.programms-list__item
+      include ../../../img/svg/green-cat-1.svg
+      h2 Похудение
+      p Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+      a(href="#") Каталог SLIM
+        svg(width="24" height="12"): use(xlink:href="./img/svg/icons.svg#arrow")
+    li.programms-list__item
+      include ../../../img/svg/green-cat-2.svg
+      h2 Набор массы
+      p Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+      a(href="#") Каталог Pro
+        svg(width="24" height="12"): use(xlink:href="./img/svg/icons.svg#arrow")
 

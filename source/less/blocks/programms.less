@@ -53,7 +53,7 @@
           align-self: center;
         }
       }
-      .icon-cat {
+      #green-cat-1, #green-cat-2 {
         grid-area: svg;
         display: grid;
         justify-self: start;
@@ -74,20 +74,75 @@
         padding-left: 52px;
         padding-bottom: 57px;
         padding-top: 40px;
+        padding-right: 40px;
         grid-template-areas:
         'h2 svg'
         'p svg'
         'a svg';
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 55% 45%;
         grid-template-rows: auto auto auto;
+        min-height: 372px;
 
-        .icon-cat {
+        #green-cat-1 {
+          grid-area: svg;
+          width: 200px;
+          height: 211px;
           justify-self: center;
           align-self: center;
         }
-        #black-cat {
-          width: 200px;
-          height: 211px;
+        #green-cat-2 {
+          grid-area: svg;
+          width: 268px;
+          height: 200px;
+          justify-self: center;
+          align-self: center;
+        }
+        h2 {
+          font-size: 36px;
+          line-height: 36px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        a {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programms {
+    .container(@desktop-width);
+    padding: 0 110px;
+    &-list {
+      grid-template-columns: auto auto;
+      gap: 110px;
+      &__item {
+        grid-template-areas:
+        'svg h2'
+        'p p'
+        'a a';
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto;
+
+        #green-cat-1 {
+          grid-area: svg;
+          width: 100px;
+          height: 106px;
+          align-self: center;
+          justify-self: start;
+        }
+
+        #green-cat-2 {
+          grid-area: svg;
+          width: 134px;
+          height: 100px;
+          align-self: center;
+          justify-self: start;
         }
       }
     }

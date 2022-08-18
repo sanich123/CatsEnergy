@@ -1,5 +1,5 @@
-@import '../global/variables.less';
-@import '../mixins/mixins.less';
+@import "../global/variables.less";
+@import "../mixins/mixins.less";
 
 .header {
   position: relative;
@@ -7,7 +7,7 @@
   &__logo--tablet {
     display: none;
   }
-   &__wrapper {
+  &__wrapper {
     .container(@mobile-width);
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
@@ -35,7 +35,7 @@
       font-size: 20px;
       line-height: 20px;
       text-transform: uppercase;
-      border-top: 1px solid #E6E6E6;
+      border-top: 1px solid #e6e6e6;
 
       a {
         color: @black;
@@ -63,11 +63,11 @@
     .nav {
       width: auto;
       margin: 0;
-        &-list {
-          display: flex;
-          align-items: center;
-          justify-content: end;
-          column-gap: 10px;
+      &-list {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        column-gap: 10px;
         &__item {
           font-size: 18px;
           line-height: 24px;
@@ -93,11 +93,10 @@
             }
           }
           a {
-          color: @white;
+            color: @white;
           }
         }
       }
     }
   }
 }
-

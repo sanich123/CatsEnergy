@@ -1,5 +1,5 @@
-@import '../mixins/mixins.less';
-@import '../global/variables.less';
+@import "../mixins/mixins.less";
+@import "../global/variables.less";
 
 .programms {
   .container(@mobile-width);
@@ -15,9 +15,9 @@
       padding: 0 20px;
       display: grid;
       grid-template-areas:
-      'svg h2'
-      'p p'
-      'a a';
+        "svg h2"
+        "p p"
+        "a a";
       grid-template-columns: 1fr 2fr;
       grid-template-rows: auto auto auto;
 
@@ -53,7 +53,8 @@
           align-self: center;
         }
       }
-      #green-cat-1, #green-cat-2 {
+      #green-cat-1,
+      #green-cat-2 {
         grid-area: svg;
         display: grid;
         justify-self: start;
@@ -76,9 +77,9 @@
         padding-top: 40px;
         padding-right: 40px;
         grid-template-areas:
-        'h2 svg'
-        'p svg'
-        'a svg';
+          "h2 svg"
+          "p svg"
+          "a svg";
         grid-template-columns: 55% 45%;
         grid-template-rows: auto auto auto;
         min-height: 372px;
@@ -123,9 +124,9 @@
       gap: 110px;
       &__item {
         grid-template-areas:
-        'svg h2'
-        'p p'
-        'a a';
+          "svg h2"
+          "p p"
+          "a a";
         grid-template-columns: 40% 60%;
         grid-template-rows: auto auto auto;
 

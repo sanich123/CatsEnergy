@@ -1,47 +1,47 @@
-@import '../global/variables.less';
-@import '../mixins/mixins.less';
+@import "../global/variables.less";
+@import "../mixins/mixins.less";
 
 .example {
-    .container(@mobile-width);
-    background-color: @special-grey3;
-    padding: 20px;
+  .container(@mobile-width);
+  background-color: @special-grey3;
+  padding: 20px;
 
-    h2 {
-      font-weight: 400;
-      margin: 0;
-      padding: 0;
-      margin-bottom: 30px;
-      margin-top: 10px;
-      font-size: 36px;
-      line-height: 40px;
-    }
-    p {
-      .arial-font();
-      font-size: 14px;
-      line-height: 18px;
-    }
-    .statistics-list {
-      .reset-ul();
+  h2 {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  p {
+    .arial-font();
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .statistics-list {
+    .reset-ul();
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 32px;
+
+    &__item {
+      position: relative;
       display: grid;
-      grid-template-columns: auto auto;
-      gap: 32px;
+      align-items: center;
+      justify-content: center;
+      min-width: 124px;
+      min-height: 56px;
+      border: 1px solid @special-grey;
+      border-radius: 3px;
 
-      &__item {
-        position: relative;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        min-width: 124px;
-        min-height: 56px;
-        border: 1px solid @special-grey;
-        border-radius: 3px;
-
-        strong {
-          .to-center();
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 24px;
-        }
+      strong {
+        .to-center();
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+      }
     }
     .weight::after,
     .days::after {
@@ -56,24 +56,24 @@
       left: 20px;
     }
     .weight::after {
-      content:'снижение веса';
+      content: "снижение веса";
     }
     .days::after {
-      content: 'затрачено времени';
+      content: "затрачено времени";
     }
   }
 
-    h3 {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      text-transform: uppercase;
-      text-align: center;
-    }
+  h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
   }
+}
 
 @media (min-width: @tablet-width) {
   .example {
@@ -82,44 +82,44 @@
     background: linear-gradient(to top, @special-grey 462px, transparent 300px);
     display: grid;
     grid-template-areas:
-    'h2 h2'
-    'p p'
-    'ul h3'
-    'img img';
+      "h2 h2"
+      "p p"
+      "ul h3"
+      "img img";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto;
 
-  .statistics-list {
-    margin-bottom: 100px;
-    .weight::after,
-    .days::after {
-      background-color: @white;
-      left: 40px;
+    .statistics-list {
+      margin-bottom: 100px;
+      .weight::after,
+      .days::after {
+        background-color: @white;
+        left: 40px;
+      }
     }
-  }
-  h2 {
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 60px;
-    grid-area: h2;
-  }
-  p {
-    font-size: 16px;
-    line-height: 24px;
-    grid-area: p;
-  }
-  ul {
-    grid-area: ul;
-  }
-  h3 {
-    display: grid;
-    grid-area: h3;
-    justify-content: end;
-  }
-  img {
-    grid-area: img;
-    justify-self: center;
-    align-self: center;
+    h2 {
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 60px;
+      grid-area: h2;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      grid-area: p;
+    }
+    ul {
+      grid-area: ul;
+    }
+    h3 {
+      display: grid;
+      grid-area: h3;
+      justify-content: end;
+    }
+    img {
+      grid-area: img;
+      justify-self: center;
+      align-self: center;
     }
 
     .statistics-list__item {
@@ -136,10 +136,10 @@
     padding-right: 110px;
     background: linear-gradient(to top, @base-grey 462px, transparent 300px);
     grid-template-areas:
-    'h2 img'
-    'p img'
-    'ul img'
-    'h3 img';
+      "h2 img"
+      "p img"
+      "ul img"
+      "h3 img";
     grid-template-columns: 30% 70%;
 
     img {

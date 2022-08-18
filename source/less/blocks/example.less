@@ -2,40 +2,70 @@
 @import '../mixins/mixins.less';
 
 .example {
-
-
-
-  &__wrapper {
     .container(@mobile-width);
     background-color: @special-grey3;
     padding: 20px;
-    min-height: 700px;
+
     h2 {
+      font-weight: 400;
       margin: 0;
       padding: 0;
+      margin-bottom: 30px;
+      margin-top: 10px;
       font-size: 36px;
       line-height: 40px;
     }
-
     p {
       .arial-font();
       font-size: 14px;
       line-height: 18px;
     }
-    .example__statistics dt {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 24px;
+    .statistics-list {
+      .reset-ul();
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 32px;
 
-      dd {
-        .arial-font();
-        font-size: 12px;
-        line-height: 100%;
-      }
+      &__item {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        min-width: 124px;
+        min-height: 56px;
+        border: 1px solid @special-grey;
+        border-radius: 3px;
+
+        strong {
+          .to-center();
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 24px;
+        }
     }
+    .weight::after,
+    .days::after {
+      position: absolute;
+      .arial-font();
+      font-size: 12px;
+      line-height: 12px;
+      background-color: @special-grey3;
+      text-align: center;
+      width: 78px;
+      bottom: -17px;
+      left: 20px;
+    }
+    .weight::after {
+      content:'снижение веса';
+    }
+    .days::after {
+      content: 'затрачено времени';
+    }
+  }
 
     h3 {
+      margin-top: 30px;
+      margin-bottom: 30px;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -43,12 +73,89 @@
       text-transform: uppercase;
       text-align: center;
     }
-    .example__progress {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
+  }
 
+@media (min-width: @tablet-width) {
+  .example {
+    .container(@tablet-width);
+    padding: 30px 30px 100px 30px;
+    background: linear-gradient(to top, @special-grey 462px, transparent 300px);
+    display: grid;
+    grid-template-areas:
+    'h2 h2'
+    'p p'
+    'ul h3'
+    'img img';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+
+  .statistics-list {
+    margin-bottom: 100px;
+    .weight::after,
+    .days::after {
+      background-color: @white;
+      left: 40px;
+    }
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    grid-area: h2;
+  }
+  p {
+    grid-area: p;
+  }
+  ul {
+    grid-area: ul;
+  }
+  h3 {
+    display: grid;
+    grid-area: h3;
+    justify-content: end;
+  }
+  img {
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
+    }
+
+    .statistics-list__item {
+      min-width: 162px;
+      height: 72px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    .container(@desktop-width);
+    padding-left: 110px;
+    padding-right: 110px;
+    background: linear-gradient(to top, @base-grey 462px, transparent 300px);
+    grid-template-areas:
+    'h2 img'
+    'p img'
+    'ul img'
+    'h3 img';
+    grid-template-columns: 30% 70%;
+
+    img {
+      justify-self: end;
+    }
+
+    h3 {
+      font-size: 20px;
+      justify-content: start;
+    }
+
+    .statistics-list {
+      margin-bottom: 0;
+      .weight::after,
+      .days::after {
+        background-color: @base-grey;
+        left: 40px;
+      }
     }
   }
 }

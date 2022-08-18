@@ -789,7 +789,7 @@ a {
   .description-list {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    column-gap: 153px;
+    column-gap: 28px;
     row-gap: 37px;
     padding-bottom: 50px;
   }
@@ -854,20 +854,22 @@ a {
     width: 220px;
   }
 }
-.example__wrapper {
+.example {
   width: 320px;
   margin: 0 auto;
   background-color: #EAEAEA;
   padding: 20px;
-  min-height: 700px;
 }
-.example__wrapper h2 {
+.example h2 {
+  font-weight: 400;
   margin: 0;
   padding: 0;
+  margin-bottom: 30px;
+  margin-top: 10px;
   font-size: 36px;
   line-height: 40px;
 }
-.example__wrapper p {
+.example p {
   font-family: 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -875,21 +877,56 @@ a {
   font-size: 14px;
   line-height: 18px;
 }
-.example__wrapper .example__statistics dt {
-  font-style: normal;
+.example .statistics-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 32px;
+}
+.example .statistics-list__item {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-width: 124px;
+  min-height: 56px;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+}
+.example .statistics-list__item strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
 }
-.example__wrapper .example__statistics dt dd {
+.example .statistics-list .weight::after,
+.example .statistics-list .days::after {
+  position: absolute;
   font-family: 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #444444;
   font-size: 12px;
-  line-height: 100%;
+  line-height: 12px;
+  background-color: #EAEAEA;
+  text-align: center;
+  width: 78px;
+  bottom: -17px;
+  left: 20px;
 }
-.example__wrapper h3 {
+.example .statistics-list .weight::after {
+  content: 'снижение веса';
+}
+.example .statistics-list .days::after {
+  content: 'затрачено времени';
+}
+.example h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -897,11 +934,77 @@ a {
   text-transform: uppercase;
   text-align: center;
 }
-.example__wrapper .example__progress {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+@media (min-width: 768px) {
+  .example {
+    width: 768px;
+    margin: 0 auto;
+    padding: 30px 30px 100px 30px;
+    background: linear-gradient(to top, #CDCDCD 462px, transparent 300px);
+    display: grid;
+    grid-template-areas: 'h2 h2' 'p p' 'ul h3' 'img img';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .example .statistics-list {
+    margin-bottom: 100px;
+  }
+  .example .statistics-list .weight::after,
+  .example .statistics-list .days::after {
+    background-color: #FFFFFF;
+    left: 40px;
+  }
+  .example h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
+    grid-area: h2;
+  }
+  .example p {
+    grid-area: p;
+  }
+  .example ul {
+    grid-area: ul;
+  }
+  .example h3 {
+    display: grid;
+    grid-area: h3;
+    justify-content: end;
+  }
+  .example img {
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
+  }
+  .example .statistics-list__item {
+    min-width: 162px;
+    height: 72px;
+  }
+}
+@media (min-width: 1440px) {
+  .example {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 110px;
+    background: linear-gradient(to top, #F2F2F2 462px, transparent 300px);
+    grid-template-areas: 'h2 img' 'p img' 'ul img' 'h3 img';
+    grid-template-columns: 30% 70%;
+  }
+  .example img {
+    justify-self: end;
+  }
+  .example h3 {
+    font-size: 20px;
+    justify-content: start;
+  }
+  .example .statistics-list {
+    margin-bottom: 0;
+  }
+  .example .statistics-list .weight::after,
+  .example .statistics-list .days::after {
+    background-color: #F2F2F2;
+    left: 40px;
+  }
 }
 .contacts {
   width: 320px;

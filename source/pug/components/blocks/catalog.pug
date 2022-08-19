@@ -1,67 +1,67 @@
 -
   const catalogItems = [{
     h3: 'Cat Energy PRO 500 г',
+    srcset: './img/photos/catalog/catEnergy500.png 68w, ./img/photos/catalog/catEnergy500-tablet.png 161w',
+    sizes: '(max-width: 767px) 68px, 161px',
     imgSrc: "./img/photos/catalog/catEnergy500.png",
     imgAlt: "Cat Energy 500",
     dd1: '500 г',
     dd2: 'Курица',
     dd3: '700 Р.',
-    width: '68px',
-    height: '86px'
   }, {
     h3: 'Cat Energy PRO 1000 г',
+    srcset: './img/photos/catalog/catEnergy1000.png 84w, ./img/photos/catalog/catEnergy1000-tablet.png 168w',
+    sizes: '(max-width: 767px) 68px, 168px',
     imgSrc: "./img/photos/catalog/catEnergy1000.png",
     imgAlt: "Cat Energy 1000",
     dd1: '1000 г',
     dd2: 'Курица',
     dd3: '1000 Р.',
-    width: '84px',
-    height: '101px'
   }, {
     h3: 'Cat Energy PRO 500 г',
+    srcset: './img/photos/catalog/catEnergy500fish.png 68w, ./img/photos/catalog/catEnergy500fish-tablet.png 163w',
+    sizes: '(max-width: 767px) 68px, 163px',
     imgSrc: "./img/photos/catalog/catEnergy500fish.png",
     imgAlt: "Cat Energy 500 with fish",
     dd1: '500 г',
     dd2: 'Рыба',
     dd3: '700 Р.',
-    width: '68px',
-    height: '78px'
   }, {
     h3: 'Cat Energy PRO 1000 г',
+    srcset: './img/photos/catalog/catEnergy1000fish.png 84w, ./img/photos/catalog/catEnergy1000fish-tablet.png 168w',
+    sizes: '(max-width: 767px) 84px, 168px',
     imgSrc: "./img/photos/catalog/catEnergy1000fish.png",
     imgAlt: "Cat Energy 1000 with fish",
     dd1: '1000 г',
     dd2: 'Рыба',
     dd3: '1000 Р.',
-    width: '84px',
-    height: '101px'
   }, {
     h3: 'Cat Energy SLIM 500 г',
+    srcset: './img/photos/catalog/catEnergy500buckwheat.png 68w, ./img/photos/catalog/catEnergy500buckwheat-tablet.png 161w',
+    sizes: '(max-width: 767px) 68px, 161px',
     imgSrc: "./img/photos/catalog/catEnergy500buckwheat.png",
     imgAlt: "Cat Slim buckwheat 500",
     dd1: '500 г',
     dd2: 'Гречка',
     dd3: '400 Р.',
-    width: '68px',
-    height: '78px'
   }, {
     h3: 'Cat Energy SLIM 1000 г',
+    srcset: './img/photos/catalog/catSlim1000backwheat.png 84w, ./img/photos/catalog/catEnergy1000buckwheat-tablet.png 168w',
+    sizes: '(max-width: 767px) 84px, 168px',
     imgSrc: "./img/photos/catalog/catSlim1000backwheat.png",
     imgAlt: "Cat Slim buckwheat 1000",
     dd1: '1000 г',
     dd2: 'Гречка',
     dd3: '700 Р.',
-    width: '84px',
-    height: '101px'
   }, {
     h3: 'Cat Energy SLIM 500 г',
+    srcset: './img/photos/catalog/catSlim500rice.png 72w, ./img/photos/catalog/catEnergy500rice-tablet.png 163w',
+    sizes: '(max-width: 767px) 72px, 163px',
     imgSrc: "./img/photos/catalog/catSlim500rice.png",
     imgAlt: "Cat Slim rice 500",
     dd1: '500 г',
     dd2: 'Рис',
     dd3: '500 Р.',
-    width: '72px',
-    height: '84px'
   }];
 
 section.catalog
@@ -69,7 +69,7 @@ section.catalog
   ul.catalog-list
     each item in catalogItems
       li.catalog-list__item
-        img(src=item.imgSrc alt=item.imgAlt width=item.width height=item.height)
+        img(srcset=item.srcset, sizes=item.sizes, src=item.imgSrc, alt=item.imgAlt)
         .description__wrapper
           h3=item.h3
           dl

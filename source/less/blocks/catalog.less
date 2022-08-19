@@ -27,7 +27,6 @@
     border-bottom: 1px solid @special-grey2;
     padding: 0 20px;
 
-
     .description__wrapper {
       grid-area: desc;
       display: grid;
@@ -133,12 +132,16 @@
         min-height: 500px;
 
         grid-template-areas:
-        'img'
-        'desc'
-        'btn';
+          "img"
+          "desc"
+          "btn";
         grid-template-columns: auto;
         grid-template-rows: auto;
-        background: linear-gradient(to top, @base-grey 430px, transparent 300px);
+        background: linear-gradient(
+          to top,
+          @base-grey 430px,
+          transparent 300px
+        );
         padding-left: 39px;
         padding-right: 39px;
 
@@ -169,7 +172,7 @@
 
             .dt__wrapper {
               padding-bottom: 10px;
-              border-bottom: 1px solid #CDCDCD;
+              border-bottom: 1px solid @special-grey;
             }
           }
         }

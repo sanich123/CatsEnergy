@@ -1011,8 +1011,6 @@ a {
 .contacts {
   width: 320px;
   margin: 0 auto;
-  background-color: #f2f2f2;
-  margin-top: 20px;
 }
 .contacts__address-wrapper {
   width: 100%;
@@ -1044,6 +1042,57 @@ a {
   top: 50%;
   left: 50%;
 }
+@media (min-width: 768px) {
+  .contacts {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .contacts__map {
+    display: block;
+    width: 768px;
+    height: 400px;
+  }
+  .contacts__address-wrapper {
+    padding: 60px 70px;
+    min-height: 199px;
+  }
+  .contacts__address-wrapper h2 {
+    justify-content: start;
+    width: 171px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .contacts__address-wrapper address {
+    width: 160px;
+    text-align: end;
+    justify-self: end;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .contacts {
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .contacts__map {
+    min-width: 1440px;
+  }
+  .contacts__address-wrapper {
+    position: absolute;
+    z-index: 999;
+    background-color: #ffffff;
+    width: 565px;
+    height: 198px;
+    margin-left: 110px;
+    margin-top: 95px;
+    padding: 0px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
 .footer {
   width: 320px;
   margin: 0 auto;
@@ -1064,11 +1113,12 @@ a {
   align-items: center;
 }
 .footer .academy-links {
-  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
 }
@@ -1079,6 +1129,31 @@ a {
   color: #444444;
   font-size: 16px;
   line-height: 18px;
+}
+@media (min-width: 768px) {
+  .footer {
+    width: 768px;
+    margin: 0 auto;
+    min-height: 147px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+  }
+  .footer__logo {
+    justify-self: start;
+  }
+  .footer .academy-links {
+    grid-template-columns: auto auto;
+    justify-content: end;
+    gap: 22px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
+    min-height: 149px;
+  }
 }
 .catalog {
   width: 320px;

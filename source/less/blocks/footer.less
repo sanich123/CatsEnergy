@@ -19,9 +19,10 @@
   }
 
   .academy-links {
-    width: 100%;
     .reset-ul();
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
 
@@ -30,5 +31,32 @@
       font-size: 16px;
       line-height: 18px;
     }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    .container(@tablet-width);
+    min-height: 147px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+
+    &__logo {
+      justify-self: start;
+    }
+
+    .academy-links {
+      grid-template-columns: auto auto;
+      justify-content: end;
+      gap: 22px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    .container(@desktop-width);
+    padding: 0 110px;
+    min-height: 149px;
   }
 }

@@ -3,8 +3,7 @@
 
 .contacts {
   .container(@mobile-width);
-  background-color: @base-grey;
-  margin-top: 20px;
+
   &__address-wrapper {
     width: 100%;
     padding: 26px 20px;
@@ -33,5 +32,59 @@
     position: absolute;
     top: 50%;
     left: 50%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    .container(@tablet-width);
+
+    &__map {
+      display: block;
+      width: 768px;
+      height: 400px;
+    }
+
+    &__address-wrapper {
+      padding: 60px 70px;
+      min-height: 199px;
+
+      h2 {
+        justify-content: start;
+        width: 171px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+      }
+      address {
+        width: 160px;
+        text-align: end;
+        justify-self: end;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    .container(@desktop-width);
+    position: relative;
+    &__map {
+      min-width: 1440px;
+    }
+    &__address-wrapper {
+      position: absolute;
+      z-index: 999;
+      background-color: @white;
+      width: 565px;
+      height: 198px;
+      margin-left: 110px;
+      margin-top: 95px;
+      padding: 0px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
   }
 }

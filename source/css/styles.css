@@ -1286,7 +1286,7 @@ a {
   }
   .catalog-list__item {
     min-height: 500px;
-    grid-template-areas: 'img' 'desc' 'btn';
+    grid-template-areas: "img" "desc" "btn";
     grid-template-columns: auto;
     grid-template-rows: auto;
     background: linear-gradient(to top, #f2f2f2 430px, transparent 300px);
@@ -1318,7 +1318,7 @@ a {
   }
   .catalog-list__item .description__wrapper dl .dt__wrapper {
     padding-bottom: 10px;
-    border-bottom: 1px solid #CDCDCD;
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 .additional {

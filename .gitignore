@@ -2,3 +2,7 @@ node_modules
 
 source/css/style.css
 source/css/style.css.map
+
+source/catalog.html
+source/form.html
+source/index.html

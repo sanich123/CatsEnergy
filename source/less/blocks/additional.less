@@ -80,9 +80,11 @@
 @media (min-width: @tablet-width) {
   .additional {
     .container(@tablet-width);
-    padding-left: 30px;
-    padding-right: 30px;
-
+    padding: 0 30px;
+    h2 {
+      font-size: 36px;
+      line-height: 36px;
+    }
     .goods-list__item {
       display: grid;
       grid-template-areas:
@@ -91,6 +93,7 @@
       grid-template-columns: 50% 50%;
       grid-template-rows: auto auto;
       padding: 30px 38px;
+      border-top: 1px solid #cdcdcd;
 
       h3 {
         grid-area: h3;
@@ -102,6 +105,7 @@
         font-size: 16px;
         grid-area: dl;
         align-self: center;
+        justify-content: flex-end;
       }
 
       .accept-btn {
@@ -133,6 +137,95 @@
       svg,
       h3 {
         z-index: 999;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional {
+    .container(@desktop-width);
+    position: relative;
+    padding: 86px 110px;
+    display: grid;
+    grid-template-areas:
+      "h2 h2"
+      "ul img";
+    grid-template-columns: 895px 278px;
+    grid-template-rows: auto auto;
+    gap: 45px;
+
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      transform: translate(23px, 15px) rotate(180deg);
+      border: 2px solid @base-green;
+      background-color: @base-green;
+    }
+    &::after {
+      width: 857px;
+      right: 135px;
+      top: 125px;
+    }
+
+    &::before {
+      width: 70px;
+      left: -22px;
+      top: 125px;
+    }
+    .additional__offer {
+      grid-area: img;
+      grid-template-columns: auto;
+      // align-items: center;
+      // justify-content: center;
+      min-height: 0;
+      width: 279px;
+      height: 289px;
+      background-image: url("../../img/photos/catalog/grumpy-cat-in-backpack.png");
+      background-repeat: no-repeat;
+      margin: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  h2 {
+    grid-area: h2;
+    &::after {
+      display: none;
+    }
+  }
+
+  .goods-list {
+    grid-area: ul;
+    width: 895px;
+    .goods-list__item {
+      grid-template-areas: "h3 dl button";
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: 72px;
+      padding: 0;
+      min-height: 0;
+
+      h3 {
+        grid-area: h3;
+        align-self: center;
+      }
+
+      dl {
+        grid-area: dl;
+        justify-content: space-between;
+      }
+
+      .accept-btn {
+        grid-area: button;
+        width: 244px;
+        height: 40px;
+        align-self: center;
+        justify-self: end;
       }
     }
   }

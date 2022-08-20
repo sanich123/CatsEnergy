@@ -1186,7 +1186,6 @@ a {
   grid-area: desc;
   display: grid;
   grid-template-rows: 50% 50%;
-  width: 140px;
 }
 .catalog-list__item .description__wrapper h3 {
   font-weight: 400;
@@ -1194,7 +1193,6 @@ a {
   line-height: 20px;
   text-transform: uppercase;
   color: #222222;
-  width: 75px;
 }
 .catalog-list__item .description__wrapper dl {
   font-family: "Arial", sans-serif;
@@ -1217,25 +1215,32 @@ a {
 .catalog-list__item button {
   grid-area: btn;
 }
-.catalog__more {
+.catalog .last-item {
   width: 320px;
   margin: 0 auto;
   padding: 25px 20px;
   border-bottom: 1px solid #ebebeb;
+  display: grid;
+  grid-template-areas: 'svg' 'desc' 'btn';
+  grid-template-columns: auto;
 }
-.catalog__more .svg__wrapper {
+.catalog .last-item .svg__wrapper {
+  grid-area: svg;
   width: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.catalog__more .svg__wrapper button {
+.catalog .last-item .svg__wrapper button {
   background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
 }
-.catalog__more h3 {
+.catalog .last-item .description__wrapper {
+  grid-area: desc;
+}
+.catalog .last-item h3 {
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
@@ -1243,7 +1248,7 @@ a {
   color: #111111;
   text-align: center;
 }
-.catalog__more p {
+.catalog .last-item p {
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1252,7 +1257,8 @@ a {
   line-height: 16px;
   text-align: center;
 }
-.catalog__more button {
+.catalog .last-item button {
+  grid-area: btn;
   font-size: 16px;
   line-height: 20px;
   display: flex;
@@ -1286,7 +1292,7 @@ a {
   }
   .catalog-list__item {
     min-height: 500px;
-    grid-template-areas: 'img' 'desc' 'btn';
+    grid-template-areas: "img" "desc" "btn";
     grid-template-columns: auto;
     grid-template-rows: auto;
     background: linear-gradient(to top, #f2f2f2 430px, transparent 300px);
@@ -1318,7 +1324,14 @@ a {
   }
   .catalog-list__item .description__wrapper dl .dt__wrapper {
     padding-bottom: 10px;
-    border-bottom: 1px solid #CDCDCD;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+@media (min-width: 768px) {
+  .catalog .last-item {
+    background: transparent;
+    height: 429px;
+    border: 2px solid #F2F2F2;
   }
 }
 .additional {

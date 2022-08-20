@@ -8,6 +8,7 @@
     dd1: '500 г',
     dd2: 'Курица',
     dd3: '700 Р.',
+    isLi: true,
   }, {
     h3: 'Cat Energy PRO 1000 г',
     srcset: './img/photos/catalog/catEnergy1000.png 84w, ./img/photos/catalog/catEnergy1000-tablet.png 168w',
@@ -17,6 +18,7 @@
     dd1: '1000 г',
     dd2: 'Курица',
     dd3: '1000 Р.',
+    isLi: true,
   }, {
     h3: 'Cat Energy PRO 500 г',
     srcset: './img/photos/catalog/catEnergy500fish.png 68w, ./img/photos/catalog/catEnergy500fish-tablet.png 163w',
@@ -26,6 +28,7 @@
     dd1: '500 г',
     dd2: 'Рыба',
     dd3: '700 Р.',
+    isLi: true,
   }, {
     h3: 'Cat Energy PRO 1000 г',
     srcset: './img/photos/catalog/catEnergy1000fish.png 84w, ./img/photos/catalog/catEnergy1000fish-tablet.png 168w',
@@ -35,6 +38,7 @@
     dd1: '1000 г',
     dd2: 'Рыба',
     dd3: '1000 Р.',
+    isLi: true,
   }, {
     h3: 'Cat Energy SLIM 500 г',
     srcset: './img/photos/catalog/catEnergy500buckwheat.png 68w, ./img/photos/catalog/catEnergy500buckwheat-tablet.png 161w',
@@ -44,6 +48,7 @@
     dd1: '500 г',
     dd2: 'Гречка',
     dd3: '400 Р.',
+    isLi: true,
   }, {
     h3: 'Cat Energy SLIM 1000 г',
     srcset: './img/photos/catalog/catSlim1000backwheat.png 84w, ./img/photos/catalog/catEnergy1000buckwheat-tablet.png 168w',
@@ -53,6 +58,7 @@
     dd1: '1000 г',
     dd2: 'Гречка',
     dd3: '700 Р.',
+    isLi: true,
   }, {
     h3: 'Cat Energy SLIM 500 г',
     srcset: './img/photos/catalog/catSlim500rice.png 72w, ./img/photos/catalog/catEnergy500rice-tablet.png 163w',
@@ -62,32 +68,38 @@
     dd1: '500 г',
     dd2: 'Рис',
     dd3: '500 Р.',
+    isLi: true,
+  }, {
+    isLi: false,
   }];
 
 section.catalog
   h2 Каталог продукции
   ul.catalog-list
     each item in catalogItems
-      li.catalog-list__item
-        img(srcset=item.srcset, sizes=item.sizes, src=item.imgSrc, alt=item.imgAlt)
-        .description__wrapper
-          h3=item.h3
-          dl
-            .dt__wrapper
-              dt Масса
-              dd=item.dd1
-            .dt__wrapper
-              dt Вкус
-              dd=item.dd2
-            .dt__wrapper
-              dt Цена
-              dd=item.dd3
-        button(class="accept-btn" type="button") Заказать
-  .catalog__more
-    .svg__wrapper
-      button(type="button")
-        svg(width="30" height="30")
-          use(xlink:href="./img/svg/icons.svg#plus-icon")
-    h3 Показать еще 100500 товаров
-    p На самом деле вкусов гораздо больше!
-    button(type="button") Показать все
+      if item.isLi
+        li.catalog-list__item
+          img(srcset=item.srcset, sizes=item.sizes, src=item.imgSrc, alt=item.imgAlt)
+          .description__wrapper
+            h3=item.h3
+            dl
+              .dt__wrapper
+                dt Масса
+                dd=item.dd1
+              .dt__wrapper
+                dt Вкус
+                dd=item.dd2
+              .dt__wrapper
+                dt Цена
+                dd=item.dd3
+          button(class="accept-btn" type="button") Заказать
+      else
+        li(class="catalog-list__item last-item")
+          .svg__wrapper
+            button(type="button")
+              svg(width="30" height="30")
+                use(xlink:href="./img/svg/icons.svg#plus-icon")
+          .description__wrapper
+            h3 Показать еще 100500 товаров
+            p На самом деле вкусов гораздо больше!
+          button(type="button") Показать все

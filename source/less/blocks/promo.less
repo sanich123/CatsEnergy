@@ -103,7 +103,39 @@
   .promo {
     .container(@desktop-width);
     background-image: none;
+
+    .desktop-bg {
+      position: absolute;
+      width: 720px;
+      height: 694px;
+      top: -226px;
+      right: 0;
+      background: url("../../img/photos/bg-desktop.png") no-repeat top right;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        width: 720px;
+        height: 694px;
+        background-color: rgba(104, 183, 56, 0.85);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+      }
+    }
+
     min-height: 600px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 552px;
+      height: 499px;
+      background-image: url("../../img/photos/promo-food-desktop.png");
+      background-size: 552px 499px;
+      left: 448px;
+      top: -70px;
+    }
     h2 {
       width: 436px;
     }

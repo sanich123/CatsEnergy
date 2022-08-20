@@ -24,31 +24,6 @@ body {
   font-style: normal;
   list-style: none;
   min-height: 100vh;
-
-  @media (min-width: @desktop-width) {
-    background: url("../../img/photos/bg-desktop.png") no-repeat top right;
-
-    &::before {
-      content: "";
-      width: 720px;
-      height: 694px;
-      background-color: rgba(104, 183, 56, 0.85);
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 552px;
-      height: 499px;
-      background-image: url("../../img/photos/promo-food-desktop.png");
-      background-size: 552px 499px;
-      left: 700px;
-      top: 150px;
-    }
-  }
 }
 
 a {

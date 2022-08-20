@@ -70,9 +70,9 @@
     border-bottom: 1px solid @special-grey2;
     display: grid;
     grid-template-areas:
-    'svg'
-    'desc'
-    'btn';
+      "svg"
+      "desc"
+      "btn";
     grid-template-columns: auto;
 
     .svg__wrapper {
@@ -196,6 +196,46 @@
   .catalog .last-item {
     background: transparent;
     height: 429px;
-    border: 2px solid #F2F2F2;
+    border: 2px solid #f2f2f2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    padding: 0 110px;
+    .container(@desktop-width);
+    &-list {
+      grid-template-columns: auto auto auto auto;
+      column-gap: 80px;
+
+      &__item {
+        max-width: 245px;
+        padding-left: 38px;
+        padding-right: 39px;
+        padding-bottom: 40px;
+        justify-content: center;
+      }
+    }
+    .accept-btn {
+      min-width: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog .last-item {
+    min-height: 430px;
+    margin-top: 110px;
+    padding-left: 36px;
+    padding-right: 37px;
+    padding-bottom: 40px;
+
+    .svg__wrapper {
+      width: auto;
+    }
+
+    button {
+      min-width: 0;
+    }
   }
 }

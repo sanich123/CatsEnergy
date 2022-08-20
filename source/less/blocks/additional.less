@@ -52,20 +52,16 @@
     }
   }
   &__offer {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
     width: 279px;
     height: 289px;
     background-image: url("../../img/photos/catalog/grumpy-cat-in-backpack.png");
     background-repeat: no-repeat;
-    position: relative;
-    flex-direction: column-reverse;
-    padding-bottom: 45px;
-
-    svg {
-      position: absolute;
-      top: 40px;
-      left: 100px;
-    }
+    padding-bottom: 43px;
+    padding-top: 43px;
 
     h3 {
       .arial-font();
@@ -73,6 +69,71 @@
       line-height: 20px;
       color: @white;
       text-align: center;
+    }
+
+    svg {
+      justify-self: center;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .additional {
+    .container(@tablet-width);
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .goods-list__item {
+      display: grid;
+      grid-template-areas:
+        "h3 dl"
+        "button button";
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto auto;
+      padding: 30px 38px;
+
+      h3 {
+        grid-area: h3;
+        font-size: 20px;
+        line-height: 20px;
+      }
+
+      dl {
+        font-size: 16px;
+        grid-area: dl;
+        align-self: center;
+      }
+
+      .accept-btn {
+        grid-area: button;
+      }
+    }
+    .additional__offer {
+      position: relative;
+      min-height: 200px;
+      height: auto;
+      margin-top: 58px;
+      margin-bottom: 58px;
+      padding: 0 30px;
+      width: auto;
+      background-image: url(../../img/photos/catalog/grumpy-cat-in-backpack-tablet.png);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 707px;
+        height: 200px;
+        background-color: rgba(104, 183, 56, 0.85);
+        top: 0;
+        left: 0;
+      }
+
+      svg,
+      h3 {
+        z-index: 999;
+      }
     }
   }
 }

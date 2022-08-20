@@ -1324,7 +1324,14 @@ a {
   }
   .catalog-list__item .description__wrapper dl .dt__wrapper {
     padding-bottom: 10px;
-    border-bottom: 1px solid #CDCDCD;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+@media (min-width: 768px) {
+  .catalog .last-item {
+    background: transparent;
+    height: 429px;
+    border: 2px solid #F2F2F2;
   }
 }
 .additional {

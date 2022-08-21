@@ -10,6 +10,11 @@
     position: relative;
     min-height: 302px;
     background-image: url("../../img/photos/backgroundCat.png");
+    background-size: 320px 302px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/photos/backgroundCat@2x.png");
+    }
 
     &--color {
       min-height: inherit;
@@ -52,12 +57,17 @@
 
 @media (min-width: @tablet-width) {
   .promo {
+    .container(@tablet-width);
     background-image: url("../../img/photos/promo-food-tablet.png");
+    background-size: 709px 609px;
     background-position: 30px 270px;
     background-repeat: no-repeat;
-    .container(@tablet-width);
     padding: 0 117px;
     min-height: 800px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/photos/promo-food-tablet@2x.png");
+    }
 
     &__background-image {
       background-image: none;
@@ -111,6 +121,11 @@
       top: -226px;
       right: 0;
       background: url("../../img/photos/bg-desktop.png") no-repeat top right;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../../img/photos/bg-desktop@2x.png") no-repeat top right;
+        background-size: 720px 694px;
+      }
       z-index: 0;
 
       &::before {
@@ -132,6 +147,9 @@
       width: 552px;
       height: 499px;
       background-image: url("../../img/photos/promo-food-desktop.png");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/photos/promo-food-desktop@2x.png");
+      }
       background-size: 552px 499px;
       left: 448px;
       top: -70px;

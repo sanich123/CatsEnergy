@@ -493,6 +493,12 @@ a {
   position: relative;
   min-height: 302px;
   background-image: url("../../img/photos/backgroundCat.png");
+  background-size: 320px 302px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .promo__background-image {
+    background-image: url("../../img/photos/backgroundCat@2x.png");
+  }
 }
 .promo__background-image--color {
   min-height: inherit;
@@ -534,11 +540,12 @@ a {
 }
 @media (min-width: 768px) {
   .promo {
-    background-image: url("../../img/photos/promo-food-tablet.png");
-    background-position: 30px 270px;
-    background-repeat: no-repeat;
     width: 768px;
     margin: 0 auto;
+    background-image: url("../../img/photos/promo-food-tablet.png");
+    background-size: 709px 609px;
+    background-position: 30px 270px;
+    background-repeat: no-repeat;
     padding: 0 117px;
     min-height: 800px;
   }
@@ -573,6 +580,11 @@ a {
   }
   .promo__can-img {
     display: none;
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .promo {
+    background-image: url("../../img/photos/promo-food-tablet@2x.png");
   }
 }
 @media (min-width: 1440px) {
@@ -613,6 +625,17 @@ a {
   }
   .promo h2 {
     width: 436px;
+  }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .promo .desktop-bg {
+    background: url("../../img/photos/bg-desktop@2x.png") no-repeat top right;
+    background-size: 720px 694px;
+  }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .promo::after {
+    background-image: url("../../img/photos/promo-food-desktop@2x.png");
   }
 }
 .programms {

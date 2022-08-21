@@ -5,10 +5,8 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import pug from 'gulp-pug';
-import pugLinter from 'gulp-pug-linter';
 
 // Styles
-
 export const styles = () => {
   return gulp.src('source/less/styles.less', { sourcemaps: true })
     .pipe(plumber())
@@ -19,7 +17,6 @@ export const styles = () => {
 }
 
 // Html
-
 export const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
   .pipe(pug())
@@ -45,7 +42,7 @@ const server = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/pug/pages/*.pug', gulp.series(pugToHtml));
+  gulp.watch('source/pug/**/*.pug', gulp.series(pugToHtml));
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
 }

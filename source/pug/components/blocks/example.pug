@@ -7,5 +7,15 @@ section.example
     li(class="statistics-list__item days")
       strong 60 ДНЕЙ
   h3 Затраты на питание: 15 000 РУБ.
-  img(srcset="./img/photos/compare-cat.png 280w, ./img/photos/compare-cat-tablet.png 560w" sizes="(max-width: 767px) 280px, 560px" class="example__compare-cat-img" src="./img/photos/compare-cat.png" alt="Compare a fat cat with a tiny cat")
+  picture
+    source(
+      srcset="./img/photos/compare-cat-tablet@2x.png 2x, ./img/photos/compare-cat-tablet.png"
+      media="(min-width: 768px)")
+    source(srcset="./img/photos/compare-cat.webp")
+    img(
+      class="example__compare-cat-img"
+      src="./img/photos/compare-cat.png"
+      alt="Compare a fat cat with a tiny cat"
+      loading="lazy")
+
 

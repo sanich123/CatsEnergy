@@ -542,10 +542,7 @@ a {
   .promo {
     width: 768px;
     margin: 0 auto;
-    background-image: url("../../img/photos/promo-food-tablet.png");
-    background-size: 709px 609px;
-    background-position: 30px 270px;
-    background-repeat: no-repeat;
+    background: no-repeat url("../../img/photos/promo-food-tablet.png") 30px 270px;
     padding: 0 117px;
     min-height: 800px;
   }
@@ -585,6 +582,7 @@ a {
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .promo {
     background-image: url("../../img/photos/promo-food-tablet@2x.png");
+    background-size: 709px 609px;
   }
 }
 @media (min-width: 1440px) {
@@ -1001,7 +999,7 @@ a {
     grid-area: h3;
     justify-content: end;
   }
-  .example img {
+  .example picture {
     grid-area: img;
     justify-self: center;
     align-self: center;

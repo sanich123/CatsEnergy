@@ -18,7 +18,7 @@
 
     &--color {
       min-height: inherit;
-      background-color: rgba(104, 183, 56, 0.85);
+      background-color: @cover-green;
     }
 
     p {
@@ -58,15 +58,13 @@
 @media (min-width: @tablet-width) {
   .promo {
     .container(@tablet-width);
-    background-image: url("../../img/photos/promo-food-tablet.png");
-    background-size: 709px 609px;
-    background-position: 30px 270px;
-    background-repeat: no-repeat;
+    background: no-repeat url("../../img/photos/promo-food-tablet.png") 30px 270px;
     padding: 0 117px;
     min-height: 800px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/photos/promo-food-tablet@2x.png");
+      background-size: 709px 609px;
     }
 
     &__background-image {

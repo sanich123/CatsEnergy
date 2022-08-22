@@ -77,9 +77,7 @@ section.catalog
       if item.isLi
         li.catalog-list__item
           picture
-            source(
-              srcset=item.srcset
-              media="(min-width: 768px)")
+            source(srcset=item.srcset media="(min-width: 768px)")
             source(srcset=item.imgWebp)
             img(src=item.imgSrc loading="lazy" alt=item.imgAlt)
           .description__wrapper

@@ -492,12 +492,12 @@ a {
 .promo__background-image {
   position: relative;
   min-height: 302px;
-  background-image: url("../../img/photos/backgroundCat.png");
+  background-image: url("../../img/photos/bg-cat/bg-cat.png");
   background-size: 320px 302px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .promo__background-image {
-    background-image: url("../../img/photos/backgroundCat@2x.png");
+    background-image: url("../../img/photos/bg-cat/bg-cat@2x.png");
   }
 }
 .promo__background-image--color {
@@ -542,7 +542,7 @@ a {
   .promo {
     width: 768px;
     margin: 0 auto;
-    background: no-repeat url("../../img/photos/promo-food-tablet.png") 30px 270px;
+    background: no-repeat url("../../img/photos/promo-can/promo-can-tablet.png") 30px 270px;
     padding: 0 117px;
     min-height: 800px;
   }
@@ -581,7 +581,7 @@ a {
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .promo {
-    background-image: url("../../img/photos/promo-food-tablet@2x.png");
+    background-image: url("../../img/photos/promo-can/promo-can-tablet@2x.png");
     background-size: 709px 609px;
   }
 }
@@ -598,7 +598,7 @@ a {
     height: 694px;
     top: -226px;
     right: 0;
-    background: url("../../img/photos/bg-desktop.png") no-repeat top right;
+    background: url("../../img/photos/bg-cat/bg-cat-desktop.png") no-repeat top right;
     z-index: 0;
   }
   .promo .desktop-bg::before {
@@ -616,7 +616,7 @@ a {
     position: absolute;
     width: 552px;
     height: 499px;
-    background-image: url("../../img/photos/promo-food-desktop.png");
+    background-image: url("../../img/photos/promo-can/promo-can-desktop.png");
     background-size: 552px 499px;
     left: 448px;
     top: -70px;
@@ -627,13 +627,13 @@ a {
 }
 @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
   .promo .desktop-bg {
-    background: url("../../img/photos/bg-desktop@2x.png") no-repeat top right;
+    background: url("../../img/photos/bg-cat/bg-cat-desktop@2x.png") no-repeat top right;
     background-size: 720px 694px;
   }
 }
 @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
   .promo::after {
-    background-image: url("../../img/photos/promo-food-desktop@2x.png");
+    background-image: url("../../img/photos/promo-can/promo-can-desktop@2x.png");
   }
 }
 .programms {

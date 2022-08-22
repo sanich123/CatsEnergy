@@ -1449,16 +1449,30 @@ a {
   line-height: 14px;
 }
 .additional__offer {
+  position: relative;
   display: grid;
   grid-template-columns: auto;
   align-items: center;
   justify-content: center;
   width: 279px;
   height: 289px;
-  background-image: url("../../img/photos/catalog/grumpy-cat-in-backpack.png");
+  background-image: url("../../img/photos/catalog/grumpy-cat/grumpy-cat.png");
   background-repeat: no-repeat;
   padding-bottom: 43px;
   padding-top: 43px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .additional__offer {
+    background-image: url("../../img/photos/catalog/grumpy-cat/grumpy-cat@2x.png");
+    background-size: 279px 289px;
+  }
+}
+.additional__offer::before {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(104, 183, 56, 0.85);
 }
 .additional__offer h3 {
   font-family: "Arial", sans-serif;
@@ -1469,9 +1483,11 @@ a {
   line-height: 20px;
   color: #ffffff;
   text-align: center;
+  z-index: 999;
 }
 .additional__offer svg {
   justify-self: center;
+  z-index: 999;
 }
 @media (min-width: 768px) {
   .additional {
@@ -1513,7 +1529,7 @@ a {
     margin-bottom: 58px;
     padding: 0 30px;
     width: auto;
-    background-image: url(../../img/photos/catalog/grumpy-cat-in-backpack-tablet.png);
+    background: url(../../img/photos/catalog/grumpy-cat/grumpy-cat-tablet.png) 707px 200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -1529,6 +1545,12 @@ a {
   .additional .additional__offer svg,
   .additional .additional__offer h3 {
     z-index: 999;
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .additional .additional__offer {
+    background: url(../../img/photos/catalog/grumpy-cat/grumpy-cat-tablet@2x.png);
+    background-size: 707px 200px;
   }
 }
 @media (min-width: 1440px) {
@@ -1569,8 +1591,7 @@ a {
     min-height: 0;
     width: 279px;
     height: 289px;
-    background-image: url("../../img/photos/catalog/grumpy-cat-in-backpack.png");
-    background-repeat: no-repeat;
+    background: url("../../img/photos/catalog/grumpy-cat/grumpy-cat.png"), 279px 289px no-repeat;
     margin: 0;
   }
   .additional .additional__offer::before {
@@ -1607,6 +1628,12 @@ a {
     height: 40px;
     align-self: center;
     justify-self: end;
+  }
+}
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {
+  .additional .additional__offer {
+    background: url("../../img/photos/catalog/grumpy-cat/grumpy-cat@2x.png") no-repeat;
+    background-size: 279px 289px;
   }
 }
 .checkbox-label {

@@ -46,14 +46,15 @@
       line-height: 18px;
       text-transform: uppercase;
       color: @special-dark-grey;
-      display: grid;
-      grid-template-columns: auto auto;
+      // display: grid;
+      // grid-template-columns: auto auto;
       align-items: center;
 
       input {
         border: 1px solid @light-grey2;
         height: 45px;
         padding-left: 14px;
+        margin-left: auto;
 
         &::placeholder {
           font-size: 16px;
@@ -72,5 +73,12 @@
     font-size: 14px;
     line-height: 16px;
     color: @black;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    .container(@tablet-width);
+    padding: 0 69px;
   }
 }

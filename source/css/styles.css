@@ -1595,7 +1595,8 @@ a {
     margin: 0;
   }
   .additional .additional__offer::before {
-    display: none;
+    width: 279px;
+    height: 289px;
   }
   h2 {
     grid-area: h2;
@@ -1757,14 +1758,13 @@ a {
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
-  display: grid;
-  grid-template-columns: auto auto;
   align-items: center;
 }
 .form fieldset label input {
   border: 1px solid #e7e7e7;
   height: 45px;
   padding-left: 14px;
+  margin-left: auto;
 }
 .form fieldset label input::placeholder {
   font-size: 16px;
@@ -1784,6 +1784,13 @@ a {
   font-size: 14px;
   line-height: 16px;
   color: #000000;
+}
+@media (min-width: 768px) {
+  .form {
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 69px;
+  }
 }
 #message {
   width: 280px;

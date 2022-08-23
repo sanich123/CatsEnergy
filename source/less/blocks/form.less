@@ -3,6 +3,7 @@
 @import "../inputs/checkboxes.less";
 @import "../inputs/radio-btns.less";
 @import "../inputs/email-phone.less";
+@import "../inputs/name-weight-age.less";
 
 .form {
   .container(@mobile-width);
@@ -27,18 +28,12 @@
   }
 
   fieldset {
+    padding: 20px 0;
     border: none;
-    border-bottom: 1px solid @light-grey;
-    display: grid;
-    padding: 0;
-    gap: 13px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
 
     legend {
       font-size: 24px;
       line-height: 26px;
-      margin-bottom: 15px;
     }
 
     label {
@@ -46,15 +41,11 @@
       line-height: 18px;
       text-transform: uppercase;
       color: @special-dark-grey;
-      // display: grid;
-      // grid-template-columns: auto auto;
-      align-items: center;
 
       input {
         border: 1px solid @light-grey2;
         height: 45px;
         padding-left: 14px;
-        margin-left: auto;
 
         &::placeholder {
           font-size: 16px;

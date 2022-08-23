@@ -1637,13 +1637,17 @@ a {
     background-size: 279px 289px;
   }
 }
-.checkbox-label {
-  position: relative;
-  display: flex;
-  margin-left: 40px;
-  margin-top: 10px;
+.form__inputs-5 {
+  display: grid;
+  gap: 25px;
 }
-.checkbox-label::before {
+.checkboxes__label {
+  position: relative;
+  display: grid;
+  align-items: center;
+  margin-left: 40px;
+}
+.checkboxes__label::before {
   position: absolute;
   content: "";
   width: 26px;
@@ -1651,28 +1655,33 @@ a {
   border: 1px solid #cdcdcd;
   left: -40px;
 }
-.checkbox-label::after {
+.checkboxes__label::after {
   position: absolute;
   display: none;
   content: "";
-  width: 18px;
-  height: 14px;
-  background-image: url("../../img/svg/checked.svg");
-  background-size: 18px 14px;
+  width: 19px;
+  height: 15px;
+  background: url("../../img/svg/checked.svg");
+  background-size: 19px 15px;
   background-repeat: no-repeat;
   left: -35px;
 }
-#sugarChanger:checked + .checkbox-label::after,
-#water:checked + .checkbox-label::after,
-#milk:checked + .checkbox-label::after,
-#vitamins:checked + .checkbox-label::after {
+#sugarChanger:checked + .checkboxes__label::after,
+#water:checked + .checkboxes__label::after,
+#milk:checked + .checkboxes__label::after,
+#vitamins:checked + .checkboxes__label::after {
   display: block;
+}
+.form__inputs-2 {
+  border-bottom: 1px solid #d9d9d9;
+  display: grid;
+  gap: 24px;
 }
 .radio-label {
   position: relative;
-  display: flex;
+  display: grid;
+  align-items: center;
   margin-left: 40px;
-  margin-top: 10px;
 }
 .radio-label::before {
   position: absolute;
@@ -1698,9 +1707,21 @@ a {
 #notKnow:checked + .radio-label::after {
   display: block;
 }
-.email-label,
-.phone-label {
+.inputs-3__legend {
+  padding-top: 26px;
+  margin-bottom: 20px;
+}
+.form__inputs-3 {
+  display: grid;
+  gap: 24px;
+}
+.form .email-label,
+.form .phone-label {
   position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 13px;
 }
 .email-label svg {
   position: absolute;
@@ -1712,11 +1733,33 @@ a {
   right: 10px;
   top: 12px;
 }
-#email {
-  margin-left: -45px;
+.form__inputs-1 {
+  display: grid;
+  gap: 13px;
+  border-bottom: 1px solid #d9d9d9;
 }
-#phone {
-  margin-left: -25px;
+.labels-1__name,
+.labels-1__weight,
+.labels-1__age {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+.labels-1__name input,
+.labels-1__weight input,
+.labels-1__age input {
+  border: 1px solid #e7e7e7;
+  height: 45px;
+  padding-left: 14px;
+  margin-left: 12px;
+}
+.labels-1__name input::placeholder,
+.labels-1__weight input::placeholder,
+.labels-1__age input::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
 }
 .form {
   width: 320px;
@@ -1740,31 +1783,23 @@ a {
   width: 100%;
 }
 .form fieldset {
+  padding: 20px 0;
   border: none;
-  border-bottom: 1px solid #d9d9d9;
-  display: grid;
-  padding: 0;
-  gap: 13px;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
 }
 .form fieldset legend {
   font-size: 24px;
   line-height: 26px;
-  margin-bottom: 15px;
 }
 .form fieldset label {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
-  align-items: center;
 }
 .form fieldset label input {
   border: 1px solid #e7e7e7;
   height: 45px;
   padding-left: 14px;
-  margin-left: auto;
 }
 .form fieldset label input::placeholder {
   font-size: 16px;
@@ -1791,6 +1826,10 @@ a {
     margin: 0 auto;
     padding: 0 69px;
   }
+}
+.textarea__legend {
+  padding-top: 26px;
+  margin-bottom: 20px;
 }
 #message {
   width: 280px;

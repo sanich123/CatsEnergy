@@ -1,9 +1,27 @@
 @import "../global/variables.less";
 @import "../mixins/mixins.less";
 
-.email-label,
-.phone-label {
-  position: relative;
+.inputs-3 {
+  &__legend {
+    padding-top: 26px;
+    margin-bottom: 20px;
+  }
+}
+
+.form {
+  &__inputs-3 {
+    display: grid;
+    gap: 24px;
+  }
+
+  .email-label,
+  .phone-label {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 13px;
+  }
 }
 
 .email-label svg {
@@ -16,12 +34,4 @@
   position: absolute;
   right: 10px;
   top: 12px;
-}
-
-#email {
-  margin-left: -45px;
-}
-
-#phone {
-  margin-left: -25px;
 }

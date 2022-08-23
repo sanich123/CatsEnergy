@@ -1,0 +1,33 @@
+@import "../global/variables.less";
+
+.form {
+  &__inputs-1 {
+    display: grid;
+    gap: 13px;
+    border-bottom: 1px solid @light-grey;
+  }
+}
+
+.labels-1 {
+  &__name,
+  &__weight,
+  &__age {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    input {
+      border: 1px solid @light-grey2;
+      height: 45px;
+      padding-left: 14px;
+      margin-left: 12px;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 18px;
+        color: @special-dark-grey;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

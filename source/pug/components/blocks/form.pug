@@ -2,46 +2,11 @@ section(class="form" aria-label="Информация о вашем питомц
   h2 Подбор программы
   p Заполните анкету, и мы подберем программу питания для вашего кота
   form(action="https://echo.htmlacademy.ru" method="post")
-    fieldset
-      legend.visually-hidden Your cat's data
-      label Имя:*
-        input#name(type="text" name="name" placeholder="БАРСИК" required)
-      label Вес (кг):*
-        input#weight(type="number" name="weight" placeholder="7" required)
-      label Возраст (лет)
-        input#age(type="number" name="age" placeholder="7")
-    fieldset
-      legend.visually-hidden Options
-      input#starving(class="visually-hidden" type="radio" name="program" checked)
-      label(for="starving" class="radio-label") Похудение
-      input#gaining(class="visually-hidden" type="radio" name="program")
-      label(for="gaining" class="radio-label") Набор массы
-      input#notKnow(class="visually-hidden" type="radio" name="program")
-      label(for="notKnow" class="radio-label") Не знаю (Нужен ваш совет)
-    fieldset
-      legend Контактные данные (владельца кота)
-      label(for="email" class="email-label") E-mail:*
-        input#email(type="email" name="email" placeholder="kuklachev@gmail.com" required)
-        svg(width="20" height="15")
-          use(href="./img/svg/icons.svg#icon-mail")
-      label(for="phone" class="phone-label") Телефон:*
-        input#phone(type="tel" name="phone" placeholder="8 (960) 900-60-90" required)
-        svg(width="20" height="21")
-          use(href="./img/svg/icons.svg#icon-phone")
-    fieldset
-      legend Комментарий
-      label(aria-label="Tell us about your cat's habits")
-        textarea#message(name="message" placeholder="Расскажите обо всех повАдках кота")
-    fieldset
-      legend Дополнительно
-      input#sugarChanger(class="visually-hidden" type="checkbox" name="sugarChanger")
-      label(for="sugarChanger" class="checkbox-label") Cахарозаменитель
-      input#water(class="visually-hidden" type="checkbox" name="water")
-      label(for="water" class="checkbox-label") Питьевая вода
-      input#milk(class="visually-hidden" type="checkbox" name="milk" checked)
-      label(for="milk" class="checkbox-label") Молоко
-      input#vitamins(class="visually-hidden" type="checkbox" name="vitamins")
-      label(for="vitamins" class="checkbox-label") Витамины
+    include ./inputs/input-name-weight-age.pug
+    include ./inputs/radio-btns.pug
+    include ./inputs/input-email-phone.pug
+    include ./inputs/textarea.pug
+    include ./inputs/checkboxes.pug
     button(type="submit" class="accept-btn") Отправить заявку
   span.form__require-fields * — Обязательные поля
 

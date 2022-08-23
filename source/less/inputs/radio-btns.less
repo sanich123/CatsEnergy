@@ -1,10 +1,18 @@
 @import "../global/variables.less";
 
+.form {
+  &__inputs-2 {
+    border-bottom: 1px solid @light-grey;
+    display: grid;
+    gap: 24px;
+  }
+}
+
 .radio-label {
   position: relative;
-  display: flex;
+  display: grid;
+  align-items: center;
   margin-left: 40px;
-  margin-top: 10px;
 
   &::before {
     position: absolute;

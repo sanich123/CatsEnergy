@@ -41,3 +41,25 @@
 #notKnow:checked + .radio-label::after {
   display: block;
 }
+
+@media (min-width: @tablet-width) {
+  .form {
+
+    .form__inputs-2 {
+      border: 1px solid #E7E7E7;
+      margin-left: 42px;
+      margin-right: 42px;
+      padding: 30px;
+      width: 630px;
+      height: 196px;
+
+      @media (min-width: @desktop-width) {
+        width: 570px;
+        min-height: 196px;
+        align-self: center;
+        margin: 0;
+      }
+    }
+  }
+}
+

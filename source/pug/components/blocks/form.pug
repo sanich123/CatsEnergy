@@ -1,13 +1,14 @@
 section(class="form" aria-label="Информация о вашем питомце")
   h2 Подбор программы
   p Заполните анкету, и мы подберем программу питания для вашего кота
-  form(action="https://echo.htmlacademy.ru" method="post")
+  form(class="form__contact" action="https://echo.htmlacademy.ru" method="post")
     include ./inputs/input-name-weight-age.pug
     include ./inputs/radio-btns.pug
     include ./inputs/input-email-phone.pug
     include ./inputs/textarea.pug
     include ./inputs/checkboxes.pug
-    button(type="submit" class="accept-btn") Отправить заявку
-  span.form__require-fields * — Обязательные поля
+    .require__wrapper
+      button(type="submit" class="accept-btn") Отправить заявку
+      span.form__require-fields * — Обязательные поля
 
 

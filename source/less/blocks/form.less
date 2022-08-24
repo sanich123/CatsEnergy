@@ -45,6 +45,9 @@
       input {
         border: 1px solid @light-grey2;
         height: 45px;
+        @media (min-width: @tablet-width) {
+          height: 52px;
+        }
         padding-left: 14px;
 
         &::placeholder {
@@ -70,6 +73,92 @@
 @media (min-width: @tablet-width) {
   .form {
     .container(@tablet-width);
-    padding: 0 69px;
+    padding: 0 30px;
+
+    &__contact {
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    h2,
+    p {
+      margin-left: 41px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      width: 330px;
+    }
+
+    h2 {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    fieldset {
+      legend {
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+  }
+  .require__wrapper {
+    padding: 30px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .form__require-fields {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    .container(@desktop-width);
+    padding: 0 110px;
+
+    &__contact {
+      grid-template-areas:
+        "name starving"
+        "mail mail"
+        "comments comments"
+        "additional additional"
+        "button button";
+      grid-template-columns: 1fr 1fr;
+
+      .form__inputs-1 {
+        grid-area: name;
+      }
+
+      .form__inputs-2 {
+        grid-area: starving;
+        margin-left: 40px;
+      }
+
+      .form__inputs-3 {
+        grid-area: mail;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form__inputs-4 {
+        grid-area: comments;
+      }
+
+      .form__inputs-5 {
+        grid-area: additional;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .require__wrapper {
+        grid-area: button;
+        grid-template-columns: 568px auto;
+        .form__require-fields {
+          justify-content: start;
+          padding-left: 81px;
+        }
+      }
+    }
   }
 }

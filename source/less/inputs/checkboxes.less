@@ -3,6 +3,12 @@
     display: grid;
     gap: 25px;
   }
+  @media (min-width: @tablet-width) {
+    &__inputs-5 {
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+    }
+  }
 }
 
 .checkboxes {

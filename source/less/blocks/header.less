@@ -2,30 +2,75 @@
 @import "../mixins/mixins.less";
 
 .header {
+  .container(@mobile-width);
   z-index: 999;
   position: relative;
 
-  &__logo--tablet {
-    display: none;
-  }
   &__wrapper {
-    .container(@mobile-width);
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: auto auto;
     align-items: center;
-    padding: 0 20px;
+    min-height: 66px;
+    position: relative;
   }
   &__logo {
-    justify-self: center;
+    justify-self: start;
+    background-image:
+      url("../../img/svg/logo-mobile.svg"),
+      url("../../img/svg/logo-mobile-words.svg");
+    background-position: left, right;
+    background-repeat: no-repeat;
+    width: 210px;
+    height: 37px;
+
+    @media (min-width: @tablet-width) {
+      background: url("../../img/svg/logo-tablet.svg");
+      width: 174px;
+      height: 52px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background: url("./../../img/svg/logo-desktop.svg");
+      width: 202px;
+      height: 60px;
+    }
   }
 
   &__toggler {
+    position: relative;
     .reset-btn();
+    width: 24px;
+    height: 24px;
+    justify-self: end;
+
   }
 }
+    .active::before {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 18px;
+      background-image: url('../../img/svg/icon-hamburger.svg');
+      background-size: 24px 18px;
+      top: 0;
+      left: 0;
+    }
+
+    .passive::after {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url('../../img/svg/icon-decline.svg');
+      top: 0;
+      left: 0;
+    }
 
 .nav {
   .container(@mobile-width);
+  position: absolute;
+  background-color: @white;
+
   &-list {
     .reset-ul();
     &__item {
@@ -36,12 +81,19 @@
       font-size: 20px;
       line-height: 20px;
       text-transform: uppercase;
-      border-top: 1px solid #e6e6e6;
+      border-top: 1px solid @light-grey3;
 
+      &:last-child {
+        border-bottom: 1px solid @light-grey3;
+      }
       a {
         color: @black;
       }
     }
+  }
+
+  &--closed {
+    display: none;
   }
 }
 
@@ -52,11 +104,6 @@
     display: grid;
     grid-template-columns: 33% 66%;
 
-    &__logo--tablet {
-      display: block;
-    }
-
-    &__logo,
     &__toggler {
       display: none;
     }
@@ -64,6 +111,7 @@
     .nav {
       width: auto;
       margin: 0;
+      position: static;
       &-list {
         display: flex;
         align-items: center;
@@ -85,6 +133,7 @@
     .container(@desktop-width);
     grid-template-columns: 50% 50%;
     .nav {
+      background-color: transparent;
       &-list {
         justify-content: center;
         &__item {

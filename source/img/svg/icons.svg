@@ -1,4 +1,4 @@
-<svg style="display: none">
+<svg>
 <symbol id="logo" width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_37030_424)">
 <path d="M6.07 20.72V18.46C12.7536 17.5423 19.4937 17.0979 26.24 17.13C26.24 17.73 26.24 18.34 26.18 18.95C28.0976 18.099 30.1128 17.4877 32.18 17.13C30.8625 13.722 28.4618 10.8412 25.3471 8.93087C22.2325 7.02052 18.5764 6.1864 14.9414 6.55683C11.3064 6.92727 7.89379 8.48172 5.22852 10.9811C2.56325 13.4804 0.792971 16.7863 0.190002 20.39L6.07 20.72Z" fill="#FDC305"/>
@@ -176,5 +176,8 @@
 </clipPath>
 </defs>
 </symbol>
-
+<symbol id="icon-decline" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 -0.727046 0.686589 0.727046 2.00171 20)" stroke="black" stroke-width="1.5"/>
+<line y1="-0.75" x2="24.7577" y2="-0.75" transform="matrix(0.686589 0.727046 -0.686589 0.727046 1 2)" stroke="black" stroke-width="1.5"/>
+</symbol>
 </svg>

@@ -3,7 +3,6 @@
 
 .promo {
   .container(@mobile-width);
-  min-height: 480px;
   position: relative;
 
   &__background-image {
@@ -19,6 +18,7 @@
     &--color {
       min-height: inherit;
       background-color: @cover-green;
+      padding-top: 27px;
     }
 
     p {
@@ -28,6 +28,7 @@
       line-height: 14px;
       text-transform: uppercase;
       color: @white;
+      padding-top: 11px; //Очень плохое решение
     }
     h2 {
       padding: 0;
@@ -41,13 +42,15 @@
   }
   &__can-img {
     position: absolute;
-    top: 33%;
+    top: 167px;
+    left: 20px;
   }
 
   a {
     .to-center();
     padding: 7px 44px;
     margin: 138px 20px;
+    min-height: 40px;
     font-size: 14px;
     line-height: 18px;
     background: @base-green;
@@ -59,8 +62,10 @@
 @media (min-width: @tablet-width) {
   .promo {
     .container(@tablet-width);
-    background: no-repeat url("../../img/photos/promo-can/promo-can-tablet.png") 30px 270px;
-    padding: 0 117px;
+    background: no-repeat url("../../img/photos/promo-can/promo-can-tablet.png")
+      29px 235px;
+    padding: 7px 117px;
+    position: relative;
     min-height: 800px;
 
     @media (min-resolution: 2dppx) {
@@ -89,17 +94,20 @@
     }
 
     p {
+      margin-top: 30px;
+      padding-left: 2px; //pixel-perfect
       font-size: 20px;
       line-height: 20px;
     }
 
     a {
+      position: absolute;
       display: inline-flex;
       font-size: 20px;
       line-height: 20px;
-      padding: 14px 26px;
-      margin: 0;
-      width: auto;
+      padding: 17px 26px;
+      top: 126px;
+      left: 100px;
     }
     &__can-img {
       display: none;
@@ -111,17 +119,20 @@
   .promo {
     .container(@desktop-width);
     background-image: none;
+    padding: 25px 190px;
 
     .desktop-bg {
       position: absolute;
       width: 720px;
       height: 745px;
-      top: -226px;
+      top: -220px;
       right: 0;
-      background: url("../../img/photos/bg-cat/bg-cat-desktop.png") no-repeat bottom left;
+      background: url("../../img/photos/bg-cat/bg-cat-desktop.png") no-repeat
+        bottom left;
 
       @media (min-resolution: 2dppx) {
-        background: url("../../img/photos/bg-cat/bg-cat-desktop@2x.png") no-repeat bottom left;
+        background: url("../../img/photos/bg-cat/bg-cat-desktop@2x.png")
+          no-repeat bottom left;
         background-size: 720px 696px;
       }
 
@@ -136,7 +147,6 @@
       }
     }
 
-    min-height: 600px;
     &::after {
       content: "";
       position: absolute;
@@ -147,11 +157,18 @@
         background-image: url("../../img/photos/promo-can/promo-can-desktop@2x.png");
       }
       background-size: 552px 499px;
-      left: 448px;
-      top: -70px;
+      left: 558px;
+      top: -29px;
     }
     h2 {
       width: 436px;
+    }
+    p {
+      padding-left: 1px; //Pixel-perfect
+    }
+    a {
+      top: 146px;
+      left: 170px;
     }
   }
 }

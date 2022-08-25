@@ -399,8 +399,8 @@ a {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  min-height: 66px;
-  padding-bottom: 5px;
+  min-height: 65px;
+  padding-bottom: 6px;
 }
 .header__logo {
   justify-self: start;
@@ -432,17 +432,17 @@ a {
   position: relative;
   justify-self: end;
 }
-.header__toggler--hamburger::before,
+.header__toggler--open::before,
 .header__toggler--close::after {
   position: absolute;
   content: "";
-  top: -9px;
-  left: -10px;
+  top: -7px;
+  left: -12px;
 }
-.header__toggler--hamburger::before {
+.header__toggler--open::before {
   width: 24px;
   height: 18px;
-  background-image: url("../../img/svg/icon-hamburger.svg");
+  background-image: url("../../img/svg/icon-open.svg");
 }
 .header__toggler--close::after {
   width: 20px;
@@ -485,7 +485,7 @@ a {
 }
 @media (min-width: 768px) {
   .header {
-    padding: 18px 30px;
+    padding: 20px 30px;
     width: 768px;
     margin: 0 auto;
     display: grid;
@@ -531,6 +531,15 @@ a {
     display: block;
   }
 }
+.green-stroke::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background: #68b738;
+  right: 0;
+  left: 0;
+  bottom: 10px;
+}
 @media (min-width: 1440px) {
   .header {
     padding: 52px 110px;
@@ -555,7 +564,6 @@ a {
 .promo {
   width: 320px;
   margin: 0 auto;
-  min-height: 480px;
   position: relative;
 }
 .promo__background-image {
@@ -572,6 +580,7 @@ a {
 .promo__background-image--color {
   min-height: inherit;
   background-color: rgba(104, 183, 56, 0.85);
+  padding-top: 27px;
 }
 .promo__background-image p {
   display: flex;
@@ -582,6 +591,7 @@ a {
   line-height: 14px;
   text-transform: uppercase;
   color: #ffffff;
+  padding-top: 11px;
 }
 .promo__background-image h2 {
   padding: 0;
@@ -594,7 +604,8 @@ a {
 }
 .promo__can-img {
   position: absolute;
-  top: 33%;
+  top: 167px;
+  left: 20px;
 }
 .promo a {
   display: flex;
@@ -602,6 +613,7 @@ a {
   justify-content: center;
   padding: 7px 44px;
   margin: 138px 20px;
+  min-height: 40px;
   font-size: 14px;
   line-height: 18px;
   background: #68b738;
@@ -612,8 +624,9 @@ a {
   .promo {
     width: 768px;
     margin: 0 auto;
-    background: no-repeat url("../../img/photos/promo-can/promo-can-tablet.png") 30px 270px;
-    padding: 0 117px;
+    background: no-repeat url("../../img/photos/promo-can/promo-can-tablet.png") 29px 235px;
+    padding: 7px 117px;
+    position: relative;
     min-height: 800px;
   }
   .promo__background-image {
@@ -633,16 +646,19 @@ a {
     line-height: 60px;
   }
   .promo p {
+    margin-top: 30px;
+    padding-left: 2px;
     font-size: 20px;
     line-height: 20px;
   }
   .promo a {
+    position: absolute;
     display: inline-flex;
     font-size: 20px;
     line-height: 20px;
-    padding: 14px 26px;
-    margin: 0;
-    width: auto;
+    padding: 17px 26px;
+    top: 126px;
+    left: 100px;
   }
   .promo__can-img {
     display: none;
@@ -659,13 +675,13 @@ a {
     width: 1440px;
     margin: 0 auto;
     background-image: none;
-    min-height: 600px;
+    padding: 25px 190px;
   }
   .promo .desktop-bg {
     position: absolute;
     width: 720px;
     height: 745px;
-    top: -226px;
+    top: -220px;
     right: 0;
     background: url("../../img/photos/bg-cat/bg-cat-desktop.png") no-repeat bottom left;
   }
@@ -685,11 +701,18 @@ a {
     height: 499px;
     background-image: url("../../img/photos/promo-can/promo-can-desktop.png");
     background-size: 552px 499px;
-    left: 448px;
-    top: -70px;
+    left: 558px;
+    top: -29px;
   }
   .promo h2 {
     width: 436px;
+  }
+  .promo p {
+    padding-left: 1px;
+  }
+  .promo a {
+    top: 146px;
+    left: 170px;
   }
 }
 @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1440px) and (min-resolution: 2dppx) {

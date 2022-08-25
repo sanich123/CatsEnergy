@@ -12,8 +12,8 @@
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    min-height: 66px;
-    padding-bottom: 5px; //pixel-perfect
+    min-height: 65px;
+    padding-bottom: 6px; //pixel-perfect
   }
   &__logo {
     justify-self: start;
@@ -42,18 +42,18 @@
     position: relative;
     justify-self: end;
 
-    &--hamburger::before,
+    &--open::before,
     &--close::after {
       position: absolute;
       content: "";
-      top: -9px;
-      left: -10px;
+      top: -7px;
+      left: -12px;
     }
 
-    &--hamburger::before {
+    &--open::before {
       width: 24px;
       height: 18px;
-      background-image: url("../../img/svg/icon-hamburger.svg");
+      background-image: url("../../img/svg/icon-open.svg");
     }
 
     &--close::after {
@@ -99,7 +99,7 @@
 
 @media (min-width: @tablet-width) {
   .header {
-    padding: 18px 30px;
+    padding: 20px 30px;
     .container(@tablet-width);
     display: grid;
     grid-template-columns: auto 1fr;
@@ -148,6 +148,18 @@
         display: block;
       }
     }
+  }
+}
+
+.green-stroke {
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background: @base-green;
+    right: 0;
+    left: 0;
+    bottom: 10px;
   }
 }
 

@@ -1,3 +1,18 @@
+-
+  const paths = [{
+    url: './index.html',
+    heading: 'Главная',
+    isActive: true,
+  }, {
+    url: './catalog.html',
+    heading: 'Каталог продукции',
+    isActive: false,
+  }, {
+    url: './form.html',
+    heading: 'Подбор программы',
+    isActive: false,
+  }];
+
 header.header
   .header__wrapper
     a(
@@ -5,14 +20,11 @@ header.header
       href='./index.html'
       aria-label="Логотип магазина")
     button(
-      class="header__toggler active"
+      class="header__toggler header__toggler--close"
       type="button"
       aria-label="Кнопка открытия меню")
-  nav(class="nav")
+  nav(class="header__nav nav")
     ul(class="nav__list nav-list")
-      li(class="nav-list__item nav-list__item--active")
-        a(href="./index.html") Главная
-      li(class="nav-list__item")
-        a(href="./catalog.html") Каталог продукции
-      li(class="nav-list__item")
-        a(href="./form.html") Подбор программы
+      each link in paths
+        li(class=`nav-list__item ${link.isActive ? 'nav-list__item--active' : ''}`)
+          a(href=link.url)=link.heading

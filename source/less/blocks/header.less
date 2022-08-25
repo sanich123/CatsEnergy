@@ -5,22 +5,23 @@
   .container(@mobile-width);
   z-index: 999;
   position: relative;
+  padding: 0 20px;
 
   &__wrapper {
+    position: relative;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
     min-height: 66px;
-    position: relative;
+    padding-bottom: 5px; //pixel-perfect
   }
   &__logo {
     justify-self: start;
-    background-image:
-      url("../../img/svg/logo-mobile.svg"),
+    background-image: url("../../img/svg/logo-mobile.svg"),
       url("../../img/svg/logo-mobile-words.svg");
     background-position: left, right;
     background-repeat: no-repeat;
-    width: 210px;
+    width: 190px;
     height: 37px;
 
     @media (min-width: @tablet-width) {
@@ -37,38 +38,37 @@
   }
 
   &__toggler {
-    position: relative;
     .reset-btn();
-    width: 24px;
-    height: 24px;
+    position: relative;
     justify-self: end;
 
-  }
-}
-    .active::before {
+    &--hamburger::before,
+    &--close::after {
       position: absolute;
-      content: '';
-      width: 24px;
-      height: 18px;
-      background-image: url('../../img/svg/icon-hamburger.svg');
-      background-size: 24px 18px;
-      top: 0;
-      left: 0;
+      content: "";
+      top: -9px;
+      left: -10px;
     }
 
-    .passive::after {
-      position: absolute;
-      content: '';
+    &--hamburger::before {
+      width: 24px;
+      height: 18px;
+      background-image: url("../../img/svg/icon-hamburger.svg");
+    }
+
+    &--close::after {
       width: 20px;
       height: 20px;
-      background-image: url('../../img/svg/icon-decline.svg');
-      top: 0;
-      left: 0;
+      background-image: url("../../img/svg/icon-decline.svg");
     }
+  }
+}
 
 .nav {
   .container(@mobile-width);
   position: absolute;
+  top: 65px;
+  left: 0;
   background-color: @white;
 
   &-list {
@@ -76,17 +76,17 @@
     &__item {
       .to-center();
       min-height: 66px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 20px;
-      text-transform: uppercase;
       border-top: 1px solid @light-grey3;
 
       &:last-child {
         border-bottom: 1px solid @light-grey3;
       }
       a {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
         color: @black;
       }
     }
@@ -99,29 +99,53 @@
 
 @media (min-width: @tablet-width) {
   .header {
-    padding: 24px 30px;
+    padding: 18px 30px;
     .container(@tablet-width);
     display: grid;
-    grid-template-columns: 33% 66%;
+    grid-template-columns: auto 1fr;
 
     &__toggler {
       display: none;
     }
 
     .nav {
+      background-color: transparent;
       width: auto;
       margin: 0;
       position: static;
+
       &-list {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: end;
-        column-gap: 10px;
+        gap: 36px;
+
         &__item {
-          font-size: 18px;
-          line-height: 24px;
           border: none;
+
+          &--active {
+            position: relative;
+
+            &::before {
+              position: absolute;
+              content: "";
+              height: 2px;
+              background: @base-green;
+              right: 0;
+              left: 0;
+              bottom: 10px;
+            }
+          }
+          a {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+          }
         }
+      }
+      &--closed {
+        display: block;
       }
     }
   }
@@ -129,20 +153,23 @@
 
 @media (min-width: @desktop-width) {
   .header {
-    padding: 55px 110px;
+    padding: 52px 110px;
     .container(@desktop-width);
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     .nav {
-      background-color: transparent;
       &-list {
-        justify-content: center;
+        justify-content: flex-end;
+        gap: 35px;
         &__item {
           &--active {
-            a {
-              border-bottom: 2px solid @white;
+            &::before {
+              background: @white;
             }
           }
           a {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
             color: @white;
           }
         }

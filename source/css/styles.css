@@ -674,13 +674,14 @@ a {
   .promo {
     width: 1440px;
     margin: 0 auto;
+    min-height: 549px;
     background-image: none;
     padding: 25px 190px;
   }
   .promo .desktop-bg {
     position: absolute;
     width: 720px;
-    height: 745px;
+    height: 744px;
     top: -220px;
     right: 0;
     background: url("../../img/photos/bg-cat/bg-cat-desktop.png") no-repeat bottom left;
@@ -688,7 +689,7 @@ a {
   .promo .desktop-bg::before {
     content: "";
     width: 720px;
-    height: 745px;
+    height: 744px;
     background-color: rgba(104, 183, 56, 0.85);
     position: absolute;
     top: 0;
@@ -834,21 +835,26 @@ a {
     grid-area: svg;
     width: 200px;
     height: 211px;
-    justify-self: center;
-    align-self: center;
+    justify-self: start;
+    align-self: start;
+    margin-top: 40px;
+    margin-left: 23px;
   }
   .programms-list__item #green-cat-2 {
     grid-area: svg;
     width: 268px;
     height: 200px;
-    justify-self: center;
-    align-self: center;
+    justify-self: start;
+    align-self: start;
+    margin-top: 51px;
+    margin-left: -12px;
   }
   .programms-list__item h2 {
     font-size: 36px;
     line-height: 36px;
   }
   .programms-list__item p {
+    margin-top: -8px;
     width: 340px;
     font-size: 16px;
     line-height: 24px;
@@ -856,6 +862,7 @@ a {
   .programms-list__item a {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: -10px;
     gap: 25px;
   }
   .programms-list__item::before {
@@ -866,30 +873,47 @@ a {
   .programms {
     width: 1440px;
     margin: 0 auto;
-    padding: 0 110px;
+    padding: 58px 110px 0;
   }
   .programms-list {
     grid-template-columns: auto auto;
-    gap: 110px;
+    gap: 80px;
   }
   .programms-list__item {
     grid-template-areas: "svg h2" "p p" "a a";
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% auto;
     grid-template-rows: auto auto auto;
+    min-width: 570px;
+    min-height: 374px;
+    padding: 0;
+    padding-left: 52px;
+    padding-bottom: 66px;
   }
   .programms-list__item #green-cat-1 {
     grid-area: svg;
     width: 100px;
     height: 106px;
-    align-self: center;
-    justify-self: start;
+    margin: 0;
+    margin-top: 40px;
   }
   .programms-list__item #green-cat-2 {
     grid-area: svg;
     width: 134px;
     height: 100px;
-    align-self: center;
-    justify-self: start;
+    margin: 0;
+    margin-top: 45px;
+    margin-left: -18px;
+  }
+  .programms-list__item h2 {
+    margin-left: -14px;
+    margin-top: 29px;
+  }
+  .programms-list__item p {
+    margin-top: 15px;
+    width: 462px;
+  }
+  .programms-list__item a {
+    gap: 29px;
   }
 }
 .description {

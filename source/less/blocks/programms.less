@@ -114,21 +114,26 @@
           grid-area: svg;
           width: 200px;
           height: 211px;
-          justify-self: center;
-          align-self: center;
+          justify-self: start;
+          align-self: start;
+          margin-top: 40px;
+          margin-left: 23px;
         }
         #green-cat-2 {
           grid-area: svg;
           width: 268px;
           height: 200px;
-          justify-self: center;
-          align-self: center;
+          justify-self: start;
+          align-self: start;
+          margin-top: 51px;
+          margin-left: -12px;
         }
         h2 {
           font-size: 36px;
           line-height: 36px;
         }
         p {
+          margin-top: -8px;
           width: 340px;
           font-size: 16px;
           line-height: 24px;
@@ -136,7 +141,7 @@
         a {
           font-size: 20px;
           line-height: 30px;
-          // margin-top: 45px;
+          margin-bottom: -10px;
           gap: 25px;
         }
         &::before {
@@ -150,32 +155,50 @@
 @media (min-width: @desktop-width) {
   .programms {
     .container(@desktop-width);
-    padding: 0 110px;
+    padding: 58px 110px 0;
+
     &-list {
       grid-template-columns: auto auto;
-      gap: 110px;
+      gap: 80px;
       &__item {
         grid-template-areas:
           "svg h2"
           "p p"
           "a a";
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 30% auto;
         grid-template-rows: auto auto auto;
+        min-width: 570px;
+        min-height: 374px;
+        padding: 0;
+        padding-left: 52px;
+        padding-bottom: 66px;
 
         #green-cat-1 {
           grid-area: svg;
           width: 100px;
           height: 106px;
-          align-self: center;
-          justify-self: start;
+          margin: 0;
+          margin-top: 40px;
         }
 
         #green-cat-2 {
           grid-area: svg;
           width: 134px;
           height: 100px;
-          align-self: center;
-          justify-self: start;
+          margin: 0;
+          margin-top: 45px;
+          margin-left: -18px;
+        }
+        h2 {
+          margin-left: -14px;
+          margin-top: 29px;
+        }
+        p {
+          margin-top: 15px;
+          width: 462px;
+        }
+        a {
+          gap: 29px;
         }
       }
     }

@@ -919,19 +919,23 @@ a {
 .description {
   width: 320px;
   margin: 0 auto;
+  margin-top: -30px;
+  padding: 30px 20px;
+  min-height: 459px;
 }
 .description h2 {
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  text-align: center;
+  margin: 0;
 }
 .description-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: 40px;
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: repeat(4, auto);
   gap: 20px;
 }
 .description-list__item {
@@ -946,6 +950,7 @@ a {
   color: #444444;
   margin: 0;
   padding: 0;
+  margin-top: 2px;
   font-size: 14px;
   line-height: 18px;
 }
@@ -953,31 +958,40 @@ a {
   .description {
     width: 768px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 45px 30px 0;
+    border-bottom: 1px solid #e6e6e6;
+    height: 781px;
+  }
+  .description h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 60px;
   }
   .description-list {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    column-gap: 28px;
+    column-gap: 55px;
     row-gap: 37px;
     padding-bottom: 50px;
   }
   .description-list__item {
     display: grid;
     grid-template-columns: auto;
-    align-content: space-around;
-    min-height: 280px;
+    min-height: 276px;
+    width: 230px;
+    gap: 0;
   }
   .description-list__item p {
     position: relative;
     font-size: 16px;
     line-height: 24px;
-    width: 220px;
+    width: 245px;
   }
   .description-list__item #icon-clock,
   .description-list__item #icon-water,
   .description-list__item #icon-leaf,
   .description-list__item #icon-fork {
+    align-self: center;
     width: 80px;
     height: 80px;
   }
@@ -986,55 +1000,56 @@ a {
   .description-list .third,
   .description-list .fourth {
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top 30px left 108px;
   }
   .description-list .first {
     background-image: url("../../img/svg/icon-one.svg");
-    background-size: 112px 280px;
+    background-size: 112px 230px;
   }
   .description-list .second {
     background-image: url("../../img/svg/icon-two.svg");
-    background-size: 134px 280px;
+    background-size: 134px 230px;
   }
   .description-list .third {
     background-image: url("../../img/svg/icon-three.svg");
-    background-size: 134px 280px;
+    background-size: 134px 230px;
   }
   .description-list .fourth {
     background-image: url("../../img/svg/icon-four.svg");
-    background-size: 136px 280px;
+    background-size: 136px 230px;
   }
 }
 @media (min-width: 1440px) {
   .description {
     width: 1440px;
     margin: 0 auto;
-    padding: 0 110px;
-  }
-  .description h2 {
-    font-size: 60px;
-    line-height: 60px;
+    padding: 70px 110px;
   }
   .description-list {
-    grid-template-columns: auto auto auto auto;
-    gap: 100px;
+    grid-template-columns: repeat(4, 240px);
+    gap: 85px;
   }
   .description-list__item {
-    width: 220px;
+    width: 240px;
   }
 }
 .example {
   width: 320px;
   margin: 0 auto;
-  background-color: #eaeaea;
-  padding: 20px;
+  background: #eaeaea;
+  padding: 20px 20px;
+  min-height: 659px;
+}
+.example__wrapper {
+  margin: 0 auto;
+  background: #eaeaea;
 }
 .example h2 {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-top: 5px;
   font-size: 36px;
   line-height: 40px;
 }
@@ -1053,6 +1068,7 @@ a {
   display: grid;
   grid-template-columns: auto auto;
   gap: 32px;
+  padding-top: 6px;
 }
 .example .statistics-list__item {
   position: relative;
@@ -1094,8 +1110,7 @@ a {
   content: "затрачено времени";
 }
 .example h3 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 35px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1107,12 +1122,15 @@ a {
   .example {
     width: 768px;
     margin: 0 auto;
-    padding: 30px 30px 100px 30px;
+    padding: 37px 30px 100px 30px;
     background: linear-gradient(to top, #cdcdcd 462px, transparent 300px);
     display: grid;
     grid-template-areas: "h2 h2" "p p" "ul h3" "img img";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto;
+  }
+  .example__wrapper {
+    background: linear-gradient(to top, #cdcdcd 462px, transparent 300px);
   }
   .example .statistics-list {
     margin-bottom: 100px;
@@ -1129,6 +1147,8 @@ a {
     grid-area: h2;
   }
   .example p {
+    padding-top: 7px;
+    width: 676px;
     font-size: 16px;
     line-height: 24px;
     grid-area: p;

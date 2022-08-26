@@ -4,23 +4,26 @@
 .programms {
   .container(@mobile-width);
   padding: 20px;
+  margin-top: -138px; //Не знаю, откуда берется разрыв
+
   &-list {
     .reset-ul();
     display: grid;
     gap: 20px;
 
     &__item {
+      position: relative;
       min-height: 266px;
-      background-color: rgba(217, 217, 217, 1);
+      background-color: @base-grey;
       padding: 0 20px;
       display: grid;
       grid-template-areas:
         "svg h2"
         "p p"
         "a a";
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: auto auto auto;
-
+      grid-template-columns: 21% 1fr;
+      grid-template-rows: 80px auto auto;
+      gap: 20px;
       h2 {
         grid-area: h2;
         display: grid;
@@ -29,12 +32,15 @@
         font-size: 24px;
         line-height: 37px;
         text-transform: uppercase;
+        margin-bottom: 0;
       }
       p {
         grid-area: p;
         .arial-font();
         font-size: 14px;
         line-height: 18px;
+        margin: 0;
+        margin-top: -3px;
       }
 
       a {
@@ -43,22 +49,41 @@
         grid-template-columns: auto auto;
         justify-content: start;
         align-self: center;
-        gap: 17px;
+        gap: 15px;
         font-size: 16px;
         line-height: 16px;
         text-align: center;
         text-transform: uppercase;
         color: @black;
+        margin-bottom: 15px;
         svg {
           align-self: center;
         }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 240px;
+        height: 1px;
+        background: @light-grey;
+        left: 20px;
+        bottom: 57px;
       }
       #green-cat-1,
       #green-cat-2 {
         grid-area: svg;
         display: grid;
         justify-self: start;
-        align-self: center;
+        align-self: end;
+      }
+      #green-cat-1 {
+        margin-bottom: 5px;
+        margin-left: 2px; //Pixel-perfect
+      }
+      #green-cat-2 {
+        margin-left: -7px;
+        margin-bottom: 5px;
       }
     }
   }
@@ -67,7 +92,7 @@
 @media (min-width: @tablet-width) {
   .programms {
     .container(@tablet-width);
-    padding: 30px;
+    padding: 14px 30px 0 30px;
 
     &-list {
       gap: 30px;
@@ -75,13 +100,14 @@
         padding-left: 52px;
         padding-bottom: 57px;
         padding-top: 40px;
-        padding-right: 40px;
+
+        grid-template-columns: 55% 45%;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
           "h2 svg"
           "p svg"
           "a svg";
-        grid-template-columns: 55% 45%;
-        grid-template-rows: auto auto auto;
+
         min-height: 372px;
 
         #green-cat-1 {
@@ -103,12 +129,18 @@
           line-height: 36px;
         }
         p {
+          width: 340px;
           font-size: 16px;
           line-height: 24px;
         }
         a {
           font-size: 20px;
           line-height: 30px;
+          // margin-top: 45px;
+          gap: 25px;
+        }
+        &::before {
+          display: none;
         }
       }
     }

@@ -625,9 +625,9 @@ a {
     width: 768px;
     margin: 0 auto;
     background: no-repeat url("../../img/photos/promo-can/promo-can-tablet.png") 29px 235px;
-    padding: 7px 117px;
+    padding: 7px 117px 0;
     position: relative;
-    min-height: 800px;
+    min-height: 830px;
   }
   .promo__background-image {
     background-image: none;
@@ -730,6 +730,7 @@ a {
   width: 320px;
   margin: 0 auto;
   padding: 20px;
+  margin-top: -138px;
 }
 .programms-list {
   margin: 0;
@@ -739,13 +740,15 @@ a {
   gap: 20px;
 }
 .programms-list__item {
+  position: relative;
   min-height: 266px;
-  background-color: #d9d9d9;
+  background-color: #f2f2f2;
   padding: 0 20px;
   display: grid;
   grid-template-areas: "svg h2" "p p" "a a";
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 21% 1fr;
+  grid-template-rows: 80px auto auto;
+  gap: 20px;
 }
 .programms-list__item h2 {
   grid-area: h2;
@@ -755,6 +758,7 @@ a {
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 .programms-list__item p {
   grid-area: p;
@@ -764,6 +768,8 @@ a {
   color: #444444;
   font-size: 14px;
   line-height: 18px;
+  margin: 0;
+  margin-top: -3px;
 }
 .programms-list__item a {
   grid-area: a;
@@ -771,28 +777,46 @@ a {
   grid-template-columns: auto auto;
   justify-content: start;
   align-self: center;
-  gap: 17px;
+  gap: 15px;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  margin-bottom: 15px;
 }
 .programms-list__item a svg {
   align-self: center;
+}
+.programms-list__item::before {
+  position: absolute;
+  content: "";
+  width: 240px;
+  height: 1px;
+  background: #d9d9d9;
+  left: 20px;
+  bottom: 57px;
 }
 .programms-list__item #green-cat-1,
 .programms-list__item #green-cat-2 {
   grid-area: svg;
   display: grid;
   justify-self: start;
-  align-self: center;
+  align-self: end;
+}
+.programms-list__item #green-cat-1 {
+  margin-bottom: 5px;
+  margin-left: 2px;
+}
+.programms-list__item #green-cat-2 {
+  margin-left: -7px;
+  margin-bottom: 5px;
 }
 @media (min-width: 768px) {
   .programms {
     width: 768px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 14px 30px 0 30px;
   }
   .programms-list {
     gap: 30px;
@@ -801,10 +825,9 @@ a {
     padding-left: 52px;
     padding-bottom: 57px;
     padding-top: 40px;
-    padding-right: 40px;
-    grid-template-areas: "h2 svg" "p svg" "a svg";
     grid-template-columns: 55% 45%;
     grid-template-rows: auto auto auto;
+    grid-template-areas: "h2 svg" "p svg" "a svg";
     min-height: 372px;
   }
   .programms-list__item #green-cat-1 {
@@ -826,12 +849,17 @@ a {
     line-height: 36px;
   }
   .programms-list__item p {
+    width: 340px;
     font-size: 16px;
     line-height: 24px;
   }
   .programms-list__item a {
     font-size: 20px;
     line-height: 30px;
+    gap: 25px;
+  }
+  .programms-list__item::before {
+    display: none;
   }
 }
 @media (min-width: 1440px) {

@@ -18,7 +18,7 @@ export const styles = () => {
     .pipe(less())
     .pipe(postcss([autoprefixer(), csso()]))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('public/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -27,7 +27,7 @@ export const styles = () => {
 const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest('build'))
+  .pipe(gulp.dest('public'))
 }
 
 // Html
@@ -43,7 +43,7 @@ const pugToHtml = () => {
 const js = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
-  .pipe(gulp.dest('build/js'))
+  .pipe(gulp.dest('public/js'))
 }
 
 //Images
@@ -51,13 +51,13 @@ const js = () => {
 const images = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulpSquoosh())
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('public/img'))
 }
 //Copy images
 
 const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('public/img'))
 }
 
 //WebP
@@ -67,7 +67,7 @@ const webPImages = () => {
   .pipe(gulpSquoosh({
     webp: {},
   }))
-  .pipe(gulp.dest('build/img'))
+  .pipe(gulp.dest('public/img'))
 }
 
 

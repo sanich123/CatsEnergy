@@ -9,7 +9,7 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
-import gulpSquoosh from 'gulp-squoosh';
+import gulpSquoosh from 'gulp-libsquoosh';
 
 // Styles
 export const styles = () => {
@@ -29,6 +29,7 @@ export const html = () => {
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'))
 }
+
 // Html
 export const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
@@ -52,6 +53,23 @@ export const images = () => {
   .pipe(gulpSquoosh())
   .pipe(gulp.dest('build/img'))
 }
+//Copy images
+
+export const copyImages = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'))
+}
+
+//WebP
+
+export const webPImages = () => {
+  return gulp.src('source/img/**/*.{jpeg, png}')
+  .pipe(gulpSquoosh({
+    webp: {},
+  }))
+  .pipe(gulp.dest('build/img'))
+}
+
 
 
 // Server
@@ -75,8 +93,9 @@ const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
-
-
-export default gulp.series(
-  pugToHtml, html, js, images, styles, server, watcher
-);
+const build = gulp.series(styles, html, js, images, webPImages);
+const dev = gulp.series(pugToHtml, styles, server, watcher);
+export {build, dev}
+// export default gulp.series(
+//   pugToHtml, html, js, images, styles, server, watcher, webPImages,
+// );

@@ -1,0 +1,1 @@
+const currentLocation=document.location.href.slice(22);if("catalog.html"===currentLocation||"form.html"===currentLocation){document.querySelectorAll(".nav-list__item").forEach((t=>{t.classList.contains("nav-list__item--active")&&t.firstChild.classList.add("green-stroke"),t.firstChild.style.color="black"}))}

@@ -5,17 +5,28 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import pug from 'gulp-pug';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
 
 // Styles
 export const styles = () => {
   return gulp.src('source/less/styles.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())
-    .pipe(postcss([autoprefixer()]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(postcss([autoprefixer(), csso()]))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
+//Minify html
+
+export const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('build'))
+}
 // Html
 export const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
@@ -49,5 +60,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  pugToHtml, styles, server, watcher
+  pugToHtml, html, styles, server, watcher
 );

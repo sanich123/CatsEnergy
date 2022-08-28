@@ -8,6 +8,8 @@ import pug from 'gulp-pug';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import gulpSquoosh from 'gulp-squoosh';
 
 // Styles
 export const styles = () => {
@@ -35,6 +37,22 @@ export const pugToHtml = () => {
   .pipe(browser.stream());
 }
 
+//JS
+
+export const js = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
+}
+
+//Images
+
+export const images = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulpSquoosh())
+  .pipe(gulp.dest('build/img'))
+}
+
 
 // Server
 
@@ -60,5 +78,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  pugToHtml, html, styles, server, watcher
+  pugToHtml, html, js, images, styles, server, watcher
 );

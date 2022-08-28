@@ -27,12 +27,6 @@
   &__map-wrapper {
     position: relative;
   }
-
-  &__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -40,14 +34,13 @@
     .container(@tablet-width);
 
     &__map {
-      display: block;
       width: 768px;
       height: 400px;
     }
 
     &__address-wrapper {
-      background-color: @base-grey;
-      padding: 60px 70px;
+      padding: 0 70px;
+
       min-height: 199px;
 
       h2 {

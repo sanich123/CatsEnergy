@@ -1023,11 +1023,16 @@ a {
   .description {
     width: 1440px;
     margin: 0 auto;
-    padding: 70px 110px;
+    padding: 70px 103px;
+    padding-bottom: 0;
+    height: 470px;
+    border-bottom: none;
   }
   .description-list {
+    gap: 0;
+    row-gap: 0;
+    column-gap: 80px;
     grid-template-columns: repeat(4, 240px);
-    gap: 85px;
   }
   .description-list__item {
     width: 240px;
@@ -1037,11 +1042,9 @@ a {
   width: 320px;
   margin: 0 auto;
   background: #eaeaea;
-  padding: 20px 20px;
-  min-height: 659px;
+  padding: 20px 20px 38px;
 }
 .example__wrapper {
-  margin: 0 auto;
   background: #eaeaea;
 }
 .example h2 {
@@ -1118,27 +1121,45 @@ a {
   text-transform: uppercase;
   text-align: center;
 }
+.example img {
+  display: inline;
+  margin-top: 5px;
+}
 @media (min-width: 768px) {
   .example {
     width: 768px;
     margin: 0 auto;
     padding: 37px 30px 100px 30px;
-    background: linear-gradient(to top, #cdcdcd 462px, transparent 300px);
+    background: linear-gradient(to top, #eaeaea 463px, transparent 300px);
     display: grid;
     grid-template-areas: "h2 h2" "p p" "ul h3" "img img";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto;
   }
   .example__wrapper {
-    background: linear-gradient(to top, #cdcdcd 462px, transparent 300px);
+    background: linear-gradient(to top, #eaeaea 463px, transparent 300px);
   }
   .example .statistics-list {
     margin-bottom: 100px;
+    grid-template-columns: 162px 162px;
+    gap: 42px;
+    margin-top: 32px;
   }
   .example .statistics-list .weight::after,
   .example .statistics-list .days::after {
     background-color: #ffffff;
-    left: 40px;
+    left: 10px;
+    bottom: -8px;
+    width: 128px;
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #444444;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .example .statistics-list .days::after {
+    width: 140px;
   }
   .example h2 {
     font-weight: 400;
@@ -1147,7 +1168,7 @@ a {
     grid-area: h2;
   }
   .example p {
-    padding-top: 7px;
+    padding-top: 9px;
     width: 676px;
     font-size: 16px;
     line-height: 24px;
@@ -1157,44 +1178,87 @@ a {
     grid-area: ul;
   }
   .example h3 {
-    display: grid;
     grid-area: h3;
-    justify-content: end;
+    margin-top: 45px;
+    margin-left: auto;
+    text-align: end;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    width: 180px;
   }
   .example picture {
     grid-area: img;
     justify-self: center;
     align-self: center;
   }
+  .example img {
+    display: block;
+    margin-top: 4px;
+  }
   .example .statistics-list__item {
     min-width: 162px;
     height: 72px;
+  }
+  .example .statistics-list__item strong {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
   }
 }
 @media (min-width: 1440px) {
   .example {
     width: 1440px;
     margin: 0 auto;
-    padding-left: 110px;
-    padding-right: 110px;
-    background: linear-gradient(to top, #f2f2f2 462px, transparent 300px);
+    border-top: none;
+    padding-left: 103px;
+    padding-right: 103px;
+    padding-bottom: 50px;
+    background: linear-gradient(to top, #f2f2f2, 462px, transparent 300px);
     grid-template-areas: "h2 img" "p img" "ul img" "h3 img";
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 33% 66%;
+    grid-template-rows: 150px 170px auto auto;
+    column-gap: 129px;
+  }
+  .example__wrapper {
+    background: linear-gradient(to top, #f2f2f2, 462px, transparent 300px);
+  }
+  .example p {
+    margin-top: 52px;
+    width: 433px;
   }
   .example img {
-    justify-self: end;
+    margin-top: 4px;
+    display: grid;
+    align-self: center;
+    justify-self: center;
   }
   .example h3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+    text-align: start;
+    margin-left: 0;
+    margin-top: 55px;
     font-size: 20px;
-    justify-content: start;
+    justify-self: start;
+  }
+  .example h3 span {
+    justify-self: end;
   }
   .example .statistics-list {
     margin-bottom: 0;
+    margin-top: 49px;
   }
   .example .statistics-list .weight::after,
   .example .statistics-list .days::after {
     background-color: #f2f2f2;
-    left: 40px;
+  }
+  .example .statistics-list .weight::after {
+    left: 15px;
+  }
+  .example .statistics-list .days::after {
+    left: 10px;
   }
 }
 .contacts {
@@ -1226,24 +1290,17 @@ a {
 .contacts__map-wrapper {
   position: relative;
 }
-.contacts__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
 @media (min-width: 768px) {
   .contacts {
     width: 768px;
     margin: 0 auto;
   }
   .contacts__map {
-    display: block;
     width: 768px;
     height: 400px;
   }
   .contacts__address-wrapper {
-    background-color: #f2f2f2;
-    padding: 60px 70px;
+    padding: 0 70px;
     min-height: 199px;
   }
   .contacts__address-wrapper h2 {
@@ -1292,6 +1349,9 @@ a {
   justify-items: center;
   align-items: center;
   padding: 20px;
+}
+.footer__wrapper {
+  background: #f2f2f2;
 }
 .footer .social-list {
   margin: 0;

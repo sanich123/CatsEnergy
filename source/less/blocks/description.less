@@ -111,10 +111,16 @@
 @media (min-width: @desktop-width) {
   .description {
     .container(@desktop-width);
-    padding: 70px 110px;
+    padding: 70px 103px;
+    padding-bottom: 0;
+    height: 470px;
+    border-bottom: none;
     &-list {
+      gap: 0;
+      row-gap: 0;
+      column-gap: 80px;
       grid-template-columns: repeat(4, 240px);
-      gap: 85px;
+
       &__item {
         width: 240px;
       }

@@ -24,14 +24,14 @@ export const styles = () => {
 
 //Minify html
 
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
   .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'))
 }
 
 // Html
-export const pugToHtml = () => {
+const pugToHtml = () => {
   return gulp.src('source/pug/pages/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('source'))
@@ -40,7 +40,7 @@ export const pugToHtml = () => {
 
 //JS
 
-export const js = () => {
+const js = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
   .pipe(gulp.dest('build/js'))
@@ -48,21 +48,21 @@ export const js = () => {
 
 //Images
 
-export const images = () => {
+const images = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulpSquoosh())
   .pipe(gulp.dest('build/img'))
 }
 //Copy images
 
-export const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(gulp.dest('build/img'))
 }
 
 //WebP
 
-export const webPImages = () => {
+const webPImages = () => {
   return gulp.src('source/img/**/*.{jpeg, png}')
   .pipe(gulpSquoosh({
     webp: {},
@@ -93,9 +93,7 @@ const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
-const build = gulp.series(styles, html, js, images, webPImages);
-const dev = gulp.series(pugToHtml, styles, server, watcher);
-export {build, dev}
-// export default gulp.series(
-//   pugToHtml, html, js, images, styles, server, watcher, webPImages,
-// );
+export const build = gulp.series(styles, html, js, images, webPImages);
+export const dev = gulp.series(pugToHtml, styles, server, watcher);
+
+

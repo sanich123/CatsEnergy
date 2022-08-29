@@ -1,5 +1,5 @@
-import del from 'del';
+import {deleteAsync} from 'del';
 
 export const cleanBuild = () => {
-  return del('public');
+  return deleteAsync('public');
 }

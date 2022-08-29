@@ -9,6 +9,7 @@ import { optimizeImages } from './source/gulp/optimize-img.js';
 import { copyImages } from './source/gulp/copy-images.js';
 import { createWebP } from './source/gulp/create-webp.js';
 import { copyFonts } from './source/gulp/copy-fonts.js';
+import { minifySvg } from './source/gulp/minify-svg.js';
 
 // Server
 
@@ -35,10 +36,11 @@ export const build = gulp.series(
   minifyStyles,
   minifyHtml,
   minifyJs,
+  minifySvg,
   copyFonts,
   optimizeImages,
   createWebP);
-  
+
 export const dev = gulp.series(
   pugToHtml,
   minifyStyles,

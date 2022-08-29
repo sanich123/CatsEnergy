@@ -16,3 +16,4 @@ export const minifyStyles = () => {
     .pipe(gulp.dest('public/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
+

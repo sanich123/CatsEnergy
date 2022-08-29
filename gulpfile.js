@@ -10,8 +10,8 @@ import { createWebP } from './source/gulp/create-webp.js';
 import { copyFonts } from './source/gulp/copy-fonts.js';
 import { minifySvg } from './source/gulp/minify-svg.js';
 import { cleanBuild } from './source/gulp/clean-build.js';
-import { createSprite } from './source/gulp/create-sprite.js';
-import { copySprite } from './source/gulp/copy-sprite.js';
+import { createSprite, createSpriteDev } from './source/gulp/create-sprite.js';
+import { copyManifest } from './source/gulp/copy-manifest.js';
 
 // Server
 
@@ -38,9 +38,10 @@ const watcher = () => {
 export const build = gulp.series(
   cleanBuild,
   minifyStyles,
-  optimizeImages,
+  // optimizeImages,
 
   gulp.parallel(
+  copyManifest,
   minifyHtml,
   minifyJs,
   minifySvg,
@@ -48,13 +49,16 @@ export const build = gulp.series(
   copyFonts,
   createWebP,
   )
-
 );
 
 export const dev = gulp.series(
+  gulp.parallel(
   pugToHtml,
   minifyStyles,
+  createSpriteDev
+  ),
   server,
-  watcher);
+  watcher
+  );
 
 

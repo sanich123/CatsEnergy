@@ -10,3 +10,10 @@ export const createSprite = () => {
   .pipe(rename('icons.svg'))
   .pipe(gulp.dest('public/img/svg'));
 }
+
+export const createSpriteDev = () => {
+  return gulp.src('source/img/svg/icons/*.svg')
+  .pipe(svgstore())
+  .pipe(rename('icons.svg'))
+  .pipe(gulp.dest('source/img/svg'));
+}

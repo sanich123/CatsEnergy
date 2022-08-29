@@ -1,7 +1,7 @@
 node_modules
 public
-source/css/style.css
-source/css/style.css.map
+source/css/style.min.css
+source/css/style.min.css.map
 
 source/catalog.html
 source/form.html

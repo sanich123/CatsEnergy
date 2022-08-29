@@ -10,7 +10,7 @@ import { copyFonts } from './source/gulp/copy-fonts.js';
 import { minifySvg } from './source/gulp/minify-svg.js';
 import { cleanBuild } from './source/gulp/clean-build.js';
 import { createSprite, createSpriteDev } from './source/gulp/create-sprite.js';
-import { copyManifest } from './source/gulp/copy-manifest.js';
+import { copyIcons, copyManifest } from './source/gulp/copy-manifest.js';
 
 // Server
 
@@ -41,6 +41,7 @@ const build = gulp.series(
 
   gulp.parallel(
   copyManifest,
+  copyIcons,
   minifyHtml,
   minifyJs,
   minifySvg,

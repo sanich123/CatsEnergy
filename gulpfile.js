@@ -5,7 +5,6 @@ import { minifyStyles } from './source/gulp/minify-styles.js';
 import { pugToHtml } from './source/gulp/pug-to-html.js';
 import { minifyJs } from './source/gulp/minify-js.js';
 import { optimizeImages } from './source/gulp/optimize-img.js';
-import { copyImages } from './source/gulp/copy-images.js';
 import { createWebP } from './source/gulp/create-webp.js';
 import { copyFonts } from './source/gulp/copy-fonts.js';
 import { minifySvg } from './source/gulp/minify-svg.js';
@@ -35,7 +34,7 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-export const build = gulp.series(
+const build = gulp.series(
   cleanBuild,
   minifyStyles,
   optimizeImages,
@@ -51,7 +50,7 @@ export const build = gulp.series(
   )
 );
 
-export const dev = gulp.series(
+const dev = gulp.series(
   gulp.parallel(
   pugToHtml,
   minifyStyles,
@@ -61,4 +60,5 @@ export const dev = gulp.series(
   watcher
   );
 
+  export {build, dev}
 

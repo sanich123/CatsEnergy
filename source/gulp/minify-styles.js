@@ -7,7 +7,7 @@ import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import browser from 'browser-sync';
 
-export const minifyStyles= () => {
+export const minifyStyles = () => {
   return gulp.src('source/less/styles.less', { sourcemaps: true })
     .pipe(plumber())
     .pipe(less())

@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import browser from 'browser-sync';
-import gulpSquoosh from 'gulp-libsquoosh';
 import { minifyHtml } from './source/gulp/minify-html.js';
 import { minifyStyles } from './source/gulp/minify-styles.js';
 import { pugToHtml } from './source/gulp/pug-to-html.js';
@@ -10,6 +9,7 @@ import { copyImages } from './source/gulp/copy-images.js';
 import { createWebP } from './source/gulp/create-webp.js';
 import { copyFonts } from './source/gulp/copy-fonts.js';
 import { minifySvg } from './source/gulp/minify-svg.js';
+import { cleanBuild } from './source/gulp/clean-build.js';
 
 // Server
 
@@ -33,13 +33,16 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 export const build = gulp.series(
+  cleanBuild,
   minifyStyles,
+  optimizeImages,
+  gulp.parallel(
   minifyHtml,
   minifyJs,
   minifySvg,
   copyFonts,
-  optimizeImages,
-  createWebP);
+  createWebP)
+);
 
 export const dev = gulp.series(
   pugToHtml,

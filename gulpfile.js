@@ -37,18 +37,16 @@ const watcher = () => {
 
 export const build = gulp.series(
   cleanBuild,
-  // minifyStyles,
-  // optimizeImages,
+  minifyStyles,
+  optimizeImages,
 
   gulp.parallel(
-  // minifyHtml,
-  // minifyJs,
-  // copySprite,
+  minifyHtml,
+  minifyJs,
   minifySvg,
   createSprite,
-
-  // copyFonts,
-  // createWebP,
+  copyFonts,
+  createWebP,
   )
 
 );

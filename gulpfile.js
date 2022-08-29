@@ -38,7 +38,7 @@ const watcher = () => {
 export const build = gulp.series(
   cleanBuild,
   minifyStyles,
-  // optimizeImages,
+  optimizeImages,
 
   gulp.parallel(
   copyManifest,

@@ -17,3 +17,11 @@ export const minifyStyles = () => {
     .pipe(browser.stream());
 }
 
+export const stylesDev = () => {
+  return gulp.src('source/less/styles.less', { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(browser.stream());
+}

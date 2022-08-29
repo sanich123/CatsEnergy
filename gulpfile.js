@@ -1,11 +1,11 @@
 import gulp from 'gulp';
 import browser from 'browser-sync';
 import { minifyHtml } from './source/gulp/minify-html.js';
-import { minifyStyles } from './source/gulp/minify-styles.js';
+import { minifyStyles, stylesDev } from './source/gulp/minify-styles.js';
 import { pugToHtml } from './source/gulp/pug-to-html.js';
 import { minifyJs } from './source/gulp/minify-js.js';
 import { optimizeImages } from './source/gulp/optimize-img.js';
-import { createWebP } from './source/gulp/create-webp.js';
+import { createWebP, webPDev } from './source/gulp/create-webp.js';
 import { copyFonts } from './source/gulp/copy-fonts.js';
 import { minifySvg } from './source/gulp/minify-svg.js';
 import { cleanBuild } from './source/gulp/clean-build.js';
@@ -52,9 +52,10 @@ const build = gulp.series(
 );
 
 const dev = gulp.series(
+  webPDev,
   gulp.parallel(
   pugToHtml,
-  minifyStyles,
+  stylesDev,
   createSpriteDev
   ),
   server,

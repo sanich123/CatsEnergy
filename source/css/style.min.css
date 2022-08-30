@@ -1121,6 +1121,8 @@ a {
   text-align: center;
 }
 .example img {
+  width: 280px;
+  height: 256px;
   display: inline;
   margin-top: 5px;
 }
@@ -1192,6 +1194,8 @@ a {
     align-self: center;
   }
   .example img {
+    width: 560px;
+    height: 512px;
     display: block;
     margin-top: 4px;
   }

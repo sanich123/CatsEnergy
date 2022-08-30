@@ -94,9 +94,9 @@ if (menuToggler.classList.contains(openClass)) {
 }
 });
 
-const currentLocation = document.location.href.slice(22);
+const currentLocation = document.location.href;
 
-if (currentLocation === 'catalog.html' || currentLocation === 'form.html') {
+if (currentLocation.includes('catalog.html') || currentLocation.includes('form.html')) {
 const headerLinks = document.querySelectorAll('.nav-list__item');
 
 headerLinks.forEach((link) => {

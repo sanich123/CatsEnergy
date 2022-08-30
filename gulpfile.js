@@ -53,10 +53,8 @@ const build = gulp.series(
 );
 
 const dev = gulp.series(
-  gulp.parallel(
   pugToHtml,
   stylesDev,
-  ),
   server,
   watcher
   );

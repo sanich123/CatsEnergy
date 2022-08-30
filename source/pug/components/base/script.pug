@@ -1,3 +1,35 @@
-script(src="./js/nav-color-changer.js")
-script(src="./js/menu-toggler.js")
+//- script(src="./js/nav-color-changer.js" defer)
+//- script(src="./js/menu-toggler.js")
+script.
+  const menuToggler = document.querySelector('.header__toggler');
+  const navigation = document.querySelector('.nav');
+  const navClose = 'nav--closed';
+  const openClass = 'header__toggler--open';
+  const closeClass = 'header__toggler--close';
+  navigation.classList.add(navClose);
+  menuToggler.classList.remove(closeClass);
+  menuToggler.classList.add(openClass);
 
+  menuToggler.addEventListener('click', () => {
+  navigation.classList.toggle(navClose);
+  if (menuToggler.classList.contains(openClass)) {
+    menuToggler.classList.remove(openClass);
+    menuToggler.classList.add(closeClass);
+    } else {
+    menuToggler.classList.remove(closeClass);
+    menuToggler.classList.add(openClass);
+  }
+  });
+
+  const currentLocation = document.location.href.slice(22);
+
+  if (currentLocation === 'catalog.html' || currentLocation === 'form.html') {
+  const headerLinks = document.querySelectorAll('.nav-list__item');
+
+  headerLinks.forEach((link) => {
+    if (link.classList.contains('nav-list__item--active')) {
+      link.firstChild.classList.add('green-stroke');
+    }
+    link.firstChild.style.color = 'black';
+  });
+  }

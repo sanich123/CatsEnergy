@@ -30,7 +30,7 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/pug/**/*.pug', gulp.series(pugToHtml));
-  gulp.watch('source/less/**/*.less', gulp.series(minifyStyles));
+  gulp.watch('source/less/**/*.less', gulp.series(stylesDev));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
@@ -59,5 +59,7 @@ const dev = gulp.series(
   watcher
   );
 
-  export {build, dev}
+  export {
+    build, dev
+  }
 

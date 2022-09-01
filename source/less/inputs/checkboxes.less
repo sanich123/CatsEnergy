@@ -37,6 +37,9 @@
       background-repeat: no-repeat;
       left: -35px;
     }
+    &:focus {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -45,4 +48,11 @@
 #milk:checked + .checkboxes__label::after,
 #vitamins:checked + .checkboxes__label::after {
   display: block;
+}
+
+#sugarChanger:disabled + .checkboxes__label,
+#water:disabled + .checkboxes__label,
+#milk:disabled + .checkboxes__label,
+#vitamins:disabled + .checkboxes__label {
+  opacity: 0.3;
 }

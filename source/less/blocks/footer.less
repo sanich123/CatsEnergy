@@ -5,6 +5,13 @@
   &__wrapper {
     background: @base-grey;
   }
+  &__logo:hover {
+    opacity: 0.6;
+  }
+  &__logo:active,
+  &__logo:focus {
+    opacity: 0.3;
+  }
   .container(@mobile-width);
   background-color: @base-grey;
   display: grid;
@@ -19,6 +26,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    a:hover #icon-youtube path,
+    a:hover #icon-vk path,
+    a:hover #icon-telegram path,
+    a:focus #icon-youtube path,
+    a:focus #icon-vk path,
+    a:focus #icon-telegram path {
+      fill: @base-green;
+    }
+    a:active,
+    a:focus {
+      opacity: 0.3;
+    }
   }
 
   .academy-links {
@@ -33,6 +53,12 @@
       .arial-font();
       font-size: 16px;
       line-height: 18px;
+      &:hover svg path {
+        fill: @base-green;
+      }
+      &:focus {
+        opacity: 0.3;
+      }
     }
   }
 }

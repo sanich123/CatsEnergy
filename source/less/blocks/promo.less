@@ -56,14 +56,20 @@
     background: @base-green;
     text-transform: uppercase;
     color: @white;
+    &:hover {
+      background: @basic-green2;
+    }
+    &:active {
+      color: rgba(@white, 0.3);
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     .container(@tablet-width);
-    background: no-repeat url("../../img/photos/promo-can/promo-can-tablet.webp")
-      29px 235px;
+    background: no-repeat
+      url("../../img/photos/promo-can/promo-can-tablet.webp") 29px 235px;
     padding: 7px 117px 0;
     position: relative;
     min-height: 830px;

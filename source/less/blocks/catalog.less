@@ -79,7 +79,9 @@
       grid-area: svg;
       width: 280px;
       .to-center();
-
+      &:hover {
+        opacity: 0.6;
+      }
       button {
         .reset-btn();
       }
@@ -105,7 +107,7 @@
       text-align: center;
     }
 
-    button {
+    .show-btn {
       grid-area: btn;
       font-size: 16px;
       line-height: 20px;
@@ -117,6 +119,13 @@
       background-color: @base-grey;
       border: none;
       cursor: pointer;
+      &:hover {
+        background: @special-grey2;
+      }
+      &:focus, &:active {
+        background: @special-grey2;
+        color: rgba(@special-dark-grey, 0.3);
+      }
     }
   }
 }

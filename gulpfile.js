@@ -9,7 +9,7 @@ import { createWebP } from './source/gulp/create-webp.js';
 import { copyFonts } from './source/gulp/copy-fonts.js';
 import { minifySvg } from './source/gulp/minify-svg.js';
 import { cleanBuild } from './source/gulp/clean-build.js';
-import { clearIcons, createSprite } from './source/gulp/create-sprite.js';
+import { createSprite } from './source/gulp/create-sprite.js';
 import { copyIcons, copyManifest } from './source/gulp/copy-manifest.js';
 
 // Server
@@ -34,32 +34,11 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-const build = gulp.series(
-  pugToHtml,
-  cleanBuild,
-  minifyHtml,
-  minifyStyles,
-  optimizeImages,
+const build = gulp.series(pugToHtml, cleanBuild, minifyHtml, minifyStyles, optimizeImages,
+  gulp.parallel(copyManifest, copyIcons, minifyJs, minifySvg, createSprite, copyFonts, createWebP));
 
-  gulp.parallel(
-  copyManifest,
-  copyIcons,
-  minifyJs,
-  minifySvg,
-  createSprite,
-  copyFonts,
-  createWebP,
-  )
-);
-
-const dev = gulp.series(
-  pugToHtml,
-  stylesDev,
-  server,
-  watcher
-  );
+const dev = gulp.series(pugToHtml, stylesDev, server, watcher);
 
   export {
     build, dev
   }
-

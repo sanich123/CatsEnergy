@@ -42,6 +42,12 @@
   display: block;
 }
 
+#starving:disabled + .radio-label,
+#gaining:disabled + .radio-label,
+#notKnow:disabled + .radio-label {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .form {
 
@@ -62,4 +68,3 @@
     }
   }
 }
-

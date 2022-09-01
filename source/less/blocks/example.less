@@ -96,7 +96,11 @@
     }
     .container(@tablet-width);
     padding: 37px 30px 100px 30px;
-    background: linear-gradient(to top, rgba(234, 234, 234, 1) 463px, transparent 300px);
+    background: linear-gradient(
+      to top,
+      rgba(234, 234, 234, 1) 463px,
+      transparent 300px
+    );
     display: grid;
     grid-template-areas:
       "h2 h2"
@@ -180,16 +184,22 @@
 @media (min-width: @desktop-width) {
   .example {
     &__wrapper {
-      background: linear-gradient(to top, rgba(242, 242, 242, 1);
- 462px, transparent 300px);
+      background: linear-gradient(
+        to top,
+        rgba(242, 242, 242, 1) ; 462px,
+        transparent 300px
+      );
     }
     .container(@desktop-width);
     border-top: none;
     padding-left: 103px;
     padding-right: 103px;
     padding-bottom: 50px;
-    background: linear-gradient(to top, rgba(242, 242, 242, 1);
- 462px, transparent 300px);
+    background: linear-gradient(
+      to top,
+      rgba(242, 242, 242, 1) ; 462px,
+      transparent 300px
+    );
 
     grid-template-areas:
       "h2 img"

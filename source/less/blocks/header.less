@@ -17,7 +17,7 @@
   }
   &__logo {
     justify-self: start;
-    background-image: url('../../img/svg/logo-mobile.svg'),
+    background-image: url("../../img/svg/logo-mobile.svg"),
       url("../../img/svg/logo-mobile-words.svg");
     background-position: left, right;
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@
     height: 37px;
 
     @media (min-width: @tablet-width) {
-      background: url('../../img/svg/logo-tablet.svg');
+      background: url("../../img/svg/logo-tablet.svg");
       width: 174px;
       height: 52px;
     }
@@ -34,6 +34,15 @@
       background: url("./../../img/svg/logo-desktop.svg");
       width: 202px;
       height: 60px;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+    &:focus {
+      opacity: 0.8;
     }
   }
 
@@ -88,6 +97,12 @@
         line-height: 20px;
         text-transform: uppercase;
         color: @black;
+        &:hover {
+          opacity: 0.6;
+        }
+        &:focus {
+          opacity: 0.3;
+        }
       }
     }
   }

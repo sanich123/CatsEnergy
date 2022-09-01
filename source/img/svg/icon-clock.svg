@@ -1,4 +1,4 @@
-<svg id="icon-clock" width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg id="icon-clock" width="61" height="60" aria-labelledby="icon-of-clock" focusable="false" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.75" width="60" height="60" fill="#68B738"/>
 <ellipse cx="35.9542" cy="24.3299" rx="1.0873" ry="1.08512" fill="white"/>
 <ellipse cx="25.0811" cy="24.3299" rx="1.08731" ry="1.08512" fill="white"/>
